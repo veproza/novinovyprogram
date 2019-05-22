@@ -1,6 +1,5 @@
 import {IArticleData} from "../../srv/ts/parsers/interfaces";
 
-console.log('foo');
 export interface DayResponse {
     data: DailyResult;
 }
