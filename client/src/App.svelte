@@ -117,6 +117,7 @@ const handleNextClick = () => {
 	}
 	.prev:hover, .next:hover {
 	    color: #aaa;
+	    text-decoration: none;
 	}
 </style>
 <div class="center">
@@ -126,9 +127,9 @@ const handleNextClick = () => {
             <span class="sameWidthDay">
                 {dayHuman}
             </span>
-            <a href="#" on:click|preventDefault="{handlePrevClick}" class="prev" >〈</a>
+            <a href="#" on:click|preventDefault="{handlePrevClick}" class="prev" >&laquo;</a>
             <input type="date" bind:value="{domDate}" on:change="{handleChange}" min="2017-04-22" max="2019-05-21">
-            <a href="#" on:click|preventDefault="{handleNextClick}" class="next" >〉</a>
+            <a href="#" on:click|preventDefault="{handleNextClick}" class="next" >&raquo;</a>
         </div>
         {#await dayPromise}
         loading.
