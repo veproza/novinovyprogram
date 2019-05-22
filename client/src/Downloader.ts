@@ -1,7 +1,7 @@
 import {IArticleData} from "../../srv/ts/parsers/interfaces";
 
 console.log('foo');
-interface DayResponse {
+export interface DayResponse {
     data: DailyResult;
 }
 
@@ -28,8 +28,8 @@ interface HourData {
 }
 
 export async function downloadDay(date: Date): Promise<DayResponse> {
-    console.log('dl');
-    const request = await fetch('./day.json');
+    const dayId = date.toISOString().replace(/[-:]/g, '').substr(0, 8);
+    const request = await fetch(`https://s3-eu-west-1.amazonaws.com/lidovky-headlines/day-${dayId}.json`);
     const data = await request.json();
     return {data};
 }

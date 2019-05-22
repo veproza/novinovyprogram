@@ -4,7 +4,6 @@ import {toHumanTime} from './utils.ts'
 
 export let data;
 
-console.log(data);
 const timeTicks = getTimeTicks(data);
 
 </script>
