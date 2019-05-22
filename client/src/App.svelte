@@ -87,7 +87,16 @@ window.addEventListener('hashchange', (evt) => {
     skipNextUpdateFromHash = false;
 });
 handleChange(false);
-
+const handlePrevClick = () => {
+    const prevDay = new Date(currentDate.getTime() - 86400 * 1e3);
+    domDate = prevDay.toISOString().substr(0, 10);
+    handleChange();
+};
+const handleNextClick = () => {
+    const nextDay = new Date(currentDate.getTime() + 86400 * 1e3);
+    domDate = nextDay.toISOString().substr(0, 10);
+    handleChange();
+}
 </script>
 
 <style>
@@ -100,11 +109,28 @@ handleChange(false);
 	    width: 100%;
 	    text-align: left;
 	}
+	.sameWidthDay {
+	    display: inline-block;
+	    width: 4.6em;
+	    white-space: nowrap;
+	}
+	.prev, .next {
+	    color: #333;
+	}
+	.prev:hover, .next:hover {
+	    color: #aaa;
+	}
 </style>
 <div class="center">
     <div class="maxwidth">
         <div class="header">
-            📰 Novinový program {dayHuman} <input type="date" bind:value="{domDate}" on:change="{handleChange}" min="2017-04-22" max="2019-05-21">
+            📰 Novinový program
+            <span class="sameWidthDay">
+                {dayHuman}
+            </span>
+            <a href="#" on:click|preventDefault="{handlePrevClick}" class="prev" >〈</a>
+            <input type="date" bind:value="{domDate}" on:change="{handleChange}" min="2017-04-22" max="2019-05-21">
+            <a href="#" on:click|preventDefault="{handleNextClick}" class="next" >〉</a>
         </div>
         {#await dayPromise}
         loading.
