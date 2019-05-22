@@ -63,7 +63,6 @@ const getHourHash = () => {
     const hourDecimal = window.scrollY / hourHeightPx;
     const hour = Math.floor(hourDecimal);
     const minute = Math.floor((hourDecimal % 1) * 60);
-    console.log('hh', window.scrollY);
     return hour.toString().padStart(2, '0') + ":" + minute.toString().padStart(2, '0');
 };
 
@@ -78,9 +77,8 @@ document.addEventListener('mouseout', (evt) => {
     }
 });
 
-window.addEventListener('hashchange', (evt) => {
+window.addEventListener('hashchange', () => {
     if(skipNextUpdateFromHash === false) {
-        console.log('g');
         updateFromHash();
         handleChange(false);
     }
