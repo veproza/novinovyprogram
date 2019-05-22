@@ -12,6 +12,9 @@ export let name2 = 'bar';
 const defaultDomDate = "2019-05-21";
 let domDate = defaultDomDate;
 const currentDate = new Date();
+let nextDate = null;
+let prevDate = null;
+
 let rememberedScrollPosition = null;
 const updateFromHash = () => {
     if(window.location.hash) {
@@ -37,6 +40,9 @@ const handleChange = (doUpdateHash) => {
     const [year, month, day] = (domDate || defaultDomDate).split('-').map(parseFloat);
     currentDate.setFullYear(year, month - 1, day);
     currentDate.setHours(12, 0, 0, 0);
+    const currentTimeHash = getHourHash();
+    nextDate = new Date(currentDate.getTime() + 86400 * 1e3).toISOString().substr(0, 10) + "T" + getHourHash();
+    prevDate = new Date(currentDate.getTime() - 86400 * 1e3).toISOString().substr(0, 10) + "T" + getHourHash();
     promiseIsFulfilled = false;
     dayPromise = downloadDay(currentDate);
     dayPromise.then(value => promiseIsFulfilled = true);
@@ -95,6 +101,9 @@ const handleNextClick = () => {
     domDate = nextDay.toISOString().substr(0, 10);
     handleChange();
 }
+
+
+
 </script>
 
 <style>
@@ -127,9 +136,9 @@ const handleNextClick = () => {
             <span class="sameWidthDay">
                 {dayHuman}
             </span>
-            <a href="#" on:click|preventDefault="{handlePrevClick}" class="prev" >&laquo;</a>
+            <a href="#{prevDate}" on:click|preventDefault="{handlePrevClick}" class="prev" >&laquo;</a>
             <input type="date" bind:value="{domDate}" on:change="{handleChange}" min="2017-04-22" max="2019-05-21">
-            <a href="#" on:click|preventDefault="{handleNextClick}" class="next" >&raquo;</a>
+            <a href="#{nextDate}" on:click|preventDefault="{handleNextClick}" class="next" >&raquo;</a>
         </div>
         {#await dayPromise}
         loading.
