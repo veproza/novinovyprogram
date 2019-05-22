@@ -6,6 +6,7 @@ import irozhlasParser from "./parsers/irozhlas";
 import novinkyParser from "./parsers/novinky";
 import ihnedParser from "./parsers/ihned";
 import * as fs from 'fs';
+import {uploadObject} from "./utils";
 
 type FileAndDate = {
     filename: string;
@@ -17,7 +18,7 @@ type Publication = 'idnes' | 'lidovky' | 'aktualne' | 'irozhlas' | 'novinky' | '
 
 const publications: Publication[] = ['idnes', 'lidovky', 'aktualne', 'irozhlas', 'novinky', 'ihned'];
 
-interface DailyResult {
+export interface DailyResult {
     lastFileTime: number,
     publications: {
         idnes: PublicationDay;
@@ -62,8 +63,8 @@ const getDateFromFileName = (filename: string): Date => {
         throw new Error("Unparsable: " + filename);
     }
 };
-
-const files = fs.readFileSync(__dirname + '/../data/keys.txt', 'utf-8').split("\n")
+const datafile = fs.readFileSync(__dirname + '/../data/keys.txt', 'utf-8') + "\n" + fs.readFileSync(__dirname + '/../data/keys2.txt', 'utf-8');
+const files = datafile.split("\n")
     .slice(1) // remove  -idnes-cz1492763826366.html
     .filter(file => {
         return file.includes('idnes')
@@ -83,7 +84,7 @@ const files = fs.readFileSync(__dirname + '/../data/keys.txt', 'utf-8').split("\
         });
     });
 
-const firstReferenceTime = Date.now() - 86400 * 1e3 * 7;
+
 const getTimeBounds = function (referenceTime: number) {
     const dateStart = new Date();
     dateStart.setTime(referenceTime);
@@ -111,18 +112,24 @@ const getPublicationDay = async (publicationId: Publication, files: FileAndDate[
         return newId;
     };
 
-    const hours = await Promise.all(matchingFiles.map(async (file): Promise<HourData> => {
-        const articlesInFile = (await parser(file.filename)).slice(0, MAX_ARTICLE_LENGTH);
-        const articleIds = articlesInFile.map(getArticleId);
-        return {
-            time: file.time,
-            articles: articleIds
-        };
+    const hours = await Promise.all(matchingFiles.map(async (file): Promise<HourData|null> => {
+        try {
+            const articlesInFile = (await parser(file.filename)).slice(0, MAX_ARTICLE_LENGTH);
+            const articleIds = articlesInFile.map(getArticleId);
+            return {
+                time: file.time,
+                articles: articleIds
+            };
+        } catch (e) {
+            console.error("\n", e, publicationId, file.filename, "\n");
+            return null;
+        }
     }));
 
+    const hoursNotNull: HourData[] = hours.filter(h => h !== null) as HourData[];
     return {
         articles,
-        hours
+        hours: hoursNotNull
     };
 };
 
@@ -169,12 +176,23 @@ const getParser = (file: string): IParser => {
         throw new Error("No parser for " + file);
     }
 };
-
+const firstReferenceTime = new Date("2019-05-21T10:41:39.138Z").getTime();
+const lastReferenceTime = new Date("2019-05-20T10:41:39.138Z").getTime();
+// const lastReferenceTime = new Date("2019-05-16T10:41:39.138Z").getTime();
+let currentReferenceTime = firstReferenceTime;
 (async () => {
-    const file = files.pop();
-    if (!file) {
-        return;
-    }
-    const day = await downloadDay(firstReferenceTime);
-    fs.writeFileSync(__dirname + "/../data/day.json", JSON.stringify(day, null, 2));
+    do {
+        const file = files.pop();
+        if (!file) {
+            return;
+        }
+        const date = new Date(currentReferenceTime);
+        console.log("Downloading ", date.toISOString());
+        const day = await downloadDay(currentReferenceTime);
+        const dayId = date.toISOString().replace(/[-:]/g, '').substr(0, 8);
+        console.log("Uploading", date.toISOString());
+        await uploadObject("day-" + dayId + '.json', day);
+        console.log("Done", date.toISOString());
+        currentReferenceTime -= 86400 * 1e3;
+    } while (currentReferenceTime > lastReferenceTime)
 })();
