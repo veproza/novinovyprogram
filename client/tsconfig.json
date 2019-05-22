@@ -1,0 +1,38 @@
+{
+  "compilerOptions": {
+    "rootDir": "./src",
+    "outDir": "./src",
+    "target": "es2015",
+    "lib": [
+      "es7",
+      "es6",
+      "es2016",
+      "es2015",
+      "dom",
+      "dom.iterable"
+    ],
+    "allowJs": true,
+    "skipLibCheck": true,
+    "esModuleInterop": true,
+    "allowSyntheticDefaultImports": true,
+    "strict": true,
+    "strictFunctionTypes": false,
+    "forceConsistentCasingInFileNames": true,
+    "module": "commonjs",
+    "moduleResolution": "node",
+    "resolveJsonModule": true,
+    "jsx": "preserve",
+    "strictNullChecks": true,
+    "suppressImplicitAnyIndexErrors": true,
+    "noImplicitReturns": true,
+    "noImplicitThis": true,
+    "noImplicitAny": true
+  },
+  "exclude": [
+    "node_modules",
+    "*.js"
+  ],
+  "include": [
+    "./ts"
+  ]
+}

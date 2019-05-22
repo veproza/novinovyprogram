@@ -1,0 +1,6085 @@
+{
+  "lastFileTime": 1557783987168,
+  "publications": {
+    "idnes": {
+      "articles": [
+        {
+          "headline": "Švédové vzdávají integraci. Žákům přidají intenzivnější výuku arabštiny",
+          "perex": "Studenti z imigrantských rodin ve Švédsku pokulhávají ve škole. Zlepšit to má prohloubení výuky v jejich rodném jazyce. S nápadem přichází tamní vládní komise. Chce, aby se tyto hodiny staly součástí...",
+          "link": "https://www.idnes.cz/zpravy/zahranicni/svedsko-migranti-arabstina-integrace.A190510_092018_zahranicni_bur"
+        },
+        {
+          "headline": "Slavia - Plzeň 3:1, tři góly za osm minut a domácí jsou krok od titulu",
+          "perex": "Fotbalová Slavia se tři kola před koncem nadstavbové části přiblížila mistrovskému titulu. V...",
+          "link": "https://www.idnes.cz/fotbal/prvni-liga/slavia-plzen-nadstavba-finale-fortuna-liga-2-kolo-skupina-o-titul.A190510_165537_fotbal_min"
+        },
+        {
+          "headline": "První elektromobil ukáže Škoda na hokejovém šampionátu. Máme fotky z Prahy",
+          "perex": "Mladoboleslavská automobilka představí první sériové elektrifikované modely 23. května v...",
+          "link": "https://www.idnes.cz/auto/zpravodajstvi/skoda-citiigo-citigoe-iv-elektromobil.A190510_233124_automoto_fdv"
+        },
+        {
+          "headline": "Invaze z květináčů. Nebezpečné houby z ciziny ohrožují české lesy",
+          "perex": "Po devastujícím útoku kůrovce na české smrkové lesy zbyly desetitisíce hektarů ploch, které je...",
+          "link": "https://www.idnes.cz/zpravy/domaci/houby-invazni-druhy-kurovec-les-kvetinac.A190509_171023_domaci_onkr"
+        },
+        {
+          "headline": "Rathův nekonečný příběh. Po sedmi letech od zatčení ho čeká klíčový proces",
+          "perex": "V úterý to bude sedm let, co se vleče kauza Davida Ratha. A zatímco před časem Vrchní soud v Praze mu překvapivě rychle a neveřejně zrušil trest vězení, v červnu se stejný scénář opakovat nebude....",
+          "link": "https://www.idnes.cz/zpravy/domaci/politik-rath-vrchni-soud-v-praze.A190511_090225_domaci_jumi"
+        },
+        {
+          "headline": "Z globalizace profituje i Česko, patří mezi nejpropojenější země světa",
+          "perex": "Na intenzitě nabírá mezinárodní obchod, cirkulace peněz, výměna informací nebo migrace mezi...",
+          "link": "https://www.idnes.cz/ekonomika/zahranicni/globalizace-trump-brexit.A190512_192323_eko-zahranicni_bur"
+        },
+        {
+          "headline": "Solární megaprojekty: pandí elektrárna či farma o výkonu pěti Temelínů",
+          "perex": "Pod spalujícími slunečními paprsky v dubajské poušti vzniká budoucí největší solární park...",
+          "link": "https://www.idnes.cz/ekonomika/zahranicni/nejvetsi-solarni-parky-sveta.A190507_133022_eko-zahranicni_are"
+        },
+        {
+          "headline": "Dítě v Pardubicích zemřelo násilnou smrtí, podezřelého zadržela policie",
+          "perex": "Od nočních hodin vyšetřují pardubičtí kriminalisté násilnou smrt dítěte, oznámila policie. V souvislosti s činem zadržela čtyřicetiletého muže.",
+          "link": "https://www.idnes.cz/pardubice/zpravy/smrt-ditete-pardubice-policie-kriminaliste.A190513_084856_pardubice-zpravy_klu"
+        },
+        {
+          "headline": "Rodičům, kterým ochrnula dcerka, zaplatí liberecká nemocnice pět milionů",
+          "perex": "Téměř pět milionů korun zaplatí Krajská nemocnice v Liberci rodičům dívky, která v roce 2009...",
+          "link": "https://www.idnes.cz/liberec/zpravy/liberec-divka-ochrnuti-soud-mimosoudni-vyrovnani-pet-milionu-nemocnice-rodice-odskodneni.A190513_090852_liberec-zpravy_jape"
+        },
+        {
+          "headline": "Říhův tým má za sebou perfektní rozjezd. A teď se ukáže cesta",
+          "perex": "Když kamery zabraly prošedivělého elegána ve VIP lóži, zaplněný bratislavský zimák se...",
+          "link": "https://www.idnes.cz/hokej/ms-2019/cesi-po-svedsko-norsko-pred-rusko.A190512_210143_ms-hokej-2019_rou"
+        },
+        {
+          "headline": "Nová odrůda vznikne z 50 tisíc pokusů. Jistotu nemáme, říká šlechtitel",
+          "perex": "Není to nic pro netrpělivé. Šlechtění nových odrůd zemědělských plodin vypadá jako krajně...",
+          "link": "https://www.idnes.cz/ekonomika/domaci/selgen-slechteni-rozhovor-ivo-sedlacek-genetika-plodiny.A190511_231911_ekonomika_fih"
+        },
+        {
+          "headline": "Ledoví muži dostáli svému jménu, přinesli studený vzduch a jarní mrazy",
+          "perex": "Podle pranostiky přinášejí ledoví muži Pankrác, Servác a Bonifác na jaře studený vzduch a...",
+          "link": "https://www.idnes.cz/zpravy/domaci/ochlazeni-zima-mraz-pocasi.A190513_060205_domaci_fort"
+        },
+        {
+          "headline": "Jako v roce 2011: hokejisté září, chválí je i Jágr. Bude medaile?",
+          "perex": "Silně to připomíná osm let starý šampionát, kdy Češi v Bratislavě zářili. Parta kolem Jakuba...",
+          "link": "https://www.idnes.cz/hokej/ms-2019/hokej-ms-2019-rozbor-porovnani-s-ms-2011-reichel-frolik-jagr.A190512_221318_ms-hokej-2019_cig"
+        },
+        {
+          "headline": "Brusel pozastavil část dotací pro Agrofert, Česko je ale holdingu posílá dál",
+          "perex": "Brusel se rozhodl pozastavit část dotací společnosti Agrofert do té doby, než se vyjasní podezření ze středu zájmů premiéra Andreje Babiše. Státní fond ale podle zjištění serveru iROZHLAS.cz vyplácí...",
+          "link": "https://www.idnes.cz/zpravy/domaci/agrofert-dotace-babis-brusel-pozastavil.A190513_141546_domaci_onkr"
+        },
+        {
+          "headline": "Dimo, mluv rusky. Útočník Jaškin na MS vyhlíží speciální zápas",
+          "perex": "Byl to obyčejný trénink tehdejších hokejových šampionů ze Vsetína. Jenže obránce Alexej Jaškin...",
+          "link": "https://www.idnes.cz/hokej/ms-2019/dmitrij-jaskin-rozhovor-cesko-rusko-mistrovstvi-sveta-bratislava.A190512_211900_ms-hokej-2019_rou"
+        },
+        {
+          "headline": "Výbušné psaní z Tirany: dorazily dokumenty k údajné korupci ČEZ",
+          "perex": "Před dvěma lety začala policie prověřovat platby národního energetického kolosu ČEZ. V roce...",
+          "link": "https://www.idnes.cz/zpravy/domaci/cez-policie-podezreni-uplatky-balkan-dokumenty-z-albanie.A190509_134634_domaci_chtl"
+        },
+        {
+          "headline": "Problémy s ruskou ropou trvají, do Maďarska přitekla opět kontaminovaná",
+          "perex": "Problémy s kontaminovanou ruskou ropou trvají i nadále. Ropa z Ruska po odstávce do Evropy...",
+          "link": "https://www.idnes.cz/ekonomika/zahranicni/rusko-kontaminovana-ropa-druzba-madarsko.A190513_133154_eko-zahranicni_fih"
+        },
+        {
+          "headline": "ONLINE: Česko - Rusko 0:0, souboj neporažených, chytá Bartošák",
+          "perex": "Kromě výher nad Švédskem a Norskem získali čeští hokejisté na úvod šampionátu také skvělou formu a vysoké sebevědomí. Potvrdí pozitivní náladu i proti...",
+          "link": "https://www.idnes.cz/hokej/ms-2019/cesko-rusko-mistrovstvi-sveta-v-hokeji.A190509_172412_ms-hokej-2019_rmp"
+        },
+        {
+          "headline": "Kuciakovi vrazi jsou obvinění i z vraždy podnikatele, uvedla policie",
+          "perex": "Slovenská policie obvinila svého bývalého kolegu Tomáše Szabóa a jeho bratrance Miroslava...",
+          "link": "https://www.idnes.cz/zpravy/zahranicni/jan-kuciak-vrazda-miroslav-marcek-a-tomase-szabo.A190513_144031_zahranicni_niv"
+        },
+        {
+          "headline": "Zvedněte ceny. RegioJet zažaloval Flixbus kvůli cenám pod náklady",
+          "perex": "Dlouhodobý spor o ceny jízdenek mezi německým autobusovým dopravcem Flixbus a tuzemským...",
+          "link": "https://www.idnes.cz/ekonomika/doprava/regiojet-flixbus-zaloba-predatorske-ceny-podnakladove-ceny.A190513_130145_eko-doprava_cfr"
+        },
+        {
+          "headline": "Dětem škodí obrazovky a displeje. Ale jinak, než si rodiče obvykle myslí",
+          "perex": "Světová zdravotnická organizace vydala nová doporučení ohledně aktivit vhodných pro malé děti. Nejvíce pozornosti si získaly přísné limity pro čas strávený před obrazovkou. Rodiče by se však podle...",
+          "link": "https://www.idnes.cz/technet/veda/deti-rodice-doporuceni-obrazovky-mobily-aktivity-spanek-objevovani-who-pediatri-psychologove.A190507_133335_veda_pka"
+        },
+        {
+          "headline": "PŘEHLEDNĚ: Ústavní žalobu na Zemana chce podpořit každý čtvrtý senátor",
+          "perex": "Pouze 21 senátorů by nyní s jistotou zvedlo ruku pro podání ústavní žaloby na Miloše Zemana....",
+          "link": "https://www.idnes.cz/zpravy/domaci/senatori-hlasovani-navrh-ustavni-zaloby-na-milose-zemana-prezidenta-republiky.A190507_125307_domaci_lre"
+        },
+        {
+          "headline": "Naklonujte Hronka? Na MS v Bratislavě všechno zvládne jeden",
+          "perex": "Tvrzení, že se českému hokeji nedostává kreativních ofenzivních obránců staví do nového...",
+          "link": "https://www.idnes.cz/hokej/ms-2019/filip-hronek-cesko-hokej-mistrovstvi-sveta-bratislava-detroit.A190512_201807_ms-hokej-2019_rou"
+        },
+        {
+          "headline": "Na dálnici D8 začíná velká uzavírka. Od tunelu Libouchec až do Německa",
+          "perex": "Cesta po dálnici D8 se ode dneška opět komplikuje. Od tunelů Libouchec a Panenská až do...",
+          "link": "https://www.idnes.cz/usti/zpravy/uzavirka-oprava-dalnice-d8-komplikace-tunel-libouchec-panenska-odpocivadlo-am-heidenholz-doprava.A190510_152508_usti-zpravy_pakr"
+        },
+        {
+          "headline": "PŘÍMÝ PŘENOS: Ministři představují návrhy na úpravu daní u tabáku a lihu",
+          "perex": "Ministerstva financí a zdravotnictví představují balíček, který upravuje zdanění tabáku,...",
+          "link": "https://www.idnes.cz/ekonomika/domaci/tabak-alkohol-dane-vlada-alena-schillerova-adam-vojtech.A190513_094800_ekonomika_jn"
+        },
+        {
+          "headline": "Reprezentaci opustil Hanzl. Tým má před Rusy chuť, tvrdí Reichel",
+          "perex": "Národní tým v neděli opustil útočník Robin Hanzl. S pondělním plánovaným příjezdem Radka Faksy...",
+          "link": "https://www.idnes.cz/hokej/ms-2019/robin-hanzl-narodni-tym-reprezentace-mistrovstvi-sveta.A190513_102030_ms-hokej-2019_rmp"
+        },
+        {
+          "headline": "V zemědělství jsme dávno ztratili soběstačnost, říká šéf školního statku",
+          "perex": "Už od roku 1925 funguje v Žabčicích na Brněnsku školní statek spadající pod současnou...",
+          "link": "https://www.idnes.cz/brno/zpravy/skolni-statek-zabcice-zemedelstvi-sucho-kravy-sobestacnost.A190513_143645_brno-zpravy_krut"
+        },
+        {
+          "headline": "Rychlík na Trutnovsku sešrotoval auto na přejezdu a odhodil ho do lesa",
+          "perex": "Střet osobního auta s vlakem u Bílé Třemešné na Trutnovsku nepřežila 42letá řidička. Žena...",
+          "link": "https://www.idnes.cz/hradec-kralove/zpravy/tragicka-nehoda-zeleznicni-prejezd-bila-tremesna-vlak-auto.A190513_155340_hradec-zpravy_the"
+        },
+        {
+          "headline": "Město brání rozvoji firmy, obhajuje podnikatel bourání jedinečného zámečku",
+          "perex": "Město nedodržuje gentlemanské dohody, jeho požadavky jsou šikanózní a tlačí na nás silou. To...",
+          "link": "https://www.idnes.cz/liberec/zpravy/bourani-torzo-zamecek-schlaraffia.A190513_152802_liberec-zpravy_jape"
+        },
+        {
+          "headline": "Bachaři Hitler a Anděl smrti pálili syrské vězně. Nutili je také štěkat",
+          "perex": "Každodenní bití, znásilňování, zapalování vězňů a psychické týrání. Tak popsali listu The New York Times své zkušenosti z tajných věznic syrského prezidenta Bašára Asada přeživší. Rozsáhlý článek se...",
+          "link": "https://www.idnes.cz/zpravy/zahranicni/the-new-york-times-syrie-basar-asad-vyhlazovaci-tabory.A190513_171721_zahranicni_lesa"
+        },
+        {
+          "headline": "Šok pro Slováky. Utkání se silnou Kanadou ztratili v poslední vteřině",
+          "perex": "Slovenští hokejisté musejí skousnout hodně hořkou porážku. Přestože v utkání skupiny A...",
+          "link": "https://www.idnes.cz/hokej/ms-2019/hokej-usa-finsko-slovensko-kanada-souhrn.A190513_112518_ms-hokej-2019_rmp"
+        },
+        {
+          "headline": "Svatba i dovolená. Jinak ale Škodováci po rekordní výplatě šetří",
+          "perex": "Přestože minulý týden našlo zhruba 30 tisíc zaměstnanců firmy Škoda Auto na svých bankovních...",
+          "link": "https://www.idnes.cz/praha/zpravy/rekordni-vyplata-skoda-utraceni.A190513_181421_praha-zpravy_zuf"
+        },
+        {
+          "headline": "Říha po Rusech: Cítil jsem z týmu obrovský respekt. A rád bych Hertla",
+          "perex": "V KHL si udělal velké trenérské jméno, proto ho prohra s Ruskem mrzela dvojnásob. „Velkým...",
+          "link": "https://www.idnes.cz/hokej/ms-2019/hokej-milos-riha-ms-2019-po-rusech-rozhovor.A190513_201922_ms-hokej-2019_cig"
+        },
+        {
+          "headline": "Rudá záře. Při poslední tajné akci StB zmizely desítky tun spisů",
+          "perex": "Materiály o pronásledovaných i o těch, kdo pronásledovali. Všechno zmizelo na sklonku...",
+          "link": "https://www.idnes.cz/zpravy/domaci/stb-ruda-zare-statni-bezpecnost-vaclav-havel-komunismus-alojz-lorenc.A190506_100750_domaci_mah"
+        },
+        {
+          "headline": "Demonstrace potřetí. Lidé znovu protestovali proti Benešové",
+          "perex": "Už potřetí demonstrovali lidé v Praze, Brně a dalších městech proti nové ministryni...",
+          "link": "https://www.idnes.cz/zpravy/domaci/demonstrace-proti-ministryni-spravedlnosti-benesove-milion-chvilek-pro-demokracii.A190513_163010_domaci_niv"
+        },
+        {
+          "headline": "Chystá českého Forresta Gumpa. Igor Orozovič byl hostem Za scénou",
+          "perex": "V neděli se herec Igor Orozovič divákům naposledy představil v třídílné kriminální sérii Jana...",
+          "link": "https://www.idnes.cz/kultura/film-televize/igor-orozovic-za-scenou.A190509_123043_filmvideo_kiz"
+        },
+        {
+          "headline": "Muž předstíral retardaci, na dávkách vylákal přes milion. Hrozí mu vězení",
+          "perex": "Státní zástupkyně obžalovala muže, který po dvanáct let hrál mentální retardaci. Předstíral,...",
+          "link": "https://www.idnes.cz/zpravy/domaci/predstirani-retardace-muz-soud-obzaloba-statni-zastupce.A190513_125402_domaci_klf"
+        },
+        {
+          "headline": "Je to kopanec do koulí, ale lepší, že to přišlo teď, řekl Gudas po krachu",
+          "perex": "Ofenzivní mašina se zadrhla, nefungovaly přesilovky, obrana až příliš zmatkovala. I proto...",
+          "link": "https://www.idnes.cz/hokej/ms-2019/radko-gudas-prohra-rozhovor-cesko-rusko-mistrovstvi-sveta-bratislava-koule.A190513_193727_ms-hokej-2019_daj"
+        },
+        {
+          "headline": "Vnitro navrhuje zjednodušení právního řádu, chce zrušit až 800 zákonů",
+          "perex": "Ministerstvo vnitra navrhuje zrušení více než 800 zákonů, nařízení a vyhlášek, které jsou sice...",
+          "link": "https://www.idnes.cz/zpravy/domaci/ministerstvo-vnitra-zjednoduseni-pravniho-radu-800-zakonu.A190513_155451_domaci_lre"
+        },
+        {
+          "headline": "Vědkyně se přihlásila do televizní soutěže, aby získala peníze na výzkum",
+          "perex": "Za probíhající ekonomické krize a vládních škrtů ve financování výzkumu se argentinská vědkyně...",
+          "link": "https://www.idnes.cz/zpravy/zahranicni/vyzkum-televitna-soutez-vedkyne-argentina-rakovina.A190513_125538_zahranicni_jn"
+        },
+        {
+          "headline": "Ročně se ukradnou kola za sto milionů, police najde pětinu z nich",
+          "perex": "Každý den se podle statistik policie ČR ukradne 13 jízdních kol a elektrokol. V loňském roce...",
+          "link": "https://www.idnes.cz/cestovani/na-kole/kradez-kola-elektrokola-zlodej-policie-skody.A190513_112903_na-kolo_hig"
+        },
+        {
+          "headline": "Nejde se starat o chudé z celého světa, máme vlastní, vzkázala Le Penová EU",
+          "perex": "Důležitost nadcházejících evropských voleb podle předsedkyně francouzského krajně pravicového...",
+          "link": "https://www.idnes.cz/zpravy/zahranicni/le-penova-evropske-volby-rovnovaha-globalizace-cesko-rakousko-bratislava.A190513_160347_zahranicni_lesa"
+        }
+      ],
+      "hours": [
+        {
+          "time": 1557698491028,
+          "articles": [
+            0,
+            1,
+            3,
+            6
+          ]
+        },
+        {
+          "time": 1557699388330,
+          "articles": [
+            0,
+            1,
+            2,
+            3
+          ]
+        },
+        {
+          "time": 1557700288430,
+          "articles": [
+            0,
+            1,
+            2,
+            3
+          ]
+        },
+        {
+          "time": 1557701188791,
+          "articles": [
+            0,
+            1,
+            2,
+            3
+          ]
+        },
+        {
+          "time": 1557702088511,
+          "articles": [
+            0,
+            1,
+            2,
+            3
+          ]
+        },
+        {
+          "time": 1557702988832,
+          "articles": [
+            4,
+            0,
+            1,
+            5
+          ]
+        },
+        {
+          "time": 1557703888611,
+          "articles": [
+            4,
+            0,
+            1,
+            5
+          ]
+        },
+        {
+          "time": 1557704788188,
+          "articles": [
+            4,
+            0,
+            1,
+            5
+          ]
+        },
+        {
+          "time": 1557705691108,
+          "articles": [
+            4,
+            0,
+            1,
+            5
+          ]
+        },
+        {
+          "time": 1557706588391,
+          "articles": [
+            4,
+            0,
+            1,
+            5
+          ]
+        },
+        {
+          "time": 1557707488868,
+          "articles": [
+            4,
+            0,
+            1,
+            5
+          ]
+        },
+        {
+          "time": 1557708388928,
+          "articles": [
+            4,
+            0,
+            1,
+            5
+          ]
+        },
+        {
+          "time": 1557709288588,
+          "articles": [
+            4,
+            0,
+            1,
+            5
+          ]
+        },
+        {
+          "time": 1557710188628,
+          "articles": [
+            4,
+            0,
+            1,
+            5
+          ]
+        },
+        {
+          "time": 1557711088568,
+          "articles": [
+            4,
+            0,
+            1,
+            5
+          ]
+        },
+        {
+          "time": 1557711988148,
+          "articles": [
+            4,
+            0,
+            1,
+            5
+          ]
+        },
+        {
+          "time": 1557712890422,
+          "articles": [
+            4,
+            0,
+            1,
+            5
+          ]
+        },
+        {
+          "time": 1557713788403,
+          "articles": [
+            4,
+            0,
+            1,
+            5
+          ]
+        },
+        {
+          "time": 1557714689282,
+          "articles": [
+            4,
+            0,
+            1,
+            5
+          ]
+        },
+        {
+          "time": 1557715588462,
+          "articles": [
+            4,
+            0,
+            1,
+            5
+          ]
+        },
+        {
+          "time": 1557716488343,
+          "articles": [
+            4,
+            0,
+            1,
+            5
+          ]
+        },
+        {
+          "time": 1557717388722,
+          "articles": [
+            4,
+            0,
+            1,
+            5
+          ]
+        },
+        {
+          "time": 1557718288562,
+          "articles": [
+            4,
+            0,
+            10,
+            1
+          ]
+        },
+        {
+          "time": 1557719188162,
+          "articles": [
+            4,
+            0,
+            10,
+            1
+          ]
+        },
+        {
+          "time": 1557720088662,
+          "articles": [
+            4,
+            0,
+            10,
+            1
+          ]
+        },
+        {
+          "time": 1557720990503,
+          "articles": [
+            4,
+            0,
+            10,
+            1
+          ]
+        },
+        {
+          "time": 1557721888361,
+          "articles": [
+            4,
+            0,
+            10,
+            1
+          ]
+        },
+        {
+          "time": 1557722788640,
+          "articles": [
+            4,
+            0,
+            10,
+            1
+          ]
+        },
+        {
+          "time": 1557723688719,
+          "articles": [
+            4,
+            0,
+            10,
+            1
+          ]
+        },
+        {
+          "time": 1557724588459,
+          "articles": [
+            4,
+            0,
+            11,
+            12
+          ]
+        },
+        {
+          "time": 1557725488781,
+          "articles": [
+            4,
+            0,
+            11,
+            12
+          ]
+        },
+        {
+          "time": 1557726389021,
+          "articles": [
+            4,
+            0,
+            11,
+            12
+          ]
+        },
+        {
+          "time": 1557727288561,
+          "articles": [
+            4,
+            0,
+            11,
+            12
+          ]
+        },
+        {
+          "time": 1557728190833,
+          "articles": [
+            4,
+            0,
+            11,
+            12
+          ]
+        },
+        {
+          "time": 1557729089054,
+          "articles": [
+            4,
+            0,
+            23,
+            11
+          ]
+        },
+        {
+          "time": 1557729988894,
+          "articles": [
+            4,
+            0,
+            23,
+            11
+          ]
+        },
+        {
+          "time": 1557730888993,
+          "articles": [
+            4,
+            0,
+            23,
+            7
+          ]
+        },
+        {
+          "time": 1557731788652,
+          "articles": [
+            4,
+            9,
+            0,
+            23
+          ]
+        },
+        {
+          "time": 1557732688915,
+          "articles": [
+            4,
+            9,
+            0,
+            23
+          ]
+        },
+        {
+          "time": 1557733588513,
+          "articles": [
+            4,
+            9,
+            0,
+            23
+          ]
+        },
+        {
+          "time": 1557734488754,
+          "articles": [
+            7,
+            8,
+            4,
+            9
+          ]
+        },
+        {
+          "time": 1557735390648,
+          "articles": [
+            7,
+            8,
+            4,
+            9
+          ]
+        },
+        {
+          "time": 1557736288789,
+          "articles": [
+            20,
+            7,
+            8,
+            4
+          ]
+        },
+        {
+          "time": 1557737189068,
+          "articles": [
+            20,
+            7,
+            8,
+            4
+          ]
+        },
+        {
+          "time": 1557738088610,
+          "articles": [
+            20,
+            7,
+            8,
+            4
+          ]
+        },
+        {
+          "time": 1557738988708,
+          "articles": [
+            20,
+            21,
+            7,
+            22
+          ]
+        },
+        {
+          "time": 1557739888908,
+          "articles": [
+            20,
+            24,
+            21,
+            7
+          ]
+        },
+        {
+          "time": 1557740788648,
+          "articles": [
+            20,
+            24,
+            25,
+            21
+          ]
+        },
+        {
+          "time": 1557741688868,
+          "articles": [
+            20,
+            24,
+            25,
+            21
+          ]
+        },
+        {
+          "time": 1557742593466,
+          "articles": [
+            20,
+            25,
+            35,
+            21
+          ]
+        },
+        {
+          "time": 1557743489187,
+          "articles": [
+            20,
+            35,
+            25,
+            21
+          ]
+        },
+        {
+          "time": 1557744389788,
+          "articles": [
+            20,
+            35,
+            25,
+            21
+          ]
+        },
+        {
+          "time": 1557745288927,
+          "articles": [
+            20,
+            35,
+            25,
+            21
+          ]
+        },
+        {
+          "time": 1557746188305,
+          "articles": [
+            15,
+            25,
+            20,
+            7
+          ]
+        },
+        {
+          "time": 1557747089045,
+          "articles": [
+            15,
+            25,
+            20,
+            7
+          ]
+        },
+        {
+          "time": 1557747988266,
+          "articles": [
+            15,
+            25,
+            20,
+            7
+          ]
+        },
+        {
+          "time": 1557748888288,
+          "articles": [
+            15,
+            25,
+            20,
+            7
+          ]
+        },
+        {
+          "time": 1557749790729,
+          "articles": [
+            15,
+            25,
+            20,
+            7
+          ]
+        },
+        {
+          "time": 1557750689228,
+          "articles": [
+            15,
+            14,
+            16,
+            36
+          ]
+        },
+        {
+          "time": 1557751590772,
+          "articles": [
+            15,
+            14,
+            16,
+            36
+          ]
+        },
+        {
+          "time": 1557752488731,
+          "articles": [
+            13,
+            14,
+            15,
+            16
+          ]
+        },
+        {
+          "time": 1557753389331,
+          "articles": [
+            18,
+            14,
+            13,
+            16
+          ]
+        },
+        {
+          "time": 1557754288554,
+          "articles": [
+            18,
+            14,
+            13,
+            16
+          ]
+        },
+        {
+          "time": 1557755188132,
+          "articles": [
+            18,
+            14,
+            13,
+            16
+          ]
+        },
+        {
+          "time": 1557756091131,
+          "articles": [
+            18,
+            14,
+            13,
+            16
+          ]
+        },
+        {
+          "time": 1557756988850,
+          "articles": [
+            17,
+            18,
+            19,
+            13
+          ]
+        },
+        {
+          "time": 1557757890777,
+          "articles": [
+            17,
+            19,
+            39,
+            40
+          ]
+        },
+        {
+          "time": 1557758788654,
+          "articles": [
+            17,
+            26,
+            38,
+            19
+          ]
+        },
+        {
+          "time": 1557759688734,
+          "articles": [
+            17,
+            26,
+            38,
+            19
+          ]
+        },
+        {
+          "time": 1557760588976,
+          "articles": [
+            17,
+            26,
+            27,
+            19
+          ]
+        },
+        {
+          "time": 1557761488655,
+          "articles": [
+            17,
+            26,
+            27,
+            19
+          ]
+        },
+        {
+          "time": 1557762388794,
+          "articles": [
+            17,
+            26,
+            27,
+            19
+          ]
+        },
+        {
+          "time": 1557763288875,
+          "articles": [
+            17,
+            26,
+            27,
+            19
+          ]
+        },
+        {
+          "time": 1557764188594,
+          "articles": [
+            17,
+            26,
+            27,
+            28
+          ]
+        },
+        {
+          "time": 1557765088614,
+          "articles": [
+            17,
+            26,
+            27,
+            28
+          ]
+        },
+        {
+          "time": 1557765991059,
+          "articles": [
+            17,
+            34,
+            27,
+            26
+          ]
+        },
+        {
+          "time": 1557766888799,
+          "articles": [
+            17,
+            34,
+            41,
+            27
+          ]
+        },
+        {
+          "time": 1557767788980,
+          "articles": [
+            17,
+            34,
+            41,
+            27
+          ]
+        },
+        {
+          "time": 1557768689099,
+          "articles": [
+            17,
+            34,
+            41,
+            31
+          ]
+        },
+        {
+          "time": 1557769588499,
+          "articles": [
+            17,
+            34,
+            41,
+            31
+          ]
+        },
+        {
+          "time": 1557770489500,
+          "articles": [
+            34,
+            29,
+            17,
+            41
+          ]
+        },
+        {
+          "time": 1557771388340,
+          "articles": [
+            29,
+            33,
+            34,
+            17
+          ]
+        },
+        {
+          "time": 1557772288519,
+          "articles": [
+            29,
+            33,
+            34,
+            37
+          ]
+        },
+        {
+          "time": 1557773190596,
+          "articles": [
+            29,
+            33,
+            34,
+            37
+          ]
+        },
+        {
+          "time": 1557774088457,
+          "articles": [
+            29,
+            33,
+            34,
+            37
+          ]
+        },
+        {
+          "time": 1557774988378,
+          "articles": [
+            29,
+            33,
+            34,
+            37
+          ]
+        },
+        {
+          "time": 1557775888776,
+          "articles": [
+            29,
+            37,
+            31,
+            33
+          ]
+        },
+        {
+          "time": 1557776788938,
+          "articles": [
+            29,
+            30,
+            31,
+            37
+          ]
+        },
+        {
+          "time": 1557777688998,
+          "articles": [
+            29,
+            30,
+            31,
+            37
+          ]
+        },
+        {
+          "time": 1557778588536,
+          "articles": [
+            29,
+            30,
+            31,
+            37
+          ]
+        },
+        {
+          "time": 1557779488156,
+          "articles": [
+            29,
+            30,
+            31,
+            32
+          ]
+        },
+        {
+          "time": 1557780390707,
+          "articles": [
+            29,
+            30,
+            31,
+            32
+          ]
+        },
+        {
+          "time": 1557781288766,
+          "articles": [
+            29,
+            30,
+            31,
+            32
+          ]
+        },
+        {
+          "time": 1557782188807,
+          "articles": [
+            29,
+            30,
+            31,
+            32
+          ]
+        },
+        {
+          "time": 1557783088506,
+          "articles": [
+            29,
+            30,
+            31,
+            32
+          ]
+        },
+        {
+          "time": 1557783988686,
+          "articles": [
+            29,
+            30,
+            31,
+            32
+          ]
+        }
+      ]
+    },
+    "lidovky": {
+      "articles": [
+        {
+          "headline": "Zásoby hélia se tenčí, nedostatek vzácného plynu ohrožuje večírky i zdravotnictví",
+          "perex": "Trhy již několik měsíců bojují s nedostatkem helia, protože dodávky ze Spojených států jsou nízké a poptávka po tomto...",
+          "link": "https://www.lidovky.cz/byznys/firmy-a-trhy/zasoby-helia-se-tenci-nedostatek-vzacneho-plynu-ohrozuje-vecirky-i-zdravotnictvi.A190512_195809_firmy-trhy_ele"
+        },
+        {
+          "headline": "Ozbrojenci vtrhli do kostela v Burkině Faso a začali střílet po věřících, zabili šest lidí včetně kněze",
+          "perex": "Skupina útočníků v neděli v západoafrické Burkině Faso přepadla katolický kostel a zabila při tom šest lidí včetně...",
+          "link": "https://www.lidovky.cz/svet/skupina-ozbrojenych-muzu-strilela-v-kostele-v-burkine-faso-pri-utoku-zemrelo-sest-lidi-vcetne-kneze.A190512_185402_ln_zahranici_ele"
+        },
+        {
+          "headline": "Odvolaný Fajt dostal v Národní galerii nabídku na finančního ředitele. Nemohl jsem jinak, řekl prozatímní šéf",
+          "perex": "Odvolaný ředitel Národní galerie Praha (NGP) Jiří Fajt dostal od vedení galerie nabídku zastávat místo finančního...",
+          "link": "https://www.lidovky.cz/domov/misto-financniho-reditele-pro-fajta-budu-po-stankovi-chtit-vysvetleni-uvedl-hamacek.A190512_154901_ln_domov_ele"
+        },
+        {
+          "headline": "Záhadná smrt: německá policie našla v pasovském penzionu tři lidi zastřelené kuší",
+          "perex": "Bavorská policie vyšetřuje záhadnou smrt tří lidí, jejichž těla v sobotu našla v jednom pasovském penzionu. Muž a dvě...",
+          "link": "https://www.lidovky.cz/svet/tri-obeti-probodane-sipy-nemecka-policie-vysetruje-vrazdu-kusi.A190512_140959_ln_zahranici_ele"
+        },
+        {
+          "headline": "‚Foglarovské retro‘ či ‚vypadá jako Helmut Kohl‘. Experti komentovali volební billboardy, servítky si nebrali",
+          "perex": "Do eurovoleb zbývají necelé dva týdny. Politické strany a hnutí už před časem vizuálně zaplavily veřejný prostor...",
+          "link": "https://www.lidovky.cz/domov/predvolebni-billboardy-stale-dokola-prosle-a-zavadne-zbozi.A190506_171456_ln_domov_krev"
+        },
+        {
+          "headline": "'Už mě to nebaví.' Mladí nevydrží v práci, každý třetí dal za poslední rok výpověď",
+          "perex": "„Končím. Práce na přepážce mě už nebaví,“ sdělila řediteli minulý týden pětadvacetiletá pracovnice českobudějovické...",
+          "link": "https://www.lidovky.cz/noviny/uz-me-to-nebavi-mladi-nevydrzi-v-praci-kazdy-treti-dal-za-posledni-rok-vypoved.A190512_210715_ln_noviny_vag"
+        },
+        {
+          "headline": "Praha 10 zavede pořadníky na byty. 'Nezměrný prostor pro korupci,' kritizuje metodu opozice",
+          "perex": "Obecní byty budou v Praze 10 putovat k zájemcům podle bodovacího systému pořadníků. Novou metodiku, se kterou přišla...",
+          "link": "https://www.lidovky.cz/novinari/michal-bernath.N3981"
+        },
+        {
+          "headline": "Biolog: Menší organismy jsou ohroženější, velké se naopak šíří. Proto tady máme vlky nebo bobry",
+          "perex": "Velcí savci jako je vlk jsou většinou inteligentní a snadno se učí. Menší organismy jsou ohroženější. Zatímco sucho...",
+          "link": "https://www.lidovky.cz/novinari/eliska-nova.N3653"
+        },
+        {
+          "headline": "Švédsko znovu otevře vyšetřování Assange, v zemi čelí obvinění ze znásilnění",
+          "perex": "Švédsko znovu zahájí předběžné vyšetřování zakladatele serveru WikiLeaks Juliana Assange, který v zemi čelí obvinění ze...",
+          "link": "https://www.lidovky.cz/svet/svedsko-znovu-otevre-vysetrovani-assange-v-zemi-celi-obvineni-ze-znasilneni.A190513_111602_ln_zahranici_ele"
+        },
+        {
+          "headline": "Rusové? Vypadají, že je hokej moc nebaví, říká Holeček. ‚Myslel jsem, že to budou válcovat‘",
+          "perex": "Dva zápasy, šest bodů. Česká hokejová reprezentace na šampionátu zatím válí, což se pochopitelně zamlouvá i...",
+          "link": "https://www.lidovky.cz/novinari/jan-krejcar.N4197"
+        },
+        {
+          "headline": "‚Komunistická diktatura.‘ Venezuelský generál vyzval armádu, aby povstala proti Madurovi",
+          "perex": "Venezuelský generál vyzval armádu, aby povstala proti prezidentu Nicolásovi Madurovi, který se díky podpoře vojska drží...",
+          "link": "https://www.lidovky.cz/svet/komunisticka-diktatura-venezuelsky-general-vyzval-armadu-aby-povstala-proti-madurovi.A190513_075904_ln_zahranici_ele"
+        },
+        {
+          "headline": "VIDEO: Muž začal na přechodu v Pardubicích řídit provoz. Došli si pro něj strážníci, dostal pokutu",
+          "perex": "Neznámý muž si chtěl během přecházení silnice vyzkoušet roli dopravního policisty řídícího dopravu gesty rukou. Pro...",
+          "link": "https://www.lidovky.cz/domov/video-muz-zacal-v-pardubicich-ridit-dopravu-dosli-si-pro-nej-straznici.A190513_103744_ln_domov_mber"
+        },
+        {
+          "headline": "Vyšší daně na tabák, alkohol a hazard? Roste životní úroveň a jsou dostupnější, vysvětluje vládní návrh Schillerová",
+          "perex": "Ministerstvo financí připravilo návrh na zvýšení spotřebních daní z tabáku, lihu a hazardu jako reakci na růst...",
+          "link": "https://www.lidovky.cz/byznys/statni-pokladna/stat-chce-zvysit-dane-na-tabak-alkohol-a-hazard-jsou-nyni-dostupnejsi-tvrdi-schillerova.A190513_123629_statni-pokladna_mpr"
+        },
+        {
+          "headline": "Odborníky přesvědčil, že má IQ 35. Dvanáct let předstíral mentální retardaci, teď hrozí mu osm let vězení",
+          "perex": "Státní zástupkyně obžalovala muže, který podle pražské policie předstíral po dobu 12 let mentální retardaci. Na dotaz...",
+          "link": "https://www.lidovky.cz/domov/muz-dvanact-let-predstiral-mentalni-retardaci-ted-mu-hrozi-az-osmilete-vezeni.A190513_113146_ln_domov_ele"
+        },
+        {
+          "headline": "U polárního kruhu bylo 31 °C. Nad Ruskem se objevila teplotní anomálie",
+          "perex": "Severozápad Ruska zasáhla výjimečně teplá fronta, která během neděle ve městě Kojnas v Archangelské oblasti zahřála...",
+          "link": "https://www.lidovky.cz/svet/vyjimecne-teploty-zasahly-rusko-v-nedeli-bylo-za-polarnim-kruhem-31-c.A190513_123217_ln_zahranici_mha"
+        },
+        {
+          "headline": "ŽIVĚ: ‚Nejsme slepí‘. Lidé už potřetí demonstrují proti ministryni Benešové",
+          "perex": "V pondělí již potřetí lidé protestují v Praze, Brně a dalších městech proti nové ministryni spravedlnosti Marii...",
+          "link": "https://www.lidovky.cz/novinari/robert-sattler.N3808"
+        },
+        {
+          "headline": "Americká detektivka z Prahy nefungovala. Seriál Whiskey Cavalier končí po první sérii",
+          "perex": "Televize ABC ukončila detektivní seriál Whiskey Cavalier. Dílo, které se odehrávalo z velké části i v Praze, se...",
+          "link": "https://www.lidovky.cz/novinari/jaroslav-totusek.N3899"
+        },
+        {
+          "headline": "Čína ‚vrací úder‘, uvalí další cla na zboží z USA za víc než bilion korun. Trump ji před krokem varoval",
+          "perex": "Peking se rozhodl od 1. června uvalit nová cla na americké zboží, jehož roční dovoz do Číny dosahuje hodnoty 60 miliard...",
+          "link": "https://www.lidovky.cz/byznys/firmy-a-trhy/peking-se-rozhodl-uvalit-dodatecna-cla-na-americke-zbozi.A190513_145729_firmy-trhy_ele"
+        },
+        {
+          "headline": "Znepokojení nad volbou šéfky Čapkova památníku. Spolek chce vědět, díky čemu dostala snacha radního post",
+          "perex": "Společnost Ferdinanda Peroutky vyzvala středočeskou hejtmanku Jaroslavu Pokornou Jermanovou (ANO) ke zveřejnění...",
+          "link": "https://www.lidovky.cz/domov/znepokojeni-nad-volbou-sefky-capkova-pamatniku-spolecnost-zada-zverejneni-koncepce.A190513_132620_ln_domov_ele"
+        },
+        {
+          "headline": "ŽIVĚ: Rusko - Česko 2:0. Hokejisté trefují jen tyčky",
+          "perex": "Čeští hokejisté hrají své třetí utkání na mistrovství světa. Po výhrách nad Švédskem a Norskem jejich síly prověřuje...",
+          "link": "https://www.lidovky.cz/sport/mistrovstvi-sveta-v-hokeji-2019/zive-rusko-cesko-2-0-hokejiste-trefuji-jen-tycky.A190513_153159_ln-sport-mshokej2019_lar"
+        },
+        {
+          "headline": "Čeští hokejisté na šampionátu poprvé padli. S Ruskem prohráli 0:3",
+          "perex": "Čeští hokejisté na mistrovství světa na Slovensku po dvou výhrách poprvé ztratili body, když v Bratislavě ve třetím...",
+          "link": "https://www.lidovky.cz/sport/mistrovstvi-sveta-v-hokeji-2019/cesti-hokejiste-prohrali-s-rusy-0-3-trapili-se-v-zakonceni.A190513_153159_ln-sport-mshokej2019_lar"
+        },
+        {
+          "headline": "ŽIVĚ: Lidé už potřetí demonstrují proti nové ministryni spravedlnosti Benešové",
+          "perex": "V pondělí již potřetí lidé protestují v Praze, Brně a dalších městech proti nové ministryni spravedlnosti Marii...",
+          "link": "https://www.lidovky.cz/domov/lide-uz-potreti-protestuji-proti-nove-ministryni-spravedlnosti-benesove.A190513_184115_ln_domov_ele"
+        },
+        {
+          "headline": "ŽIVĚ: Rusko - Česko 1:0. Druhý gól odvrátil na brankové čáře Hronek",
+          "perex": "Sledujte zápas MS v hokeji skupiny B mezi Ruskem a Českem v podrobné online reportáži.",
+          "link": "https://www.lidovky.cz/sport/mistrovstvi-sveta-v-hokeji-2019/zive-rusko-cesko-1-0-druhy-gol-odvratil-na-brankove-care-hronek.A190513_153159_ln-sport-mshokej2019_lar"
+        },
+        {
+          "headline": "ŽIVĚ: Rusko - Česko 0:0 v 1. třetině. Sborná nastupuje v plné síle, Češi sestavu neměnili",
+          "perex": "Sledujte zápas MS v hokeji skupiny B mezi Ruskem a Českem v podrobné online reportáži.",
+          "link": "https://www.lidovky.cz/sport/mistrovstvi-sveta-v-hokeji-2019/zive-rusko-cesko-dulezity-zapas-v-boji-o-ctvrtfinale-v-brance-nastoupi-bartosak.A190513_153159_ln-sport-mshokej2019_lar"
+        },
+        {
+          "headline": "ŽIVĚ: Rusko - Česko 2:0. Osamocený Gusev nedal Bartošákovi šanci",
+          "perex": "Sledujte zápas MS v hokeji skupiny B mezi Ruskem a Českem v podrobné online reportáži.",
+          "link": "https://www.lidovky.cz/sport/mistrovstvi-sveta-v-hokeji-2019/zive-rusko-cesko-2-0-osamoceny-gusev-nedal-bartosakovi-sanci.A190513_153159_ln-sport-mshokej2019_lar"
+        },
+        {
+          "headline": "Prohra 0:3. Na začátku jsme hráli hodně křečovitě, hodnotil Růžička",
+          "perex": "Čeští hokejisté poprvé na mistrovství světa prohráli. Rusku podlehli 0:3. „Rozhodly hlavně přesilovky, kde jsme si na...",
+          "link": "https://www.lidovky.cz/sport/mistrovstvi-sveta-v-hokeji-2019/proti-rusum-jsme-hrali-na-zacatku-krecovite-hodnotil-prohru-0-3-ruzicka.A190513_191959_ln-sport-mshokej2019_lar"
+        },
+        {
+          "headline": "ŽIVĚ: Rusko - Česko 1:0 po 1. třetině. Chybu při střídání potrestal Andronov",
+          "perex": "Sledujte zápas MS v hokeji skupiny B mezi Ruskem a Českem v podrobné online reportáži.",
+          "link": "https://www.lidovky.cz/sport/mistrovstvi-sveta-v-hokeji-2019/zive-rusko-cesko-1-0-po-1-tretine-chybu-pri-stridani-potrestal-andronov.A190513_153159_ln-sport-mshokej2019_lar"
+        },
+        {
+          "headline": "ŽIVĚ: Rusko - Česko 1:0 v 1. třetině. Chybu při střídání potrestal Andronov",
+          "perex": "Sledujte zápas MS v hokeji skupiny B mezi Ruskem a Českem v podrobné online reportáži.",
+          "link": "https://www.lidovky.cz/sport/mistrovstvi-sveta-v-hokeji-2019/zive-rusko-cesko-1-0-v-1-tretine-chybu-pri-stridani-potrestal-andronov.A190513_153159_ln-sport-mshokej2019_lar"
+        },
+        {
+          "headline": "ŽIVĚ: Rusko - Česko 2:0. Hokejisté se v zakončení trápí",
+          "perex": "Čeští hokejisté hrají své třetí utkání na mistrovství světa. Po výhrách nad Švédskem a Norskem jejich síly prověřuje...",
+          "link": "https://www.lidovky.cz/sport/mistrovstvi-sveta-v-hokeji-2019/zive-rusko-cesko-2-0-hokejiste-se-v-zakonceni-trapi.A190513_153159_ln-sport-mshokej2019_lar"
+        }
+      ],
+      "hours": [
+        {
+          "time": 1557698490549,
+          "articles": [
+            0,
+            1,
+            2,
+            3
+          ]
+        },
+        {
+          "time": 1557699388530,
+          "articles": [
+            0,
+            1,
+            2,
+            3
+          ]
+        },
+        {
+          "time": 1557700288608,
+          "articles": [
+            0,
+            1,
+            2,
+            3
+          ]
+        },
+        {
+          "time": 1557701188571,
+          "articles": [
+            0,
+            1,
+            2,
+            3
+          ]
+        },
+        {
+          "time": 1557702088448,
+          "articles": [
+            0,
+            1,
+            2,
+            3
+          ]
+        },
+        {
+          "time": 1557702988709,
+          "articles": [
+            0,
+            1,
+            2,
+            3
+          ]
+        },
+        {
+          "time": 1557703888490,
+          "articles": [
+            0,
+            1,
+            2,
+            3
+          ]
+        },
+        {
+          "time": 1557704788289,
+          "articles": [
+            0,
+            1,
+            2,
+            3
+          ]
+        },
+        {
+          "time": 1557705690529,
+          "articles": [
+            0,
+            1,
+            2,
+            3
+          ]
+        },
+        {
+          "time": 1557706588268,
+          "articles": [
+            0,
+            1,
+            2,
+            3
+          ]
+        },
+        {
+          "time": 1557707488871,
+          "articles": [
+            0,
+            1,
+            2,
+            3
+          ]
+        },
+        {
+          "time": 1557708388628,
+          "articles": [
+            0,
+            1,
+            2,
+            3
+          ]
+        },
+        {
+          "time": 1557709288228,
+          "articles": [
+            0,
+            1,
+            2,
+            3
+          ]
+        },
+        {
+          "time": 1557710188630,
+          "articles": [
+            0,
+            1,
+            2,
+            3
+          ]
+        },
+        {
+          "time": 1557711088368,
+          "articles": [
+            0,
+            1,
+            2,
+            3
+          ]
+        },
+        {
+          "time": 1557711988389,
+          "articles": [
+            0,
+            1,
+            2,
+            3
+          ]
+        },
+        {
+          "time": 1557712890283,
+          "articles": [
+            0,
+            1,
+            2,
+            3
+          ]
+        },
+        {
+          "time": 1557713788405,
+          "articles": [
+            0,
+            1,
+            2,
+            3
+          ]
+        },
+        {
+          "time": 1557714688642,
+          "articles": [
+            0,
+            1,
+            2,
+            3
+          ]
+        },
+        {
+          "time": 1557715588703,
+          "articles": [
+            0,
+            1,
+            2,
+            3
+          ]
+        },
+        {
+          "time": 1557716488702,
+          "articles": [
+            0,
+            1,
+            2,
+            3
+          ]
+        },
+        {
+          "time": 1557717388346,
+          "articles": [
+            4,
+            5,
+            6,
+            7
+          ]
+        },
+        {
+          "time": 1557718288625,
+          "articles": [
+            4,
+            5,
+            6,
+            7
+          ]
+        },
+        {
+          "time": 1557719188203,
+          "articles": [
+            4,
+            5,
+            6,
+            7
+          ]
+        },
+        {
+          "time": 1557720088562,
+          "articles": [
+            4,
+            5,
+            6,
+            7
+          ]
+        },
+        {
+          "time": 1557720990501,
+          "articles": [
+            4,
+            5,
+            6,
+            7
+          ]
+        },
+        {
+          "time": 1557721888299,
+          "articles": [
+            4,
+            5,
+            6,
+            7
+          ]
+        },
+        {
+          "time": 1557722788500,
+          "articles": [
+            4,
+            5,
+            6,
+            7
+          ]
+        },
+        {
+          "time": 1557723688640,
+          "articles": [
+            4,
+            5,
+            6,
+            7
+          ]
+        },
+        {
+          "time": 1557724588280,
+          "articles": [
+            4,
+            5,
+            6,
+            7
+          ]
+        },
+        {
+          "time": 1557725488539,
+          "articles": [
+            4,
+            5,
+            6,
+            7
+          ]
+        },
+        {
+          "time": 1557726388803,
+          "articles": [
+            4,
+            5,
+            6,
+            7
+          ]
+        },
+        {
+          "time": 1557727288480,
+          "articles": [
+            4,
+            5,
+            6,
+            7
+          ]
+        },
+        {
+          "time": 1557728190835,
+          "articles": [
+            4,
+            5,
+            6,
+            7
+          ]
+        },
+        {
+          "time": 1557729088893,
+          "articles": [
+            4,
+            5,
+            6,
+            7
+          ]
+        },
+        {
+          "time": 1557729989073,
+          "articles": [
+            4,
+            5,
+            6,
+            7
+          ]
+        },
+        {
+          "time": 1557730888833,
+          "articles": [
+            4,
+            5,
+            6,
+            7
+          ]
+        },
+        {
+          "time": 1557731788733,
+          "articles": [
+            4,
+            5,
+            6,
+            7
+          ]
+        },
+        {
+          "time": 1557732689115,
+          "articles": [
+            4,
+            5,
+            6,
+            7
+          ]
+        },
+        {
+          "time": 1557733588692,
+          "articles": [
+            4,
+            5,
+            6,
+            7
+          ]
+        },
+        {
+          "time": 1557734488913,
+          "articles": [
+            4,
+            5,
+            6,
+            10
+          ]
+        },
+        {
+          "time": 1557735390689,
+          "articles": [
+            4,
+            5,
+            6,
+            10
+          ]
+        },
+        {
+          "time": 1557736288788,
+          "articles": [
+            4,
+            5,
+            6,
+            10
+          ]
+        },
+        {
+          "time": 1557737188808,
+          "articles": [
+            4,
+            5,
+            6,
+            10
+          ]
+        },
+        {
+          "time": 1557738088769,
+          "articles": [
+            4,
+            5,
+            10,
+            6
+          ]
+        },
+        {
+          "time": 1557738988847,
+          "articles": [
+            4,
+            5,
+            10,
+            6
+          ]
+        },
+        {
+          "time": 1557739888588,
+          "articles": [
+            4,
+            5,
+            8,
+            9
+          ]
+        },
+        {
+          "time": 1557740788868,
+          "articles": [
+            4,
+            5,
+            8,
+            9
+          ]
+        },
+        {
+          "time": 1557741688630,
+          "articles": [
+            4,
+            5,
+            11,
+            9
+          ]
+        },
+        {
+          "time": 1557742593728,
+          "articles": [
+            4,
+            5,
+            11,
+            9
+          ]
+        },
+        {
+          "time": 1557743489008,
+          "articles": [
+            4,
+            5,
+            11,
+            9
+          ]
+        },
+        {
+          "time": 1557744388547,
+          "articles": [
+            4,
+            5,
+            11,
+            9
+          ]
+        },
+        {
+          "time": 1557745288926,
+          "articles": [
+            12,
+            5,
+            4,
+            13
+          ]
+        },
+        {
+          "time": 1557746188506,
+          "articles": [
+            12,
+            5,
+            4,
+            13
+          ]
+        },
+        {
+          "time": 1557747088865,
+          "articles": [
+            14,
+            5,
+            4,
+            13
+          ]
+        },
+        {
+          "time": 1557747988325,
+          "articles": [
+            14,
+            5,
+            4,
+            13
+          ]
+        },
+        {
+          "time": 1557748888285,
+          "articles": [
+            14,
+            5,
+            4,
+            13
+          ]
+        },
+        {
+          "time": 1557749790649,
+          "articles": [
+            14,
+            5,
+            4,
+            13
+          ]
+        },
+        {
+          "time": 1557750689090,
+          "articles": [
+            14,
+            5,
+            4,
+            13
+          ]
+        },
+        {
+          "time": 1557751590632,
+          "articles": [
+            14,
+            5,
+            4,
+            13
+          ]
+        },
+        {
+          "time": 1557752488733,
+          "articles": [
+            14,
+            5,
+            18,
+            4
+          ]
+        },
+        {
+          "time": 1557753388991,
+          "articles": [
+            14,
+            5,
+            18,
+            16
+          ]
+        },
+        {
+          "time": 1557754288471,
+          "articles": [
+            14,
+            5,
+            18,
+            16
+          ]
+        },
+        {
+          "time": 1557755188272,
+          "articles": [
+            14,
+            17,
+            5,
+            18
+          ]
+        },
+        {
+          "time": 1557756091230,
+          "articles": [
+            14,
+            17,
+            5,
+            18
+          ]
+        },
+        {
+          "time": 1557756988632,
+          "articles": [
+            14,
+            17,
+            5,
+            18
+          ]
+        },
+        {
+          "time": 1557757890635,
+          "articles": [
+            14,
+            23,
+            17,
+            5
+          ]
+        },
+        {
+          "time": 1557758788696,
+          "articles": [
+            14,
+            27,
+            17,
+            5
+          ]
+        },
+        {
+          "time": 1557759689234,
+          "articles": [
+            14,
+            26,
+            17,
+            5
+          ]
+        },
+        {
+          "time": 1557760588515,
+          "articles": [
+            14,
+            22,
+            17,
+            5
+          ]
+        },
+        {
+          "time": 1557761488515,
+          "articles": [
+            14,
+            24,
+            17,
+            5
+          ]
+        },
+        {
+          "time": 1557762388617,
+          "articles": [
+            14,
+            24,
+            17,
+            5
+          ]
+        },
+        {
+          "time": 1557763288955,
+          "articles": [
+            14,
+            28,
+            16,
+            17
+          ]
+        },
+        {
+          "time": 1557764188354,
+          "articles": [
+            14,
+            19,
+            16,
+            17
+          ]
+        },
+        {
+          "time": 1557765088434,
+          "articles": [
+            14,
+            20,
+            16,
+            17
+          ]
+        },
+        {
+          "time": 1557765990800,
+          "articles": [
+            14,
+            20,
+            16,
+            17
+          ]
+        },
+        {
+          "time": 1557766888519,
+          "articles": [
+            14,
+            21,
+            16,
+            17
+          ]
+        },
+        {
+          "time": 1557767789040,
+          "articles": [
+            14,
+            15,
+            16,
+            17
+          ]
+        },
+        {
+          "time": 1557768689499,
+          "articles": [
+            14,
+            15,
+            16,
+            17
+          ]
+        },
+        {
+          "time": 1557769588299,
+          "articles": [
+            14,
+            15,
+            16,
+            17
+          ]
+        },
+        {
+          "time": 1557770489580,
+          "articles": [
+            14,
+            15,
+            16,
+            25
+          ]
+        },
+        {
+          "time": 1557771388139,
+          "articles": [
+            14,
+            15,
+            16,
+            25
+          ]
+        },
+        {
+          "time": 1557772288580,
+          "articles": [
+            21,
+            14,
+            16,
+            16
+          ]
+        },
+        {
+          "time": 1557773190656,
+          "articles": [
+            21,
+            14,
+            16,
+            16
+          ]
+        },
+        {
+          "time": 1557774088656,
+          "articles": [
+            21,
+            14,
+            16,
+            16
+          ]
+        },
+        {
+          "time": 1557774988536,
+          "articles": [
+            21,
+            14,
+            16,
+            16
+          ]
+        },
+        {
+          "time": 1557775888876,
+          "articles": [
+            21,
+            14,
+            16,
+            16
+          ]
+        },
+        {
+          "time": 1557776788757,
+          "articles": [
+            21,
+            14,
+            16,
+            16
+          ]
+        },
+        {
+          "time": 1557777689156,
+          "articles": [
+            21,
+            14,
+            16,
+            16
+          ]
+        },
+        {
+          "time": 1557778588716,
+          "articles": [
+            21,
+            14,
+            16,
+            16
+          ]
+        },
+        {
+          "time": 1557779488056,
+          "articles": [
+            21,
+            14,
+            16,
+            16
+          ]
+        },
+        {
+          "time": 1557780390366,
+          "articles": [
+            21,
+            14,
+            16,
+            16
+          ]
+        },
+        {
+          "time": 1557781288547,
+          "articles": [
+            21,
+            14,
+            16,
+            16
+          ]
+        },
+        {
+          "time": 1557782188706,
+          "articles": [
+            21,
+            14,
+            16,
+            16
+          ]
+        },
+        {
+          "time": 1557783088508,
+          "articles": [
+            21,
+            14,
+            16,
+            16
+          ]
+        },
+        {
+          "time": 1557783988408,
+          "articles": [
+            21,
+            14,
+            16,
+            16
+          ]
+        }
+      ]
+    },
+    "aktualne": {
+      "articles": [
+        {
+          "headline": "Avatar vyvolal strach o planetu. Dvojka přijde pozdě, hra je dohraná, říká historik",
+          "perex": "Odkládaná premiéra dvojky přijde v době, kdy už se pozemšťané smiřují s tím, že boj o život na planetě prohráli a je čas myslet na evakuaci.",
+          "link": "https://magazin.aktualne.cz/avatar-cameron-planeta-zivotni-prostredi/r~24fea4ae6dea11e98aa4ac1f6b220ee8/"
+        },
+        {
+          "headline": "ČSSD navrhne zvýšit rodičovskou všem. Na částku ale bude mít vliv věk dítěte",
+          "perex": "",
+          "link": "https://zpravy.aktualne.cz/domaci/cssd-navrhne-zvysit-rodicovskou-vsem-na-castku-bude-ale-mit/r~88a0da4c74c311e9b9980cc47ab5f122/"
+        },
+        {
+          "headline": "Slavii tleskal Kodeš i Fantomas. Tak se Pražané dostali přes Plzeň na dostřel titulu",
+          "perex": "",
+          "link": "https://sport.aktualne.cz/fotbal/ceska-liga/fotografie-ze-zapasu-nadstavby-fortuna-ligy-slavia-plzen/r~b27206a274f011e98aa4ac1f6b220ee8/"
+        },
+        {
+          "headline": "Šéfredaktor MF DNES Jaroslav Plesl školil komentátora rozhlasu. Sám popletl ministry",
+          "perex": "",
+          "link": "https://zpravy.aktualne.cz/domaci/sefredaktor-mf-dnes-ples-skolil-komentatora-rozhlasu-sam-si/r~41d5153a74b211e993a6ac1f6b220ee8/"
+        },
+        {
+          "headline": "Dominik Duka: Problematika sexuálního zneužívání není v Česku tak výbušná jako jinde",
+          "perex": "S Dominikem Dukou o (ne)hledání svého nástupce v úřadu arcibiskupa, o spolupráci s policií i o konkrétních případech sexuálního zneužívání.",
+          "link": "https://zpravy.aktualne.cz/domaci/dominik-duka-problematika-sexualniho-zneuzivani-neni-v-cesku/r~59134502724411e9b9980cc47ab5f122/"
+        },
+        {
+          "headline": "Sestry na Stanfordu: Jsme výjimečné, chtěly jsme do USA, český humor tam nemá místo",
+          "perex": "",
+          "link": "https://video.aktualne.cz/dvtv/sestry-na-stanfordu-vzdy-si-vybereme-vyzvy-byla-to-nase-prio/r~ca60cb14733711e9b38a0cc47ab5f122/"
+        },
+        {
+          "headline": "Boj o první místo s hlavním favoritem MS. Všichni vědí, co na Rusy platí, líčí Jaškin",
+          "perex": "",
+          "link": "https://sport.aktualne.cz/hokej/ms-v-hokeji/cesko-rusko-hvezdy-preview/r~9ab9ca4c74bc11e9a049ac1f6b220ee8/"
+        },
+        {
+          "headline": "Budeme spolupracovat se senátorem Valentou, tvrdí Klaus. Valenta chce zůstat s ODS",
+          "perex": "\"V mnoha případech se s názory Václava Klause mladšího ztotožňuji,\" řekl Aktuálně.cz Ivo Valenta.",
+          "link": "https://zpravy.aktualne.cz/domaci/politika/vaclav-klaus-mladsi-stoji-o-senatora-valentu-ten-chce-zustat/r~b6b3879c730411e9b38a0cc47ab5f122/"
+        },
+        {
+          "headline": "Jsme pěšáci ve vysoké hře. Separatistickými republikami na Ukrajině zmítá deziluze",
+          "perex": "",
+          "link": "https://zpravy.aktualne.cz/zahranici/separatistickymi-republikami-na-ukrajine-zmita-deziluze/r~bf15a99c731d11e9a049ac1f6b220ee8/"
+        },
+        {
+          "headline": "Francouzská a česká samoobsluha: dvě různé planety. Zamrzli jsme hluboko v 90. letech",
+          "perex": "",
+          "link": "https://nazory.aktualne.cz/komentare/francouzska-a-ceska-samoobsluha-dve-ruzne-planety/r~a1a9f12e731811e998d70cc47ab5f122/"
+        },
+        {
+          "headline": "Glosa: Ztraceni v ráji, díl šestý. Pro Plzeň je Eden infernem, zlatý sen se rozplývá",
+          "perex": "",
+          "link": "https://sport.aktualne.cz/fotbal/ceska-liga/glosa-ztraceni-v-raji-dil-sesty-pro-plzen-je-eden-infernem-s/r~0e13bfe274ff11e998d70cc47ab5f122/"
+        },
+        {
+          "headline": "Evropská komise hrozí Rumunsku. Znepokojuje ji stav justice a vlažný přístup ke korupci",
+          "perex": "Případ Rumunska je bezprecedentní, neboť země čelící podezření z porušování základních hodnot unie zároveň předsedá Radě EU.",
+          "link": "https://zpravy.aktualne.cz/zahranici/evropska-komise-tlaci-na-rumunsko-varovala-ho-kvuli-stavu-ju/r~ada74fcc756511e9b38a0cc47ab5f122/"
+        },
+        {
+          "headline": "ODS má Antibabiše, chce vícerychlostní Evropu a Česko v pruhu pro traktory",
+          "perex": "",
+          "link": "https://nazory.aktualne.cz/komentare/ods-ma-antibabise-chce-vicerychlostni-evropu/r~d52bffea756311e9b5e8ac1f6b220ee8/"
+        },
+        {
+          "headline": "Češi se chystají na šlágr s Rusy: Na ledě bylo devět hráčů, Hanzl si vybral odjezd",
+          "perex": "",
+          "link": "https://sport.aktualne.cz/hokej/ms-v-hokeji/pred-slagrem-s-rusy-trenovalo-devet-hracu-hanzl-uz-nechtel-b/r~94976734755a11e9b9980cc47ab5f122/"
+        },
+        {
+          "headline": "Šéfkou Čapkova památníku zvolili snachu radního. Je to velmi podezřelé, říká spolek",
+          "perex": "\"Je to snacha radního, který pro ni hlasoval, takže to podezření z nepotismu je obrovské,\" říká předseda Společnosti Ferdinanda Peroutky.",
+          "link": "https://zpravy.aktualne.cz/regiony/stredocesky/at-reditelka-pamatniku-capka-zverejni-svou-koncepci-vyzyva-j/r~b0c5f0ac756811e9ab10ac1f6b220ee8/"
+        },
+        {
+          "headline": "Česko? Vážný sok jen v porovnání s outsidery. Má jedinou hvězdu, píší v Rusku",
+          "perex": "",
+          "link": "https://sport.aktualne.cz/hokej/ms-v-hokeji/rusko-cesko-ms-hokej-skupina/r~f9d0dc94755911e9819e0cc47ab5f122/"
+        },
+        {
+          "headline": "Svoboda: Afrika se rozmnožuje o jednu Británii ročně, bezpečnost v EU je ohrožena",
+          "perex": "Nedohoda se STAN a TOP 09 není chyba, naše voliče by odradili Polčák a Štětina, říká lídr KDU-ČSL pro volby do europarlamentu.",
+          "link": "https://video.aktualne.cz/dvtv/svoboda-afrika-se-rozmnozuje-o-jednu-britanii-rocne-bezpecno/r~c7250d2674cb11e998d70cc47ab5f122/"
+        },
+        {
+          "headline": "Živě: Česko - Rusko 0:1. Sborná využila špatného střídání českého týmu",
+          "perex": "",
+          "link": "https://sport.aktualne.cz/hokej/ms-v-hokeji/ms-v-hokeji-2019-zive-sledujeme-zapas-cesko-rusko/r~5cc2fa5250df11e9a305ac1f6b220ee8/"
+        },
+        {
+          "headline": "Předposlední díl vůbec: Hra o trůny spěchá, ale míří k impozantnímu finále",
+          "perex": "",
+          "link": "https://magazin.aktualne.cz/kultura/film/hra-o-truny-viii-epizoda-v-recenze/r~a9e6289e758911e9b6a9ac1f6b220ee8/"
+        },
+        {
+          "headline": "Lesní správa Lány musí odškodnit vdovu po myslivci, kterého zabily hantaviry",
+          "perex": "Okresní soud v Rakovníku v pondělí rozhodl, že vdova svá tvrzení prokázala a má na odškodnění i náhradu nákladů nárok.",
+          "link": "https://zpravy.aktualne.cz/domaci/lesni-sprava-lany-musi-odskodnit-vdovu-po-myslivci-ktereho-z/r~9da3d132758c11e9b2a00cc47ab5f122/"
+        },
+        {
+          "headline": "Ministři se nemění na náměstích, vzkazuje Babiš demonstrantům proti Benešové",
+          "perex": "",
+          "link": "https://zpravy.aktualne.cz/domaci/organizatori-demonstraci-tlaci-na-politiky-aby-garantovali-n/r~6a35b3a6757d11e9b5e8ac1f6b220ee8/"
+        },
+        {
+          "headline": "ŽIVĚ: Tisíce lidí opět zaplnily Staroměstské náměstí. Proti Benešové demonstrují i v dalších městech",
+          "perex": "",
+          "link": "https://video.aktualne.cz/dvtv/zive-lide-demonstruji-za-odstoupeni-marie-benesove/r~798088ea759b11e9a305ac1f6b220ee8/"
+        },
+        {
+          "headline": "S ministerstvem se pře Muzeum umění. Podle něj je odvolaný Soukup stále ředitelem",
+          "perex": "",
+          "link": "https://magazin.aktualne.cz/kultura/umeni/muzeum-umeni-se-pre-s-ministerstvem-podle-nej-je-soukup-stal/r~0f637bc2759911e9b6a9ac1f6b220ee8/"
+        },
+        {
+          "headline": "Duel proti Rusku postrádal z české strany šťávu. Posadili nás na zadek, řekl Gudas",
+          "perex": "",
+          "link": "https://sport.aktualne.cz/hokej/ms-v-hokeji/radko-gudas/r~5cd12bba759f11e9be22ac1f6b220ee8/"
+        },
+        {
+          "headline": "První prohra na šampionátu. Češi se proti Rusům gólově neprosadili",
+          "perex": "",
+          "link": "https://sport.aktualne.cz/hokej/ms-v-hokeji/prvni-prohra-na-sampionatu-cesi-ruskou-masinu-nezastavili/r~5c444ee2759611e9b6a9ac1f6b220ee8/"
+        },
+        {
+          "headline": "Tisíce lidí potřetí v řadě protestovaly proti Benešové, chystají se další demonstrace",
+          "perex": "Účast byla podle fotografií z věže Staroměstské radnice vyšší než před týdnem, kdy podle organizátorů přišlo přes 20 tisíc lidí",
+          "link": "https://zpravy.aktualne.cz/domaci/treti-protest-proti-benesove-zaplnil-prazske-staromestske-na/r~84289f2675af11e9be22ac1f6b220ee8/"
+        },
+        {
+          "headline": "Nejchladnější vesnici světa mění globální oteplování. Místní se bojí o soby i obživu",
+          "perex": "",
+          "link": "https://zpravy.aktualne.cz/zahranici/nejchladnejsi-vesnice-sveta-ojmjakon-uz-take-pocituje-klimat/r~c21114ce6cec11e98aa4ac1f6b220ee8/"
+        },
+        {
+          "headline": "Letadlu se nevysunul přední podvozek, pilot s ním přesto přistál. Teď je za hrdinu",
+          "perex": "",
+          "link": "https://zpravy.aktualne.cz/zahranici/pilot-v-barme-pristal-s-letadlem-bez-podvozku-video/r~239542c4757b11e9a305ac1f6b220ee8/"
+        },
+        {
+          "headline": "S ministerstvem se pře Muzeum umění. Podle něj je odvolaný Soukup stále ředitelem",
+          "perex": "",
+          "link": "https://magazin.aktualne.cz/muzeum-umeni-se-pre-s-ministerstvem-podle-nej-je-soukup-stal/r~0f637bc2759911e9b6a9ac1f6b220ee8/"
+        },
+        {
+          "headline": "Foto: \"Příště zaplníme Václavák, Staromák už nestačí.\" Protesty proti Benešové sílí",
+          "perex": "Demonstrace žádající rezignaci ministryně spravedlnosti Marie Benešové trvají už třetí týden.",
+          "link": "https://zpravy.aktualne.cz/domaci/foto-demonstrace-proti-benesove/r~ae30953075b411e998d70cc47ab5f122/"
+        },
+        {
+          "headline": "Každý chtěl, ale ne pro tým, nechápal Říha. A vysvětloval překvapivou posilu",
+          "perex": "",
+          "link": "https://sport.aktualne.cz/hokej/ms-v-hokeji/riha-cesko-rusko-hlasy/r~332b460875a211e9ae850cc47ab5f122/"
+        }
+      ],
+      "hours": [
+        {
+          "time": 1557698490389,
+          "articles": [
+            0,
+            1,
+            2,
+            3
+          ]
+        },
+        {
+          "time": 1557699388331,
+          "articles": [
+            0,
+            1,
+            2,
+            3
+          ]
+        },
+        {
+          "time": 1557700288249,
+          "articles": [
+            0,
+            1,
+            2,
+            3
+          ]
+        },
+        {
+          "time": 1557701188729,
+          "articles": [
+            0,
+            1,
+            2,
+            3
+          ]
+        },
+        {
+          "time": 1557702088508,
+          "articles": [
+            0,
+            1,
+            2,
+            3
+          ]
+        },
+        {
+          "time": 1557702988229,
+          "articles": [
+            0,
+            1,
+            2,
+            3
+          ]
+        },
+        {
+          "time": 1557703888609,
+          "articles": [
+            0,
+            1,
+            2,
+            3
+          ]
+        },
+        {
+          "time": 1557704787809,
+          "articles": [
+            0,
+            1,
+            2,
+            3
+          ]
+        },
+        {
+          "time": 1557705690168,
+          "articles": [
+            0,
+            1,
+            2,
+            3
+          ]
+        },
+        {
+          "time": 1557706587888,
+          "articles": [
+            0,
+            1,
+            2,
+            3
+          ]
+        },
+        {
+          "time": 1557707488388,
+          "articles": [
+            0,
+            1,
+            2,
+            3
+          ]
+        },
+        {
+          "time": 1557708388188,
+          "articles": [
+            0,
+            1,
+            2,
+            3
+          ]
+        },
+        {
+          "time": 1557709288268,
+          "articles": [
+            0,
+            1,
+            2,
+            3
+          ]
+        },
+        {
+          "time": 1557710189290,
+          "articles": [
+            0,
+            1,
+            2,
+            3
+          ]
+        },
+        {
+          "time": 1557711087869,
+          "articles": [
+            0,
+            1,
+            2,
+            3
+          ]
+        },
+        {
+          "time": 1557711987988,
+          "articles": [
+            0,
+            1,
+            2,
+            3
+          ]
+        },
+        {
+          "time": 1557712889943,
+          "articles": [
+            0,
+            1,
+            2,
+            3
+          ]
+        },
+        {
+          "time": 1557713788282,
+          "articles": [
+            0,
+            1,
+            2,
+            3
+          ]
+        },
+        {
+          "time": 1557714688702,
+          "articles": [
+            0,
+            1,
+            2,
+            3
+          ]
+        },
+        {
+          "time": 1557715587963,
+          "articles": [
+            0,
+            1,
+            2,
+            3
+          ]
+        },
+        {
+          "time": 1557716488224,
+          "articles": [
+            0,
+            1,
+            2,
+            3
+          ]
+        },
+        {
+          "time": 1557717388342,
+          "articles": [
+            0,
+            1,
+            2,
+            3
+          ]
+        },
+        {
+          "time": 1557718288322,
+          "articles": [
+            4,
+            1,
+            2,
+            3
+          ]
+        },
+        {
+          "time": 1557719187724,
+          "articles": [
+            4,
+            1,
+            2,
+            3
+          ]
+        },
+        {
+          "time": 1557720088262,
+          "articles": [
+            4,
+            1,
+            2,
+            3
+          ]
+        },
+        {
+          "time": 1557720990500,
+          "articles": [
+            4,
+            0,
+            1,
+            5
+          ]
+        },
+        {
+          "time": 1557721888099,
+          "articles": [
+            4,
+            0,
+            1,
+            5
+          ]
+        },
+        {
+          "time": 1557722788321,
+          "articles": [
+            4,
+            0,
+            5,
+            10
+          ]
+        },
+        {
+          "time": 1557723688141,
+          "articles": [
+            4,
+            0,
+            5,
+            6
+          ]
+        },
+        {
+          "time": 1557724587820,
+          "articles": [
+            4,
+            8,
+            5,
+            6
+          ]
+        },
+        {
+          "time": 1557725488141,
+          "articles": [
+            4,
+            8,
+            5,
+            6
+          ]
+        },
+        {
+          "time": 1557726388739,
+          "articles": [
+            4,
+            8,
+            5,
+            6
+          ]
+        },
+        {
+          "time": 1557727288265,
+          "articles": [
+            4,
+            8,
+            5,
+            6
+          ]
+        },
+        {
+          "time": 1557728190453,
+          "articles": [
+            4,
+            8,
+            5,
+            9
+          ]
+        },
+        {
+          "time": 1557729088412,
+          "articles": [
+            4,
+            8,
+            5,
+            9
+          ]
+        },
+        {
+          "time": 1557729988533,
+          "articles": [
+            4,
+            8,
+            9,
+            5
+          ]
+        },
+        {
+          "time": 1557730888473,
+          "articles": [
+            4,
+            8,
+            9,
+            5
+          ]
+        },
+        {
+          "time": 1557731788393,
+          "articles": [
+            7,
+            8,
+            9,
+            4
+          ]
+        },
+        {
+          "time": 1557732688594,
+          "articles": [
+            7,
+            8,
+            9,
+            4
+          ]
+        },
+        {
+          "time": 1557733588113,
+          "articles": [
+            8,
+            7,
+            9,
+            4
+          ]
+        },
+        {
+          "time": 1557734488433,
+          "articles": [
+            8,
+            7,
+            9,
+            4
+          ]
+        },
+        {
+          "time": 1557735390209,
+          "articles": [
+            8,
+            7,
+            9,
+            4
+          ]
+        },
+        {
+          "time": 1557736288148,
+          "articles": [
+            8,
+            7,
+            9,
+            4
+          ]
+        },
+        {
+          "time": 1557737188448,
+          "articles": [
+            8,
+            7,
+            9,
+            4
+          ]
+        },
+        {
+          "time": 1557738088348,
+          "articles": [
+            8,
+            7,
+            9,
+            4
+          ]
+        },
+        {
+          "time": 1557738988808,
+          "articles": [
+            8,
+            13,
+            9,
+            4
+          ]
+        },
+        {
+          "time": 1557739888429,
+          "articles": [
+            8,
+            13,
+            9,
+            4
+          ]
+        },
+        {
+          "time": 1557740788368,
+          "articles": [
+            8,
+            13,
+            9,
+            4
+          ]
+        },
+        {
+          "time": 1557741688368,
+          "articles": [
+            8,
+            13,
+            9,
+            4
+          ]
+        },
+        {
+          "time": 1557742593166,
+          "articles": [
+            11,
+            13,
+            9,
+            4
+          ]
+        },
+        {
+          "time": 1557743488725,
+          "articles": [
+            11,
+            13,
+            9,
+            4
+          ]
+        },
+        {
+          "time": 1557744388186,
+          "articles": [
+            11,
+            12,
+            13,
+            4
+          ]
+        },
+        {
+          "time": 1557745288527,
+          "articles": [
+            11,
+            12,
+            13,
+            4
+          ]
+        },
+        {
+          "time": 1557746188126,
+          "articles": [
+            11,
+            12,
+            13,
+            4
+          ]
+        },
+        {
+          "time": 1557747088206,
+          "articles": [
+            11,
+            12,
+            13,
+            4
+          ]
+        },
+        {
+          "time": 1557747988429,
+          "articles": [
+            14,
+            12,
+            15,
+            4
+          ]
+        },
+        {
+          "time": 1557748887845,
+          "articles": [
+            14,
+            12,
+            15,
+            4
+          ]
+        },
+        {
+          "time": 1557749790210,
+          "articles": [
+            14,
+            12,
+            15,
+            4
+          ]
+        },
+        {
+          "time": 1557750688729,
+          "articles": [
+            14,
+            12,
+            15,
+            4
+          ]
+        },
+        {
+          "time": 1557751590191,
+          "articles": [
+            14,
+            12,
+            15,
+            4
+          ]
+        },
+        {
+          "time": 1557752488211,
+          "articles": [
+            14,
+            12,
+            15,
+            4
+          ]
+        },
+        {
+          "time": 1557753388671,
+          "articles": [
+            16,
+            12,
+            14,
+            15
+          ]
+        },
+        {
+          "time": 1557754288171,
+          "articles": [
+            16,
+            12,
+            14,
+            15
+          ]
+        },
+        {
+          "time": 1557755187892,
+          "articles": [
+            16,
+            12,
+            14,
+            17
+          ]
+        },
+        {
+          "time": 1557756090671,
+          "articles": [
+            16,
+            17,
+            14,
+            12
+          ]
+        },
+        {
+          "time": 1557756988452,
+          "articles": [
+            16,
+            17,
+            27,
+            12
+          ]
+        },
+        {
+          "time": 1557757890555,
+          "articles": [
+            16,
+            17,
+            12,
+            18
+          ]
+        },
+        {
+          "time": 1557758788394,
+          "articles": [
+            16,
+            17,
+            12,
+            18
+          ]
+        },
+        {
+          "time": 1557759688314,
+          "articles": [
+            16,
+            17,
+            12,
+            18
+          ]
+        },
+        {
+          "time": 1557760588337,
+          "articles": [
+            16,
+            17,
+            20,
+            12
+          ]
+        },
+        {
+          "time": 1557761488517,
+          "articles": [
+            16,
+            17,
+            20,
+            12
+          ]
+        },
+        {
+          "time": 1557762388615,
+          "articles": [
+            16,
+            17,
+            20,
+            12
+          ]
+        },
+        {
+          "time": 1557763288555,
+          "articles": [
+            16,
+            17,
+            20,
+            12
+          ]
+        },
+        {
+          "time": 1557764188055,
+          "articles": [
+            19,
+            17,
+            20,
+            12
+          ]
+        },
+        {
+          "time": 1557765088054,
+          "articles": [
+            19,
+            17,
+            20,
+            12
+          ]
+        },
+        {
+          "time": 1557765990480,
+          "articles": [
+            19,
+            21,
+            24,
+            12
+          ]
+        },
+        {
+          "time": 1557766888522,
+          "articles": [
+            19,
+            21,
+            24,
+            12
+          ]
+        },
+        {
+          "time": 1557767788540,
+          "articles": [
+            19,
+            21,
+            24,
+            12
+          ]
+        },
+        {
+          "time": 1557768688580,
+          "articles": [
+            19,
+            21,
+            24,
+            12
+          ]
+        },
+        {
+          "time": 1557769587939,
+          "articles": [
+            19,
+            21,
+            24,
+            12
+          ]
+        },
+        {
+          "time": 1557770488579,
+          "articles": [
+            19,
+            21,
+            28,
+            23
+          ]
+        },
+        {
+          "time": 1557771388279,
+          "articles": [
+            19,
+            21,
+            22,
+            23
+          ]
+        },
+        {
+          "time": 1557772288239,
+          "articles": [
+            19,
+            21,
+            22,
+            23
+          ]
+        },
+        {
+          "time": 1557773190216,
+          "articles": [
+            19,
+            21,
+            26,
+            23
+          ]
+        },
+        {
+          "time": 1557774088177,
+          "articles": [
+            25,
+            26,
+            19,
+            23
+          ]
+        },
+        {
+          "time": 1557774988036,
+          "articles": [
+            25,
+            26,
+            19,
+            23
+          ]
+        },
+        {
+          "time": 1557775888316,
+          "articles": [
+            25,
+            26,
+            19,
+            23
+          ]
+        },
+        {
+          "time": 1557776788456,
+          "articles": [
+            25,
+            26,
+            19,
+            23
+          ]
+        },
+        {
+          "time": 1557777688697,
+          "articles": [
+            25,
+            26,
+            19,
+            23
+          ]
+        },
+        {
+          "time": 1557778588039,
+          "articles": [
+            26,
+            25,
+            19,
+            23
+          ]
+        },
+        {
+          "time": 1557779487817,
+          "articles": [
+            26,
+            25,
+            19,
+            23
+          ]
+        },
+        {
+          "time": 1557780390286,
+          "articles": [
+            26,
+            25,
+            19,
+            23
+          ]
+        },
+        {
+          "time": 1557781288206,
+          "articles": [
+            29,
+            26,
+            19,
+            23
+          ]
+        },
+        {
+          "time": 1557782188666,
+          "articles": [
+            29,
+            26,
+            19,
+            30
+          ]
+        },
+        {
+          "time": 1557783088067,
+          "articles": [
+            29,
+            26,
+            19,
+            30
+          ]
+        },
+        {
+          "time": 1557783988326,
+          "articles": [
+            29,
+            26,
+            19,
+            30
+          ]
+        }
+      ]
+    },
+    "irozhlas": {
+      "articles": [
+        {
+          "headline": "Post finančního ředitele pro Fajta? ‚Nestandardní,' hodnotí nabídku oborník na pracovní právo",
+          "perex": "„Nabízí se jiné vhodné místo, což by splňovala například zmíněná pozice kurátora. Kdyby zaměstnavatel nabídl pouze to, s přehledem by to ustál,“ popisuje jeden z oslovených odborníků.",
+          "link": "https://www.irozhlas.cz/zpravy-domov/jiri-fajt-narodni-galerie-financni-reditel-pracovni-pravo-zakon-ivan-moravek_1905121822_pla"
+        },
+        {
+          "headline": "Slavia - Plzeň 3:1. Desetiminutová smršť v&nbsp;závěru přiblížila sešívané titulu",
+          "perex": "Slavia i Viktoria Plzeň se ve druhém poločase dostaly do obrovských šancí, až deset minut před koncem se prosadil Lukáš Masopust a odstartoval sešívanou euforii.",
+          "link": "https://www.irozhlas.cz/sport/fotbal/slavia-plzen-online-prenos-fortuna-liga-nadstavba_1905121534_vman"
+        },
+        {
+          "headline": "Prodáváme důkazy o&nbsp;zločinech, neonacisté je neocení, říká americký obchodník s&nbsp;válečnými předměty",
+          "perex": "„Neonacistům k ničemu nejsou. Nemají dost peněz a vzdělání na to, aby je ocenili. A ani je nechtějí. Oni mají své nové nacistické vlajky a své vlastní symboly.“",
+          "link": "https://www.irozhlas.cz/veda-technologie/historie/usa-spojene-staty-druha-svetova-valka-prodejce-drazba-aukce-chesapeake_1905121844_lac"
+        },
+        {
+          "headline": "Švýcaři se dlouho trápili s&nbsp;Lotyši, nakonec ale vyhráli 3:1. Kanada rozstřílela Velkou Británii 8:0",
+          "perex": "Švýcarští obhájci stříbrných medailí z loňského mistrovství světa si připsali druhou výhru ze dvou zápasů, když porazili houževnaté Lotyše 3:1.",
+          "link": "https://www.irozhlas.cz/sport/ms-hokej/ms-hokej-2019-online-prenos-lotyssko-svycarsko_1905121820_vman"
+        },
+        {
+          "headline": "Policie patrá po 15leté dívce z&nbsp;Ostrova na Karlovarsku. Léčí se s&nbsp;epilepsií a léky u&nbsp;sebe nemá",
+          "perex": "Dívka odešla v neděli večer z domova neznámo kam. Na sobě měla mít červené tepláky, černou šusťákovou bundu a černé tenisky se zlatou hvězdou.",
+          "link": "https://www.irozhlas.cz/zpravy-domov/patrani-policie-dite-v-ohrozeni-ostrov-karlovy-vary_1905130137_dp"
+        },
+        {
+          "headline": "Brusel část dotací pro Agrofert stopl, Česko je ale posílá dál. ‚Nemáme důvod nevyplácet,‘ říká fond",
+          "perex": "„Jako preventivní opatření komise nevyplácí dotace z Evropských strukturálních a investičních fondů Agrofertu nebo spřízněným příjemcům,“ napsal eurokomisař pro rozpočet v dopise zaslaném do Česka.",
+          "link": "https://www.irozhlas.cz/zpravy-domov/dotace-andrej-babis-agrofert-audit-stret-zajmu_1905130600_tec"
+        },
+        {
+          "headline": "Sedm skupin voličů podle postojů k&nbsp;EU: jste profitář, reformista, nebo snad městský liberál? Otestujte se",
+          "perex": "Debaty v hospodách – a ještě silněji na sociálních sítích – působí dojmem, že Češi se dělí na menšinu „eurohujerů“ a většinu euroskeptiků. Skutečnost je jiná: vyhraněných je jen něco přes třetinu.",
+          "link": "https://www.irozhlas.cz/zpravy-domov/eu-evropske-volby-test-prokop-median_1905130600_jab"
+        },
+        {
+          "headline": "Životní radost i&nbsp;finanční podvod. ‚Náhradní mateřství české zákony neznají,‘ varují právníci",
+          "perex": "Právníci zejména varují před trestným činem obchodování s dětmi. Náhradní matka má nárok jen na kompenzaci za ušlou mzdu, vyšetření nebo cestování.",
+          "link": "https://www.irozhlas.cz/zpravy-domov/nahradni-materstvi-porod-dite-neplodnost-zakon-podvod-penize-duvera_1905130749_pla"
+        },
+        {
+          "headline": "Avengers: Kalkul, nebo věrný odraz diverzity? V&nbsp;Hollywoodu pochopili, že nejde točit pro jedno publikum",
+          "perex": "​Závěrečný díl ságy studia Marvel trhá rekordy. Avengers: Endgame překonal filmový Titanic a šplhá k vrcholu žebříčku komerčně nejúspěšnějších filmů všech dob. Pochvaly dostává i od kritiků. Proč?",
+          "link": "https://www.irozhlas.cz/kultura/film/podcast-avengers-vinohradska-12-marvel-endgame_1905130600_bar"
+        },
+        {
+          "headline": "Švédsko znovu otevře kauzu zakladatele WikiLeaks. Julian Assange je čelí obvinění ze dvou znásilnění",
+          "perex": "Podle švédské žalobkyně Evy-Marie Perssonová je tu důvodné podezření, že je zakladatel WikiLeaks vinen.",
+          "link": "https://www.irozhlas.cz/zpravy-svet/julian-assange-wikileaks-svedsko-londyn-znasilneni-svedsko_1905131118_och"
+        },
+        {
+          "headline": "Šetření schůzek Mynáře se soudci je u&nbsp;konce: podle policie prezidentův kancléř justici neovlivňoval",
+          "perex": "Serveru iROZHLAS.cz to řekl dozorující státní zástupce Jan Lelek, který spis nyní posoudí. Pro zahájení trestního řízení není podle vyšetřovatelů důvod.",
+          "link": "https://www.irozhlas.cz/zpravy-domov/vratislav-mynar-justice-soudy-policie-trestni-oznameni_1905131207_kno"
+        },
+        {
+          "headline": "Ovčáček o&nbsp;protestech proti Benešové: Není rok 1948, v&nbsp;demokracii se náměstí neustupuje",
+          "perex": "„Vrcholem demonstrací jsou evropské volby, proto se tam tlačí politici ze STAN a TOP 09, aby promluvili, oslovili potenciální voliče,“ popisuje Jiří Ovčáček.",
+          "link": "https://www.irozhlas.cz/zpravy-domov/pro-a-proti-jiri-ovcacek-mikulas-minar-protest-demonstrace-marie-benesova_1905131110_pla"
+        },
+        {
+          "headline": "Schillerová chce zvýšit spotřební daň na tabák, alkohol i&nbsp;hazard. Podle opozice vládě docházejí peníze",
+          "perex": "Podle návrhu zákona by měla stoupnout spotřební daň z cigaret a tabáku, včetně zahřívaného, od příštího roku zhruba o deset procent. Spotřební daň z lihu by měla vzrůst asi o 13 procent.",
+          "link": "https://www.irozhlas.cz/ekonomika/spotrebni-dan-zvyseni-dani-ministerstvo-financi-navykove-latky-alena-schillerova_1905131312_gak"
+        },
+        {
+          "headline": "Polskem otřásl film o&nbsp;sexuálním zneužívání v&nbsp;církvi. Za první víkend jej zhlédly miliony lidí",
+          "perex": "Arcibiskupové, kteří původně odmítli ve filmu vystoupit, se nyní za zobrazené zločiny omlouvají. Problém zneužívání se stal jedním z hlavních témat v kampani před volbami do Evropského parlamentu.",
+          "link": "https://www.irozhlas.cz/zivotni-styl/spolecnost/polsko-film-sexualni-zneuzivani-v-cirkvi-arcibiskup_1905131315_anj"
+        },
+        {
+          "headline": "‚Bylo to zoufalé gesto.‘ Kardinál obnovil elektřinu pro bezdomovce, porušil při tom policejní pečeť",
+          "perex": "Šéf papežské charity kardinál Konrad Krajewski obnovil v Římě dodávky elektřiny pro stovky lidí bez domova. O víkendu kvůli tomu vnikl do vybydlené budovy, kde porušil policejní pečeť na spínači.",
+          "link": "https://www.irozhlas.cz/zpravy-svet/kardinal-konrad-krajewski-rim-italie-vatikan-papez-frantisek_1905130950_och"
+        },
+        {
+          "headline": "První zlato pro český florbal. Junioři ovládli mistrovství světa v&nbsp;Kanadě",
+          "perex": "Tým kouče Jiřího Jakoubka tak překonal výsledek z roku 2007, kdy dosáhla česká devatenáctka ve švýcarském Kirchbergu na stříbro.",
+          "link": "https://www.irozhlas.cz/sport/ostatni-sporty/florbal-mistrovstvi-sveta-junioru-zlato-msj-finale-cesko-svedsko-8-2_1905130659_vman"
+        },
+        {
+          "headline": "ONLINE: Rusko - Česko 2:0. Sborná odskakuje do dvoubrankového vedení, zvyšuje Gusev",
+          "perex": "Ve třetím zápase skupiny B na mistrovství světa hraje český hokejový tým proti Rusku. Zápas neporažených ze skupiny B vysílá Radiožurnál v přímém přenosu a iROZHLAS v textovém onlinu.",
+          "link": "https://www.irozhlas.cz/sport/ms-hokej/rusko-cesko-hokej-mistrovstvi-sveta-online-prenos_1905131404_vman"
+        },
+        {
+          "headline": "Peroutkova společnost žádá o&nbsp;koncepci nové šéfky Čapkova památníku. Dopis podepsal Pithart i&nbsp;Šídlo",
+          "perex": "Společnost Ferdinanda Peroutky vyzvala středočeskou hejtmanku Jermanovou  ke zveřejnění koncepce, s níž uspěla ve výběrovém řízení nová ředitelka Památníku Karla Čapka ve Strži u Dobříše Seidlová.",
+          "link": "https://www.irozhlas.cz/zpravy-domov/stredocesky-kraj-hejtmanka-jaroslava-pokorna-jermanova-pamatnik-karla-capka_1905131721_nkr"
+        },
+        {
+          "headline": "Problémů ruských letounů Suchoj přibývá, během jednoho dne se objevily potíže na pěti spojích",
+          "perex": "Na letiště Šeremeťjevo se musel v noci vrátit stroj Superjet letící na lince do Samary. Čidla po startu signalizovala pokles tlaku vzduchu v pilotní kabině.",
+          "link": "https://www.irozhlas.cz/zpravy-domov/rusko-moskva-letiste-seremetevo-problem-suchoj-superjet-100-technicke-problemy_1905131732_pla"
+        },
+        {
+          "headline": "Policie viní dva z&nbsp;pěti obviněných ze smrti Jána Kuciaka z&nbsp;další vraždy. Pro peníze zabili podnikatele",
+          "perex": "Dva z pěti obviněných z loňské vraždy slovenského novináře Jána Kuciaka a jeho partnerky obvinila policie na Slovensku v případu další vraždy. Policie o tom v pondělí informovala na sociální síti.",
+          "link": "https://www.irozhlas.cz/zpravy-svet/jan-kuciak-slovensko-vrazda-vrazi-miroslav-marcek-tomas-szabo_1905131518_nkr"
+        },
+        {
+          "headline": "Divadlo a předvolební kampaň, komentuje Babiš demonstrace proti ministryni Benešové",
+          "perex": "Demonstrace proti nové ministryni spravedlnosti Benešové (za ANO) považuje premiér Babiš za kampaň do Evropského parlamentu. Kritizoval mimo jiné předsedu TOP 09  Pospíšila.",
+          "link": "https://www.irozhlas.cz/zpravy-domov/marie-benesova-andrej-babis-justice-demonstrace-jiri-pospisil_1905131816_nkr"
+        },
+        {
+          "headline": "Zkoumají zprávy a příběhy, sledují školní účty. Finské děti se učí rozpoznat dezinformace už od druhé třídy",
+          "perex": "Jednou z nejzkušenějších zemí v boji proti ruské propagandě a dezinformacím je Finsko. Prezident Niinistö už v roce 2015 vyzval občany k tomu, aby se při čtení zpráv na internetu chovali odpovědně.",
+          "link": "https://www.irozhlas.cz/zpravy-svet/finsko-medialni-gramotnost-fake-news-vyuka-vzdelavani_1905131608_nkr"
+        },
+        {
+          "headline": "Výpovědi přeživších ze syrských věznic. Vojáci je bili, pouštěli do nich elektrošoky a zapalovali je",
+          "perex": "Popisy připomínají zvěrstva páchána nacisty během holokaustu. Jde však o události z novodobé Sýrie, kde bylo údajně ve věznicích 14 tisíc lidí umučeno k smrti.",
+          "link": "https://www.irozhlas.cz/zpravy-svet/syrie-vezeni-muceni-vojaci-basar-asad-new-york-times_1905131624_anj"
+        },
+        {
+          "headline": "Češi věří mýtům o&nbsp;unii. Je třeba jim vysvětlit, že věci jsou úplně jinak, říká Tomáš Prouza",
+          "perex": "„Převažují lidé, kteří jsou spokojeni s členstvím v unii, ale máme trochu hokynářský přístup. Hodně očekáváme, ale málo chceme dát,“ řekl rektor Univerzity Palackého v Olomouci Jaroslav Müller.",
+          "link": "https://www.irozhlas.cz/zpravy-domov/evropska-unie-tomas-prouza-jaroslav-muller-olomouc-pruzkum-prokop-median_1905131841_och"
+        },
+        {
+          "headline": "‚Arzenál udržujeme na minimu.‘ Čína se nepřipojí k&nbsp;odzbrojovacím jednáním Ruska a Spojených států",
+          "perex": "„Čína nemá zájem připojit se k jednání Ruska a Spojených států o jaderném odzbrojení a nepovažuje to za nezbytné,“ řekl čínský ministr novinářům.",
+          "link": "https://www.irozhlas.cz/zpravy-svet/wang-i-sergej-lavrov-jednani-jaderne-odzbrojeni-usa-rusko-cina-zbrane-dohoda_1905131914_pla"
+        },
+        {
+          "headline": "‚Nás neodvoláš.‘ Tisíce lidí potřetí demonstrují proti Benešové a Babišovi",
+          "perex": "Na několika místech České republiky tisíce lidí potřetí protestují proti nové ministryni spravedlnosti Marii Benešové (za ANO) a premiérovi Babišovi. Staroměstské náměstí zaplnili ze tří čtvrtin.",
+          "link": "https://www.irozhlas.cz/zpravy-domov/marie-benesova-andrej-babis-demonstrace-milion-chvilek-pro-demokracii_1905131950_nkr"
+        },
+        {
+          "headline": "Hledali jsme zbytečně moc nahrávek do prázdné branky, říká Simon po prohře s&nbsp;Ruskem",
+          "perex": "Čeští hokejisté na mistrovství světa poprvé prohráli. Rusům nedali ani gól a podlehli jim 0:3. Co bylo špatně, řekl v rozhovoru pro Radiožurnál Sport útočník Domink Simon.",
+          "link": "https://www.irozhlas.cz/sport/ms-hokej/ms-hokej-2019-bratislava-cesko-rusko-ohlasy_1905132034_tat"
+        },
+        {
+          "headline": "ŽIVĚ: Předvolební debata lídrů stran a hnutí kandidujících do Evropského parlamentu",
+          "perex": "Pozvání do debaty Českého rozhlasu Plus a Radiožurnálu s moderátorem Janem Pokorným přijali kandidáti do Eurovoleb 2019.",
+          "link": "https://www.irozhlas.cz/zpravy-domov/eurovolby-2019-evropsky-parlament-volby-debata-cesky-rozhlas-plus-radiozurnal_1905131531_gak"
+        },
+        {
+          "headline": "Národní muzeum hledá stařičké české nahrávky. ‚Šmejdí‘ kvůli nim v&nbsp;amerických antikvariátech",
+          "perex": "Cílem je vypátrat, a poté digitalizovat nejstarší zvukové nahrávky v češtině, které vznikaly právě v Americe. V Chicagu například v minulosti na jedné ulici prodávali tři obchodníci z Čech hudebniny",
+          "link": "https://www.irozhlas.cz/veda-technologie/historie/narodni-muzeum-usa-gramofonove-nahravky-hudebniny-hudba-historie-chicago_1905132132_dok"
+        }
+      ],
+      "hours": [
+        {
+          "time": 1557698489870,
+          "articles": [
+            0,
+            1,
+            2,
+            3
+          ]
+        },
+        {
+          "time": 1557699387989,
+          "articles": [
+            0,
+            1,
+            2,
+            3
+          ]
+        },
+        {
+          "time": 1557700288128,
+          "articles": [
+            0,
+            1,
+            2,
+            3
+          ]
+        },
+        {
+          "time": 1557701188070,
+          "articles": [
+            0,
+            1,
+            2,
+            3
+          ]
+        },
+        {
+          "time": 1557702087989,
+          "articles": [
+            0,
+            1,
+            2,
+            3
+          ]
+        },
+        {
+          "time": 1557702988129,
+          "articles": [
+            0,
+            1,
+            2,
+            3
+          ]
+        },
+        {
+          "time": 1557703888248,
+          "articles": [
+            0,
+            1,
+            2,
+            3
+          ]
+        },
+        {
+          "time": 1557704787610,
+          "articles": [
+            0,
+            1,
+            2,
+            3
+          ]
+        },
+        {
+          "time": 1557705690109,
+          "articles": [
+            0,
+            1,
+            2,
+            4
+          ]
+        },
+        {
+          "time": 1557706587891,
+          "articles": [
+            0,
+            1,
+            2,
+            4
+          ]
+        },
+        {
+          "time": 1557707488069,
+          "articles": [
+            0,
+            1,
+            2,
+            4
+          ]
+        },
+        {
+          "time": 1557708388028,
+          "articles": [
+            0,
+            1,
+            2,
+            4
+          ]
+        },
+        {
+          "time": 1557709287928,
+          "articles": [
+            0,
+            1,
+            2,
+            4
+          ]
+        },
+        {
+          "time": 1557710188128,
+          "articles": [
+            0,
+            1,
+            2,
+            4
+          ]
+        },
+        {
+          "time": 1557711087871,
+          "articles": [
+            0,
+            1,
+            2,
+            4
+          ]
+        },
+        {
+          "time": 1557711987709,
+          "articles": [
+            0,
+            1,
+            2,
+            4
+          ]
+        },
+        {
+          "time": 1557712889803,
+          "articles": [
+            0,
+            1,
+            2,
+            4
+          ]
+        },
+        {
+          "time": 1557713788182,
+          "articles": [
+            0,
+            1,
+            2,
+            4
+          ]
+        },
+        {
+          "time": 1557714688182,
+          "articles": [
+            0,
+            1,
+            2,
+            4
+          ]
+        },
+        {
+          "time": 1557715587842,
+          "articles": [
+            0,
+            1,
+            2,
+            4
+          ]
+        },
+        {
+          "time": 1557716488042,
+          "articles": [
+            0,
+            1,
+            2,
+            4
+          ]
+        },
+        {
+          "time": 1557717388022,
+          "articles": [
+            0,
+            1,
+            2,
+            4
+          ]
+        },
+        {
+          "time": 1557718288022,
+          "articles": [
+            0,
+            1,
+            2,
+            4
+          ]
+        },
+        {
+          "time": 1557719187722,
+          "articles": [
+            0,
+            1,
+            2,
+            4
+          ]
+        },
+        {
+          "time": 1557720088064,
+          "articles": [
+            5,
+            8,
+            0,
+            1
+          ]
+        },
+        {
+          "time": 1557720990320,
+          "articles": [
+            5,
+            6,
+            8,
+            4
+          ]
+        },
+        {
+          "time": 1557721887840,
+          "articles": [
+            5,
+            6,
+            8,
+            4
+          ]
+        },
+        {
+          "time": 1557722787979,
+          "articles": [
+            5,
+            6,
+            8,
+            4
+          ]
+        },
+        {
+          "time": 1557723688240,
+          "articles": [
+            5,
+            6,
+            8,
+            4
+          ]
+        },
+        {
+          "time": 1557724587822,
+          "articles": [
+            5,
+            6,
+            8,
+            15
+          ]
+        },
+        {
+          "time": 1557725488040,
+          "articles": [
+            5,
+            6,
+            8,
+            15
+          ]
+        },
+        {
+          "time": 1557726388399,
+          "articles": [
+            5,
+            6,
+            8,
+            15
+          ]
+        },
+        {
+          "time": 1557727287880,
+          "articles": [
+            5,
+            6,
+            7,
+            8
+          ]
+        },
+        {
+          "time": 1557728190313,
+          "articles": [
+            5,
+            6,
+            7,
+            8
+          ]
+        },
+        {
+          "time": 1557729088333,
+          "articles": [
+            5,
+            6,
+            7,
+            8
+          ]
+        },
+        {
+          "time": 1557729988473,
+          "articles": [
+            5,
+            6,
+            7,
+            8
+          ]
+        },
+        {
+          "time": 1557730888153,
+          "articles": [
+            5,
+            6,
+            7,
+            8
+          ]
+        },
+        {
+          "time": 1557731788074,
+          "articles": [
+            5,
+            6,
+            7,
+            8
+          ]
+        },
+        {
+          "time": 1557732688373,
+          "articles": [
+            5,
+            6,
+            7,
+            8
+          ]
+        },
+        {
+          "time": 1557733587773,
+          "articles": [
+            5,
+            6,
+            7,
+            8
+          ]
+        },
+        {
+          "time": 1557734488293,
+          "articles": [
+            5,
+            6,
+            14,
+            8
+          ]
+        },
+        {
+          "time": 1557735390148,
+          "articles": [
+            5,
+            6,
+            14,
+            8
+          ]
+        },
+        {
+          "time": 1557736288308,
+          "articles": [
+            5,
+            6,
+            14,
+            8
+          ]
+        },
+        {
+          "time": 1557737188208,
+          "articles": [
+            5,
+            6,
+            14,
+            8
+          ]
+        },
+        {
+          "time": 1557738088008,
+          "articles": [
+            5,
+            6,
+            14,
+            8
+          ]
+        },
+        {
+          "time": 1557738988329,
+          "articles": [
+            5,
+            6,
+            14,
+            8
+          ]
+        },
+        {
+          "time": 1557739888228,
+          "articles": [
+            5,
+            6,
+            9,
+            8
+          ]
+        },
+        {
+          "time": 1557740788209,
+          "articles": [
+            5,
+            6,
+            9,
+            8
+          ]
+        },
+        {
+          "time": 1557741688248,
+          "articles": [
+            11,
+            6,
+            9,
+            5
+          ]
+        },
+        {
+          "time": 1557742593105,
+          "articles": [
+            10,
+            11,
+            6,
+            9
+          ]
+        },
+        {
+          "time": 1557743488426,
+          "articles": [
+            10,
+            11,
+            6,
+            9
+          ]
+        },
+        {
+          "time": 1557744388105,
+          "articles": [
+            10,
+            11,
+            6,
+            5
+          ]
+        },
+        {
+          "time": 1557745288066,
+          "articles": [
+            10,
+            11,
+            6,
+            5
+          ]
+        },
+        {
+          "time": 1557746187845,
+          "articles": [
+            10,
+            11,
+            6,
+            5
+          ]
+        },
+        {
+          "time": 1557747088145,
+          "articles": [
+            10,
+            11,
+            13,
+            6
+          ]
+        },
+        {
+          "time": 1557747987846,
+          "articles": [
+            10,
+            11,
+            13,
+            6
+          ]
+        },
+        {
+          "time": 1557748887887,
+          "articles": [
+            10,
+            11,
+            13,
+            6
+          ]
+        },
+        {
+          "time": 1557749790188,
+          "articles": [
+            10,
+            11,
+            12,
+            13
+          ]
+        },
+        {
+          "time": 1557750688388,
+          "articles": [
+            10,
+            11,
+            12,
+            13
+          ]
+        },
+        {
+          "time": 1557751590071,
+          "articles": [
+            10,
+            11,
+            12,
+            13
+          ]
+        },
+        {
+          "time": 1557752488131,
+          "articles": [
+            10,
+            11,
+            12,
+            13
+          ]
+        },
+        {
+          "time": 1557753388732,
+          "articles": [
+            10,
+            11,
+            12,
+            13
+          ]
+        },
+        {
+          "time": 1557754287831,
+          "articles": [
+            10,
+            11,
+            19,
+            12
+          ]
+        },
+        {
+          "time": 1557755187771,
+          "articles": [
+            27,
+            10,
+            11,
+            19
+          ]
+        },
+        {
+          "time": 1557756090449,
+          "articles": [
+            27,
+            10,
+            11,
+            16
+          ]
+        },
+        {
+          "time": 1557756988130,
+          "articles": [
+            16,
+            11,
+            21,
+            13
+          ]
+        },
+        {
+          "time": 1557757890134,
+          "articles": [
+            16,
+            11,
+            21,
+            13
+          ]
+        },
+        {
+          "time": 1557758788074,
+          "articles": [
+            16,
+            11,
+            21,
+            22
+          ]
+        },
+        {
+          "time": 1557759688195,
+          "articles": [
+            16,
+            11,
+            21,
+            22
+          ]
+        },
+        {
+          "time": 1557760588015,
+          "articles": [
+            16,
+            11,
+            21,
+            22
+          ]
+        },
+        {
+          "time": 1557761487995,
+          "articles": [
+            16,
+            17,
+            11,
+            22
+          ]
+        },
+        {
+          "time": 1557762388174,
+          "articles": [
+            16,
+            17,
+            11,
+            18
+          ]
+        },
+        {
+          "time": 1557763288037,
+          "articles": [
+            16,
+            17,
+            11,
+            18
+          ]
+        },
+        {
+          "time": 1557764188014,
+          "articles": [
+            16,
+            17,
+            11,
+            18
+          ]
+        },
+        {
+          "time": 1557765087934,
+          "articles": [
+            16,
+            17,
+            20,
+            18
+          ]
+        },
+        {
+          "time": 1557765990179,
+          "articles": [
+            23,
+            16,
+            17,
+            20
+          ]
+        },
+        {
+          "time": 1557766888079,
+          "articles": [
+            23,
+            16,
+            17,
+            20
+          ]
+        },
+        {
+          "time": 1557767788459,
+          "articles": [
+            23,
+            16,
+            17,
+            24
+          ]
+        },
+        {
+          "time": 1557768688242,
+          "articles": [
+            23,
+            16,
+            17,
+            24
+          ]
+        },
+        {
+          "time": 1557769587700,
+          "articles": [
+            23,
+            16,
+            17,
+            24
+          ]
+        },
+        {
+          "time": 1557770488439,
+          "articles": [
+            25,
+            23,
+            16,
+            17
+          ]
+        },
+        {
+          "time": 1557771387779,
+          "articles": [
+            25,
+            23,
+            16,
+            17
+          ]
+        },
+        {
+          "time": 1557772287901,
+          "articles": [
+            25,
+            23,
+            16,
+            17
+          ]
+        },
+        {
+          "time": 1557773189956,
+          "articles": [
+            25,
+            26,
+            23,
+            17
+          ]
+        },
+        {
+          "time": 1557774087956,
+          "articles": [
+            25,
+            26,
+            23,
+            17
+          ]
+        },
+        {
+          "time": 1557774987936,
+          "articles": [
+            25,
+            26,
+            23,
+            17
+          ]
+        },
+        {
+          "time": 1557775888356,
+          "articles": [
+            25,
+            26,
+            23,
+            17
+          ]
+        },
+        {
+          "time": 1557776788576,
+          "articles": [
+            25,
+            28,
+            26,
+            17
+          ]
+        },
+        {
+          "time": 1557777688096,
+          "articles": [
+            25,
+            28,
+            26,
+            17
+          ]
+        },
+        {
+          "time": 1557778588036,
+          "articles": [
+            25,
+            28,
+            26,
+            17
+          ]
+        },
+        {
+          "time": 1557779487536,
+          "articles": [
+            25,
+            28,
+            26,
+            17
+          ]
+        },
+        {
+          "time": 1557780389767,
+          "articles": [
+            25,
+            28,
+            26,
+            17
+          ]
+        },
+        {
+          "time": 1557781288326,
+          "articles": [
+            25,
+            28,
+            26,
+            17
+          ]
+        },
+        {
+          "time": 1557782188066,
+          "articles": [
+            25,
+            28,
+            26,
+            17
+          ]
+        },
+        {
+          "time": 1557783087826,
+          "articles": [
+            25,
+            28,
+            26,
+            17
+          ]
+        },
+        {
+          "time": 1557783987826,
+          "articles": [
+            25,
+            28,
+            26,
+            17
+          ]
+        }
+      ]
+    },
+    "novinky": {
+      "articles": [
+        {
+          "headline": "KLDR má novou raketu, může jít o verzi ruského Iskanderu",
+          "perex": "12. 5.  Čtvrteční severokorejský raketový test zvýšil obavy, že má KLDR nové balistické rakety krátkého doletu, možná derivát ruských střel Iskander, které by mohly proniknout protiraketovou obranou Jižní Koreje a Japonska. Na test dohlížel severokorejský... Celý&nbsp;článek&nbsp;KLDR má novou raketu, může jít o verzi ruského Iskanderu&raquo;",
+          "link": "https://www.novinky.cz/zahranicni/svet/504543-kldr-ma-novou-raketu-muze-jit-o-verzi-ruskeho-iskanderu.html"
+        },
+        {
+          "headline": "ANO v preferencích ztrácí na úkor ODS a Pirátů",
+          "perex": "12. 5.  Sněmovní volby by vyhrálo se skoro 30 procenty hnutí ANO, od října ale pomalu ztrácí. Vyplývá to z dubnového průzkumu společnosti...",
+          "link": "https://www.novinky.cz/domaci/504603-ano-v-preferencich-ztraci-na-ukor-ods-a-piratu.html"
+        },
+        {
+          "headline": "Český horský vůdce se zabil při heliskiingu ve Švédsku",
+          "perex": "12. 5.  Při jízdě na lyžích se na severu Švédska zabil člen České asociace horských vůdců (ČAHV) a instruktor lyžování. Sdružení informovalo,...",
+          "link": "https://www.novinky.cz/zahranicni/evropa/504611-cesky-horsky-vudce-se-zabil-pri-heliskiingu-ve-svedsku.html"
+        },
+        {
+          "headline": "Tajemná smrt v penzionu v Pasově: Policie našla tři lidi zastřelené kuší",
+          "perex": "12. 5.  Těla tří lidí zabitých kuší se našla v sobotu v penzionu v bavorském Pasově. Policie v neděli nařídila pitvu, uvedl týdeník Fokus....",
+          "link": "https://www.novinky.cz/zahranicni/evropa/504606-tajemna-smrt-v-penzionu-v-pasove-policie-nasla-tri-lidi-zastrelene-kusi.html"
+        },
+        {
+          "headline": "Ovládlo mě zlo, řekl po brutální vraždě prarodičů",
+          "perex": "13. 5.  Nejméně rok zůstane pod zámkem v dobřanské psychiatrické léčebně 30letý Jan L., který je podezřelý z brutální vraždy svých prarodičů v domově pro seniory v Břasích na Rokycansku z února letošního roku. Rozhodl o tom v pátek Okresní soud... Celý&nbsp;článek&nbsp;Ovládlo mě zlo, řekl po brutální vraždě prarodičů&raquo;",
+          "link": "https://www.novinky.cz/krimi/504614-ovladlo-me-zlo-rekl-po-brutalni-vrazde-prarodicu.html"
+        },
+        {
+          "headline": "Liberec chce najít potopenou ponorku Reichenberg",
+          "perex": "13. 5.  Na jaře roku 1941 vyplula do vln Atlantiku, půl roku poté zmizela v Biskajském zálivu. Po osudu ponorky U-206 Reichenberg, kterou...",
+          "link": "https://www.novinky.cz/domaci/504596-liberec-chce-najit-potopenou-ponorku-reichenberg.html"
+        },
+        {
+          "headline": "Poslední úder ledových mužů, pak už se začne oteplovat",
+          "perex": "13. 5.  Počasí tento týden přinese zřejmě poslední vpád studeného vzduchu. S blížícím se víkendem půjdou teploty nahoru, žádné vyprahlé vedro ale nehrozí, oteplení bude doprovázet vlhký vzduch a srážky. Novinky o tom v pondělí informovala Dagmar... Celý&nbsp;článek&nbsp;Poslední úder ledových mužů, pak už se začne oteplovat&raquo;",
+          "link": "https://www.novinky.cz/domaci/504619-posledni-uder-ledovych-muzu-pak-uz-se-zacne-oteplovat.html"
+        },
+        {
+          "headline": "KOMENTÁŘ: Privatizace státu a televize - Václav Klaus ml.",
+          "perex": "13. 5.  Patřím k lidem, co si v jádru přejí, aby se stát pletl lidem do života, co nejméně. Koneckonců, jak Ronald Reagan kdysi vtipně poznamenal:...",
+          "link": "https://www.novinky.cz/komentare/504625-komentar-privatizace-statu-a-televize-vaclav-klaus-ml.html"
+        },
+        {
+          "headline": "Vyplatí se pracovat načerno? Rozhodně ne",
+          "perex": "13. 5.  I přesto, že je nezaměstnanost velmi nízká a pracovní trh nabízí desítky tisíc volných míst, stále ještě se vyskytují případy, kdy...",
+          "link": "https://www.novinky.cz/finance/503875-vyplati-se-pracovat-nacerno-rozhodne-ne.html"
+        },
+        {
+          "headline": "Šípy zabitá dvojice v Pasově se držela za ruce, další ženu našli v tratolišti krve",
+          "perex": "13. 5.  Německá policie zveřejnila další podrobnosti k podivné víkendové vraždě šípy v Pasově. Pokojská v místním hotelu našla v sobotu tři mrtvá těla probodnutá šípy. Muž se ženou se drželi za ruce v posteli. Další žena ležela na podlaze v tratolišti... Celý&nbsp;článek&nbsp;Šípy zabitá dvojice v Pasově se držela za ruce, další ženu našli v tratolišti krve&raquo;",
+          "link": "https://www.novinky.cz/zahranicni/evropa/504684-sipy-zabita-dvojice-v-pasove-se-drzela-za-ruce-dalsi-zenu-nasli-v-tratolisti-krve.html"
+        },
+        {
+          "headline": "Babišova vláda chce zdražit alkohol. Pije se moc a platy prý rychle rostou",
+          "perex": "13. 5.  Rostoucí kupní síla zvyšuje dostupnost zboží a mzdy v Česku od roku 2009 vzrostly o 45 procent. Takto ministryně financí Alena Schillerová...",
+          "link": "https://www.novinky.cz/ekonomika/504666-babisova-vlada-chce-zdrazit-alkohol-pije-se-moc-a-platy-pry-rychle-rostou.html"
+        },
+        {
+          "headline": "Obrana vyškrtla Tatru z obřího tendru na transportéry",
+          "perex": "13. 5.  Velké peníze přitahují velké problémy. Historicky největší armádní tendr na dodání 210 pásových bojových vozidel pěchoty (BVP) za...",
+          "link": "https://www.novinky.cz/domaci/504621-obrana-vyskrtla-tatru-z-obriho-tendru-na-transportery.html"
+        },
+        {
+          "headline": "ČSSD vyvolala kvůli rodičovské další koaliční přestřelku",
+          "perex": "13. 5.  Už třetí návrh na zvýšení rodičovského příspěvku v neděli představila ČSSD. Ovšem ne koaličnímu partnerovi, ale médiím, což hnutí...",
+          "link": "https://www.novinky.cz/domaci/504641-cssd-vyvolala-kvuli-rodicovske-dalsi-koalicni-prestrelku.html"
+        },
+        {
+          "headline": "V domě v Pardubicích našli mrtvého sedmiletého chlapce, policie zadržela podezřelého",
+          "perex": "13. 5. Aktualizováno  Násilné úmrtí nezletilého dítěte vyšetřují od noci na pondělí kriminalisté v Pardubicích. V souvislosti se smrtí dítěte zadrželi 40letého muže. Další podrobnosti policie zatím sdělovat nebude. Celý&nbsp;článek&nbsp;V domě v Pardubicích našli mrtvého sedmiletého chlapce, policie zadržela podezřelého&raquo;",
+          "link": "https://www.novinky.cz/krimi/504624-v-dome-v-pardubicich-nasli-mrtveho-sedmileteho-chlapce-policie-zadrzela-podezreleho.html"
+        },
+        {
+          "headline": "V bytě ženy zabité kuší v pasovském penzionu našli další dvě mrtvoly",
+          "perex": "13. 5.  Tajemný případ tří mrtvých probodnutých šípy, kteří byli nalezeni o víkendu v pokoji hotelu v Pasově, má šokující pokračování. V bytě jedné z pasovských obětí byly nalezeny další dvě mrtvoly, napsal v pondělí server týdeníku Focus s odvoláním... Celý&nbsp;článek&nbsp;V bytě ženy zabité kuší v pasovském penzionu našli další dvě mrtvoly&raquo;",
+          "link": "https://www.novinky.cz/zahranicni/evropa/504703-v-byte-zeny-zabite-kusi-v-pasovskem-penzionu-nasli-dalsi-dve-mrtvoly.html"
+        },
+        {
+          "headline": "Není proč demonstrovat, vzkázal protestujícím proti Benešové ministr Vojtěch",
+          "perex": "13. 5.  Ministři Babišovy vlády nevidí důvody, proč se v pondělí večer už potřetí sejdou demonstranti po celém Česku. Ti požadují zachování...",
+          "link": "https://www.novinky.cz/domaci/504691-neni-proc-demonstrovat-vzkazal-protestujicim-proti-benesove-ministr-vojtech.html"
+        },
+        {
+          "headline": "Mynářova jednání se soudci nejsou trestná, tvrdí policie",
+          "perex": "13. 5.  Policie uzavřela prověřování možného ovlivňování justice ze strany hradního kancléře Vratislava Mynáře s tím, že skutek nebyl trestným...",
+          "link": "https://www.novinky.cz/domaci/504694-mynarova-jednani-se-soudci-nejsou-trestna-tvrdi-policie.html"
+        },
+        {
+          "headline": "Muž dvanáct let předstíral mentální retardaci, na dávkách vylákal více než milion korun",
+          "perex": "13. 5.  Státní zástupkyně obžalovala muže, který podle pražské policie předstíral po dobu 12 let mentální retardaci. Informoval o tom v pondělí šéf Obvodního státního zastupitelství pro Prahu 10 Richard Houdek. Policisté dříve uvedli, že stíhaný... Celý&nbsp;článek&nbsp;Muž dvanáct let předstíral mentální retardaci, na dávkách vylákal více než milion korun&raquo;",
+          "link": "https://www.novinky.cz/krimi/504686-muz-dvanact-let-predstiral-mentalni-retardaci-na-davkach-vylakal-vice-nez-milion-korun.html"
+        },
+        {
+          "headline": "Hartenberg z Babišova fondu kupuje síť květinářství. Babišova vláda loni schválila nižší DPH na řezané květiny",
+          "perex": "13. 5.  Fond Hartenberg, který patří do svěřenského fondu premiéra Andreje Babiše, kupuje většinový podíl v síti květinářství Flamengo. Její majitel, společnost HFF, se dohodl s fondem na spolupráci kvůli plánovanému rozvoji firmy. Cenu transakce... Celý&nbsp;článek&nbsp;Hartenberg z Babišova fondu kupuje síť květinářství. Babišova vláda loni schválila nižší DPH na řezané květiny&raquo;",
+          "link": "https://www.novinky.cz/ekonomika/504680-hartenberg-z-babisova-fondu-kupuje-sit-kvetinarstvi-babisova-vlada-loni-schvalila-nizsi-dph-na-rezane-kvetiny.html"
+        },
+        {
+          "headline": "Základní vzdělání nedokončí ročně kolem pěti tisíc dětí",
+          "perex": "13. 5.  Ačkoli je na českém území již od dob rakouské monarchie povinná školní docházka, některé děti ani nyní základní vzdělání nezískají....",
+          "link": "https://www.novinky.cz/veda-skoly/504654-zakladni-vzdelani-nedokonci-rocne-kolem-peti-tisic-deti.html"
+        },
+        {
+          "headline": "Hartenberg z Babišova fondu kupuje síť květinářství",
+          "perex": "13. 5. Aktualizováno  Fond Hartenberg, který patří do svěřenského fondu premiéra Andreje Babiše, kupuje většinový podíl v síti květinářství Flamengo. Její majitel, společnost HFF, se dohodl s fondem na spolupráci kvůli plánovanému rozvoji firmy. Cenu transakce... Celý&nbsp;článek&nbsp;Hartenberg z Babišova fondu kupuje síť květinářství&raquo;",
+          "link": "https://www.novinky.cz/ekonomika/504680-hartenberg-z-babisova-fondu-kupuje-sit-kvetinarstvi.html"
+        },
+        {
+          "headline": "Na dně Indického oceánu objevili záhadného tvora",
+          "perex": "13. 5.  Vědecké posádce ponorky v největších hlubinách Indického oceánu se podařilo zachytit neznámého tvora. Výzkumníkům, kteří jsou přesvědčeni, že tento druh nebyl nikdy dříve doložen, pak podle agentury Reuters doslova došla řeč. Celý&nbsp;článek&nbsp;Na dně Indického oceánu objevili záhadného tvora&raquo;",
+          "link": "https://www.novinky.cz/veda-skoly/504676-na-dne-indickeho-oceanu-objevili-zahadneho-tvora.html"
+        },
+        {
+          "headline": "Za odvolání Benešové demonstrovaly opět tisíce lidí",
+          "perex": "13. 5. Aktualizováno  Lidé v Praze i jiných městech v pondělí vpodvečer opět demonstrovali za odvolání Marie Benešové (za ANO) z postu ministryně spravedlnosti....",
+          "link": "https://www.novinky.cz/domaci/504655-za-odvolani-benesove-demonstrovaly-opet-tisice-lidi.html"
+        },
+        {
+          "headline": "Za odvolání Benešové demonstrují opět tisíce lidí",
+          "perex": "13. 5. Aktualizováno  Lidé v Praze i jiných městech v pondělí vpodvečer opět demonstrují za odvolání Marie Benešové (za ANO) z postu ministryně spravedlnosti. Důvodem protestů jsou obavy z možných změn na nejvyšším státním zastupitelství. Celý&nbsp;článek&nbsp;Za odvolání Benešové demonstrují opět tisíce lidí&raquo;",
+          "link": "https://www.novinky.cz/domaci/504655-za-odvolani-benesove-demonstruji-opet-tisice-lidi.html"
+        },
+        {
+          "headline": "Tisíce demonstrantů za odvolání Benešové zaplnily pražské Staroměstské náměstí",
+          "perex": "13. 5. Aktualizováno  Lidé v Praze i jiných městech v pondělí vpodvečer opět demonstrovali za odvolání Marie Benešové (za ANO) z postu ministryně spravedlnosti....",
+          "link": "https://www.novinky.cz/domaci/504655-tisice-demonstrantu-za-odvolani-benesove-zaplnily-prazske-staromestske-namesti.html"
+        },
+        {
+          "headline": "Nedávejte cenu rasistovi, homofobovi a nepříteli žen Delonovi, žádá petice",
+          "perex": "13. 5.  Na internetu se rozjela kampaň proti filmové legendě a idolu žen všech věkových kategorií francouzskému herci Alanu Delonovi. Americká...",
+          "link": "https://www.novinky.cz/zahranicni/evropa/504729-nedavejte-cenu-rasistovi-homofobovi-a-nepriteli-zen-delonovi-zada-petice.html"
+        },
+        {
+          "headline": "Rakouská spolková země chce dávat přistěhovalcům deset přikázání imigrace",
+          "perex": "13. 5.  Spolková země Dolní Rakousy plánuje rozdávat migrantům takzvané Desatero přikázání, které by měli plnit, píše server týdeníku Focus....",
+          "link": "https://www.novinky.cz/zahranicni/evropa/504726-rakouska-spolkova-zeme-chce-davat-pristehovalcum-deset-prikazani-imigrace.html"
+        },
+        {
+          "headline": "Lidé opět demonstrují za odvolání Benešové",
+          "perex": "13. 5. Aktualizováno  Lidé v Praze i jiných městech v pondělí vpodvečer opět demonstrují za odvolání Marie Benešové (za ANO) z postu ministryně spravedlnosti. Důvodem protestů jsou obavy z možných změn na nejvyšším státním zastupitelství. Celý&nbsp;článek&nbsp;Lidé opět demonstrují za odvolání Benešové&raquo;",
+          "link": "https://www.novinky.cz/domaci/504655-lide-opet-demonstruji-za-odvolani-benesove.html"
+        }
+      ],
+      "hours": [
+        {
+          "time": 1557698488072,
+          "articles": [
+            0,
+            1,
+            2,
+            3
+          ]
+        },
+        {
+          "time": 1557699387091,
+          "articles": [
+            0,
+            1,
+            2,
+            3
+          ]
+        },
+        {
+          "time": 1557700286971,
+          "articles": [
+            0,
+            1,
+            2,
+            3
+          ]
+        },
+        {
+          "time": 1557701187032,
+          "articles": [
+            0,
+            1,
+            2,
+            3
+          ]
+        },
+        {
+          "time": 1557702087209,
+          "articles": [
+            0,
+            1,
+            2,
+            3
+          ]
+        },
+        {
+          "time": 1557702986970,
+          "articles": [
+            0,
+            1,
+            2,
+            3
+          ]
+        },
+        {
+          "time": 1557703887369,
+          "articles": [
+            0,
+            1,
+            2,
+            3
+          ]
+        },
+        {
+          "time": 1557704786731,
+          "articles": [
+            0,
+            1,
+            2,
+            3
+          ]
+        },
+        {
+          "time": 1557705687828,
+          "articles": [
+            0,
+            1,
+            2,
+            3
+          ]
+        },
+        {
+          "time": 1557706586969,
+          "articles": [
+            0,
+            1,
+            2,
+            3
+          ]
+        },
+        {
+          "time": 1557707487249,
+          "articles": [
+            0,
+            1,
+            2,
+            3
+          ]
+        },
+        {
+          "time": 1557708387229,
+          "articles": [
+            0,
+            1,
+            2,
+            3
+          ]
+        },
+        {
+          "time": 1557709287111,
+          "articles": [
+            0,
+            1,
+            2,
+            3
+          ]
+        },
+        {
+          "time": 1557710187089,
+          "articles": [
+            0,
+            1,
+            2,
+            3
+          ]
+        },
+        {
+          "time": 1557711086950,
+          "articles": [
+            0,
+            1,
+            2,
+            3
+          ]
+        },
+        {
+          "time": 1557711986808,
+          "articles": [
+            0,
+            1,
+            2,
+            3
+          ]
+        },
+        {
+          "time": 1557712888224,
+          "articles": [
+            0,
+            1,
+            2,
+            3
+          ]
+        },
+        {
+          "time": 1557713787322,
+          "articles": [
+            0,
+            1,
+            2,
+            3
+          ]
+        },
+        {
+          "time": 1557714687123,
+          "articles": [
+            0,
+            1,
+            2,
+            5
+          ]
+        },
+        {
+          "time": 1557715586844,
+          "articles": [
+            0,
+            1,
+            2,
+            5
+          ]
+        },
+        {
+          "time": 1557716487005,
+          "articles": [
+            0,
+            1,
+            2,
+            5
+          ]
+        },
+        {
+          "time": 1557717386923,
+          "articles": [
+            4,
+            1,
+            2,
+            5
+          ]
+        },
+        {
+          "time": 1557718287085,
+          "articles": [
+            4,
+            1,
+            2,
+            5
+          ]
+        },
+        {
+          "time": 1557719187062,
+          "articles": [
+            4,
+            1,
+            2,
+            5
+          ]
+        },
+        {
+          "time": 1557720087266,
+          "articles": [
+            4,
+            1,
+            2,
+            5
+          ]
+        },
+        {
+          "time": 1557720987962,
+          "articles": [
+            4,
+            1,
+            2,
+            5
+          ]
+        },
+        {
+          "time": 1557721887321,
+          "articles": [
+            4,
+            1,
+            2,
+            5
+          ]
+        },
+        {
+          "time": 1557722787061,
+          "articles": [
+            4,
+            1,
+            2,
+            5
+          ]
+        },
+        {
+          "time": 1557723687100,
+          "articles": [
+            5,
+            1,
+            2,
+            4
+          ]
+        },
+        {
+          "time": 1557724587040,
+          "articles": [
+            5,
+            1,
+            2,
+            4
+          ]
+        },
+        {
+          "time": 1557725486841,
+          "articles": [
+            5,
+            1,
+            2,
+            4
+          ]
+        },
+        {
+          "time": 1557726387760,
+          "articles": [
+            5,
+            1,
+            2,
+            4
+          ]
+        },
+        {
+          "time": 1557727286961,
+          "articles": [
+            6,
+            5,
+            4,
+            8
+          ]
+        },
+        {
+          "time": 1557728188895,
+          "articles": [
+            6,
+            5,
+            4,
+            8
+          ]
+        },
+        {
+          "time": 1557729087116,
+          "articles": [
+            6,
+            5,
+            4,
+            8
+          ]
+        },
+        {
+          "time": 1557729987313,
+          "articles": [
+            6,
+            5,
+            4,
+            8
+          ]
+        },
+        {
+          "time": 1557730887094,
+          "articles": [
+            6,
+            5,
+            4,
+            8
+          ]
+        },
+        {
+          "time": 1557731786934,
+          "articles": [
+            6,
+            5,
+            7,
+            8
+          ]
+        },
+        {
+          "time": 1557732687215,
+          "articles": [
+            6,
+            5,
+            7,
+            8
+          ]
+        },
+        {
+          "time": 1557733587155,
+          "articles": [
+            6,
+            5,
+            7,
+            8
+          ]
+        },
+        {
+          "time": 1557734487194,
+          "articles": [
+            6,
+            5,
+            7,
+            8
+          ]
+        },
+        {
+          "time": 1557735388449,
+          "articles": [
+            12,
+            5,
+            7,
+            6
+          ]
+        },
+        {
+          "time": 1557736287231,
+          "articles": [
+            12,
+            5,
+            7,
+            6
+          ]
+        },
+        {
+          "time": 1557737187231,
+          "articles": [
+            12,
+            5,
+            7,
+            6
+          ]
+        },
+        {
+          "time": 1557738086990,
+          "articles": [
+            12,
+            5,
+            7,
+            6
+          ]
+        },
+        {
+          "time": 1557738987428,
+          "articles": [
+            13,
+            12,
+            7,
+            6
+          ]
+        },
+        {
+          "time": 1557739886850,
+          "articles": [
+            13,
+            12,
+            7,
+            6
+          ]
+        },
+        {
+          "time": 1557740787310,
+          "articles": [
+            13,
+            12,
+            7,
+            6
+          ]
+        },
+        {
+          "time": 1557741687170,
+          "articles": [
+            13,
+            11,
+            19,
+            12
+          ]
+        },
+        {
+          "time": 1557742590909,
+          "articles": [
+            13,
+            11,
+            19,
+            12
+          ]
+        },
+        {
+          "time": 1557743487326,
+          "articles": [
+            11,
+            13,
+            19,
+            12
+          ]
+        },
+        {
+          "time": 1557744387108,
+          "articles": [
+            11,
+            13,
+            19,
+            12
+          ]
+        },
+        {
+          "time": 1557745287145,
+          "articles": [
+            10,
+            13,
+            11,
+            12
+          ]
+        },
+        {
+          "time": 1557746186667,
+          "articles": [
+            10,
+            13,
+            11,
+            12
+          ]
+        },
+        {
+          "time": 1557747086946,
+          "articles": [
+            10,
+            13,
+            11,
+            12
+          ]
+        },
+        {
+          "time": 1557747986828,
+          "articles": [
+            17,
+            10,
+            11,
+            12
+          ]
+        },
+        {
+          "time": 1557748887487,
+          "articles": [
+            17,
+            10,
+            11,
+            12
+          ]
+        },
+        {
+          "time": 1557749788431,
+          "articles": [
+            9,
+            10,
+            11,
+            12
+          ]
+        },
+        {
+          "time": 1557750687229,
+          "articles": [
+            18,
+            9,
+            11,
+            12
+          ]
+        },
+        {
+          "time": 1557751588011,
+          "articles": [
+            20,
+            13,
+            11,
+            12
+          ]
+        },
+        {
+          "time": 1557752487234,
+          "articles": [
+            9,
+            10,
+            11,
+            12
+          ]
+        },
+        {
+          "time": 1557753387671,
+          "articles": [
+            9,
+            10,
+            11,
+            12
+          ]
+        },
+        {
+          "time": 1557754287733,
+          "articles": [
+            9,
+            10,
+            11,
+            16
+          ]
+        },
+        {
+          "time": 1557755187051,
+          "articles": [
+            14,
+            15,
+            11,
+            16
+          ]
+        },
+        {
+          "time": 1557756088590,
+          "articles": [
+            14,
+            15,
+            11,
+            16
+          ]
+        },
+        {
+          "time": 1557756987510,
+          "articles": [
+            14,
+            15,
+            11,
+            16
+          ]
+        },
+        {
+          "time": 1557757888494,
+          "articles": [
+            14,
+            15,
+            11,
+            16
+          ]
+        },
+        {
+          "time": 1557758787354,
+          "articles": [
+            14,
+            15,
+            11,
+            16
+          ]
+        },
+        {
+          "time": 1557759687096,
+          "articles": [
+            14,
+            15,
+            11,
+            16
+          ]
+        },
+        {
+          "time": 1557760587037,
+          "articles": [
+            14,
+            15,
+            11,
+            16
+          ]
+        },
+        {
+          "time": 1557761487176,
+          "articles": [
+            14,
+            15,
+            11,
+            16
+          ]
+        },
+        {
+          "time": 1557762387075,
+          "articles": [
+            14,
+            15,
+            11,
+            16
+          ]
+        },
+        {
+          "time": 1557763287197,
+          "articles": [
+            14,
+            15,
+            11,
+            16
+          ]
+        },
+        {
+          "time": 1557764186916,
+          "articles": [
+            14,
+            15,
+            11,
+            16
+          ]
+        },
+        {
+          "time": 1557765087275,
+          "articles": [
+            14,
+            15,
+            11,
+            16
+          ]
+        },
+        {
+          "time": 1557765988481,
+          "articles": [
+            27,
+            15,
+            14,
+            16
+          ]
+        },
+        {
+          "time": 1557766887539,
+          "articles": [
+            27,
+            15,
+            14,
+            16
+          ]
+        },
+        {
+          "time": 1557767787401,
+          "articles": [
+            23,
+            15,
+            14,
+            16
+          ]
+        },
+        {
+          "time": 1557768687362,
+          "articles": [
+            23,
+            15,
+            14,
+            16
+          ]
+        },
+        {
+          "time": 1557769587001,
+          "articles": [
+            23,
+            15,
+            14,
+            16
+          ]
+        },
+        {
+          "time": 1557770487021,
+          "articles": [
+            23,
+            15,
+            14,
+            16
+          ]
+        },
+        {
+          "time": 1557771386779,
+          "articles": [
+            21,
+            22,
+            14,
+            16
+          ]
+        },
+        {
+          "time": 1557772286959,
+          "articles": [
+            21,
+            22,
+            14,
+            16
+          ]
+        },
+        {
+          "time": 1557773188238,
+          "articles": [
+            21,
+            24,
+            14,
+            25
+          ]
+        },
+        {
+          "time": 1557774086878,
+          "articles": [
+            21,
+            24,
+            14,
+            25
+          ]
+        },
+        {
+          "time": 1557774986936,
+          "articles": [
+            21,
+            24,
+            14,
+            25
+          ]
+        },
+        {
+          "time": 1557775887516,
+          "articles": [
+            21,
+            24,
+            14,
+            25
+          ]
+        },
+        {
+          "time": 1557776787357,
+          "articles": [
+            21,
+            24,
+            14,
+            25
+          ]
+        },
+        {
+          "time": 1557777687337,
+          "articles": [
+            21,
+            24,
+            14,
+            25
+          ]
+        },
+        {
+          "time": 1557778587058,
+          "articles": [
+            21,
+            24,
+            14,
+            25
+          ]
+        },
+        {
+          "time": 1557779486896,
+          "articles": [
+            21,
+            24,
+            14,
+            25
+          ]
+        },
+        {
+          "time": 1557780388167,
+          "articles": [
+            21,
+            24,
+            14,
+            25
+          ]
+        },
+        {
+          "time": 1557781287168,
+          "articles": [
+            21,
+            24,
+            14,
+            25
+          ]
+        },
+        {
+          "time": 1557782187406,
+          "articles": [
+            21,
+            26,
+            14,
+            25
+          ]
+        },
+        {
+          "time": 1557783086909,
+          "articles": [
+            21,
+            26,
+            14,
+            25
+          ]
+        },
+        {
+          "time": 1557783987168,
+          "articles": [
+            21,
+            26,
+            14,
+            25
+          ]
+        }
+      ]
+    },
+    "ihned": {
+      "articles": [
+        {
+          "headline": "Špičky státních zástupců a soudců se bojí o nezávislost. Vláda má prostřednictvím ministra řadu možností, jak justici ovlivnit, varují",
+          "perex": "Už třetí týden po sobě se v pondělí večer sejdou lidé v Praze a dalších městech, aby demonstrovali proti Marii Benešové v čele ministerstva spravedlnosti. Hlavním důvodem jsou obavy, že Benešová bude jako dlouholetá poradkyně prezidenta Miloše...Celý článek",
+          "link": "//archiv.ihned.cz/c1-66569710-spicky-statnich-zastupcu-a-soudcu-se-boji-o-nezavislost-vlada-ma-prostrednictvim-ministra-radu-moznosti-jak-justici-ovlivnit-varuji"
+        },
+        {
+          "headline": "Přetahovaná o nájemní byty: Češi nemají na vlastní bydlení, majitel najde nájemce i během jediného dne. Situace panuje v celé Evropě",
+          "perex": "Ekonom\t\t\tAž desítky zájemců, smlouva podepsaná do týdne. Majitelé bytů zažívají zlaté časy. Zájem o nájemní bydlení od loňského října roste ještě...",
+          "link": "//ekonom.ihned.cz/c1-66567300-pretahovana-o-najemni-byty-lide-nemaji-na-vlastni-bydleni"
+        },
+        {
+          "headline": "Donald Trump rozjíždí riskantní globální hru. Obchodní válka s Čínou bude bolet celý svět, dotkne se i Česka",
+          "perex": "Obchodní válka mezi Spojenými státy a Čínou, považovaná za jedno z největších rizik pro světovou ekonomiku, se opět přiostřuje. Američané...",
+          "link": "//archiv.ihned.cz/c1-66569640-donald-trump-rozjizdi-riskantni-globalni-hru-obchodni-valka-s-cinou-bude-bolet-cely-svet-dotkne-se-i-ceska"
+        },
+        {
+          "headline": "Obchodní válku mezi USA a Čínou zaplatí i české podniky. Evropský trh zaplaví levné čínské zboží",
+          "perex": "Vyostření obchodního sporu mezi Spojenými státy a Čínou bude mít dopad i na českou ekonomiku a firmy. Podle Svazu průmyslu a dopravy eskalace...",
+          "link": "//byznys.ihned.cz/c1-66569140-obchodni-valku-mezi-usa-a-cinou-zaplati-i-ceske-podniky-evropsky-trh-zaplavi-levne-cinske-zbozi"
+        },
+        {
+          "headline": "Anketa: Věříte tomu, že se americký prezident vůbec chce s Čínou dohodnout?",
+          "perex": "Vyostření obchodních sporů mezi dvěma největšími světovými ekonomikami dopadne podle domácích analytiků i na českou ekonomiku. Spojené státy v...",
+          "link": "//byznys.ihned.cz/c1-66569200-anketa-verite-tomu-ze-se-americky-prezident-vubec-chce-s-cinou-dohodnout"
+        },
+        {
+          "headline": "Bitcoin patří mezi letošní nejvýnosnější aktiva. Posílil už o 104 procent a jeho hodnota prolomila hranici 7 tisíc dolarů",
+          "perex": "Po loňském pádu nastalo zotavení bitcoinu. Kryptoměna vyšplhala na nejvyšší hodnotu od loňského září a během noci z neděle na pondělí překročila hranici sedmi tisíc dolarů, tedy více než 160 tisíc korun. Kryptoaktivum si drželo tržní strop ve výši...Celý článek",
+          "link": "//byznys.ihned.cz/c1-66569880-bitcoin-patri-mezi-letosni-nejvynosnejsi-aktiva-od-zacatku-roku-posilil-o-104-procent-hranici-deseti-tisic-dolaru-uz-asi-neprekroci-rika-ekonom"
+        },
+        {
+          "headline": "Schillerová hodlá zvýšit daně na tabák a líh. Krabička cigaret by mohla podražit o 13 korun, láhev tvrdého alkoholu o devět",
+          "perex": "Ministerstvo financí připravilo návrh na zvýšení spotřebních daní z tabáku, lihu a hazardu jako reakci na růst dostupnosti návykových látek. Je způsoben zvyšující se životní úrovní. Návrh tak reaguje na požadavky ministerstva zdravotnictví a národní...Celý článek",
+          "link": "//domaci.ihned.cz/c1-66570180-ministerstvo-financi-planuje-zvysit-dane-na-tabak-a-alkohol-argumentuje-zvysujici-se-zivotni-urovni-a-dostupnosti-navykovych-latek"
+        },
+        {
+          "headline": "Řidiči nemají kde dobíjet auta poháněná elektřinou a vodíkem. Stát uvolní 1,2 miliardy, do čtyř let chce, aby vznikly stovky nových stanic",
+          "perex": "Stát uvolní stovky milionů korun na výstavbu \"pump\" pro auta na elektřinu &#8722; ať už pro ta dobíjecí, či vozy, které si elektřinu vyrábí z vodíku. Na jejich rozvoj má ministerstvo dopravy do roku 2023 připraveno zhruba 1,2 miliardy korun. První...Celý článek",
+          "link": "//archiv.ihned.cz/c1-66569520-ridici-nemaji-kde-dobijet-auta-pohanena-elektrinou-a-vodikem-stat-tak-uvolni-1-2-miliardy-na-rozvoj-plnicich-stanic-na-vodik"
+        },
+        {
+          "headline": "Čínská odveta: Peking uvalí cla na americké zboží v hodnotě 60 miliard dolarů. Reaguje na Trumpovy splněné výhrůžky",
+          "perex": "Peking se rozhodl uvalit dodatečná cla na americké zboží, jehož roční dovoz do Číny dosahuje 60 miliard dolarů (zhruba 1,4 bilionu korun)....",
+          "link": "//zahranicni.ihned.cz/asie-a-pacifik-cina/c1-66570370-cinska-odveta-peking-rozhodl-o-uvaleni-cla-na-americke-zbozi-v-hodnote-60-miliard-dolaru-jde-o-reakci-na-trumpovy-splnene-vyhruzky"
+        },
+        {
+          "headline": "Musíme být ostražití. Pokud se vláda s trestně stíhaným premiérem pustí do změn v justici, může ohrozit její důvěryhodnost, říká Bradáčová",
+          "perex": "Co to znamená, když do čela ministerstva spravedlnosti nastoupí Marie Benešová, už pražská vrchní státní zástupkyně Lenka Bradáčová jednou zažila. Když se v roce 2013 stala Benešová členkou úřednické vlády Jiřího Rusnoka, bylo zřejmé, že obě dámy...Celý článek",
+          "link": "//archiv.ihned.cz/c1-66569470-musime-byt-ostraziti-pokud-se-vlada-s-trestne-stihanym-premierem-pusti-do-zmen-v-justici-muze-tim-ohrozit-jeji-duveryhodnost-rika-bradacova"
+        },
+        {
+          "headline": "Revoluce jménem Eduzměna. Velké nadace napumpují stamiliony do regionu s nejslabším vzděláváním, chtějí zlepšit výsledky všech školáků",
+          "perex": "Na vzdělávání přispívají miliony korun ročně, ale nevidí výsledky. Čtyři velké nadace se proto rozhodly spojit síly a založit jednu velkou organizaci s názvem Eduzměna. Nadační fondy Avastu, České spořitelny, Karla Janečka a OSF teď společně plánují...Celý článek",
+          "link": "//archiv.ihned.cz/c1-66570800-revoluce-jmenem-eduzmena-velke-nadace-napumpuji-stamiliony-do-regionu-s-nejslabsim-vzdelavanim-chteji-zlepsit-vysledky-vsech-skolaku"
+        },
+        {
+          "headline": "Zákon, který má zkrátit povolování staveb na jeden rok, čelí kritice kvůli nahrávání korupci. Útočí na něj i starostové a ekologové",
+          "perex": "Příprava nového stavebního zákona, který má vyřešit problém zdlouhavého povolování staveb v Česku, míří do klíčové fáze. Ministerstvo pro místní...",
+          "link": "//archiv.ihned.cz/c1-66570680-zakon-ktery-ma-zkratit-povolovani-staveb-na-jeden-rok-celi-kritice-kvuli-nahravani-korupci-utoci-na-nej-i-starostove-a-ekologove"
+        },
+        {
+          "headline": "Systém jedna stavba, jedno razítko, jeden úřad bude mít protikorupční účinek. Vše navíc zrychlí, říká spoluautor stavebního zákona",
+          "perex": "Stavební řízení je v Česku zdlouhavé a komplikované. Změnu k lepšímu má přinést nový stavební zákon, na jehož přípravě se významně podílel tým...",
+          "link": "//archiv.ihned.cz/c1-66516160-system-jedna-stavba-jedno-razitko-jeden-urad-bude-mit-protikorupcni-ucinek-vse-navic-zrychli-rika-spoluautor-stavebniho-zakona"
+        }
+      ],
+      "hours": [
+        {
+          "time": 1557698489189,
+          "articles": [
+            0,
+            1,
+            2,
+            3
+          ]
+        },
+        {
+          "time": 1557699387510,
+          "articles": [
+            0,
+            1,
+            2,
+            3
+          ]
+        },
+        {
+          "time": 1557700287611,
+          "articles": [
+            0,
+            1,
+            2,
+            3
+          ]
+        },
+        {
+          "time": 1557701187670,
+          "articles": [
+            0,
+            1,
+            2,
+            3
+          ]
+        },
+        {
+          "time": 1557702087409,
+          "articles": [
+            0,
+            1,
+            2,
+            3
+          ]
+        },
+        {
+          "time": 1557702987728,
+          "articles": [
+            0,
+            1,
+            2,
+            3
+          ]
+        },
+        {
+          "time": 1557703887609,
+          "articles": [
+            0,
+            1,
+            2,
+            3
+          ]
+        },
+        {
+          "time": 1557704787308,
+          "articles": [
+            0,
+            1,
+            2,
+            3
+          ]
+        },
+        {
+          "time": 1557705689268,
+          "articles": [
+            0,
+            1,
+            2,
+            3
+          ]
+        },
+        {
+          "time": 1557706587449,
+          "articles": [
+            0,
+            1,
+            2,
+            3
+          ]
+        },
+        {
+          "time": 1557707487649,
+          "articles": [
+            0,
+            1,
+            2,
+            3
+          ]
+        },
+        {
+          "time": 1557708387648,
+          "articles": [
+            0,
+            1,
+            2,
+            3
+          ]
+        },
+        {
+          "time": 1557709287470,
+          "articles": [
+            0,
+            1,
+            2,
+            3
+          ]
+        },
+        {
+          "time": 1557710187730,
+          "articles": [
+            0,
+            1,
+            2,
+            3
+          ]
+        },
+        {
+          "time": 1557711087388,
+          "articles": [
+            0,
+            1,
+            2,
+            3
+          ]
+        },
+        {
+          "time": 1557711987448,
+          "articles": [
+            0,
+            1,
+            2,
+            3
+          ]
+        },
+        {
+          "time": 1557712888803,
+          "articles": [
+            0,
+            1,
+            2,
+            3
+          ]
+        },
+        {
+          "time": 1557713787622,
+          "articles": [
+            0,
+            1,
+            2,
+            3
+          ]
+        },
+        {
+          "time": 1557714687742,
+          "articles": [
+            0,
+            1,
+            2,
+            3
+          ]
+        },
+        {
+          "time": 1557715587323,
+          "articles": [
+            0,
+            1,
+            2,
+            3
+          ]
+        },
+        {
+          "time": 1557716487622,
+          "articles": [
+            0,
+            1,
+            2,
+            3
+          ]
+        },
+        {
+          "time": 1557717387683,
+          "articles": [
+            0,
+            1,
+            2,
+            3
+          ]
+        },
+        {
+          "time": 1557718287662,
+          "articles": [
+            0,
+            1,
+            2,
+            3
+          ]
+        },
+        {
+          "time": 1557719187203,
+          "articles": [
+            0,
+            1,
+            2,
+            3
+          ]
+        },
+        {
+          "time": 1557720087622,
+          "articles": [
+            0,
+            1,
+            2,
+            3
+          ]
+        },
+        {
+          "time": 1557720989500,
+          "articles": [
+            0,
+            1,
+            2,
+            3
+          ]
+        },
+        {
+          "time": 1557721887400,
+          "articles": [
+            0,
+            1,
+            2,
+            3
+          ]
+        },
+        {
+          "time": 1557722787499,
+          "articles": [
+            0,
+            1,
+            2,
+            3
+          ]
+        },
+        {
+          "time": 1557723687702,
+          "articles": [
+            0,
+            2,
+            3,
+            4
+          ]
+        },
+        {
+          "time": 1557724587300,
+          "articles": [
+            0,
+            2,
+            3,
+            4
+          ]
+        },
+        {
+          "time": 1557725487500,
+          "articles": [
+            0,
+            2,
+            3,
+            4
+          ]
+        },
+        {
+          "time": 1557726388119,
+          "articles": [
+            0,
+            2,
+            3,
+            4
+          ]
+        },
+        {
+          "time": 1557727287560,
+          "articles": [
+            0,
+            2,
+            3,
+            4
+          ]
+        },
+        {
+          "time": 1557728189394,
+          "articles": [
+            0,
+            2,
+            3,
+            4
+          ]
+        },
+        {
+          "time": 1557729087753,
+          "articles": [
+            0,
+            2,
+            3,
+            4
+          ]
+        },
+        {
+          "time": 1557729987913,
+          "articles": [
+            0,
+            2,
+            3,
+            4
+          ]
+        },
+        {
+          "time": 1557730887834,
+          "articles": [
+            0,
+            2,
+            3,
+            4
+          ]
+        },
+        {
+          "time": 1557731787833,
+          "articles": [
+            0,
+            2,
+            3,
+            4
+          ]
+        },
+        {
+          "time": 1557732688013,
+          "articles": [
+            0,
+            2,
+            3,
+            4
+          ]
+        },
+        {
+          "time": 1557733587775,
+          "articles": [
+            0,
+            2,
+            3,
+            4
+          ]
+        },
+        {
+          "time": 1557734487933,
+          "articles": [
+            0,
+            2,
+            3,
+            4
+          ]
+        },
+        {
+          "time": 1557735389251,
+          "articles": [
+            0,
+            2,
+            3,
+            4
+          ]
+        },
+        {
+          "time": 1557736287629,
+          "articles": [
+            0,
+            2,
+            3,
+            4
+          ]
+        },
+        {
+          "time": 1557737187749,
+          "articles": [
+            0,
+            2,
+            3,
+            4
+          ]
+        },
+        {
+          "time": 1557738087688,
+          "articles": [
+            0,
+            2,
+            3,
+            4
+          ]
+        },
+        {
+          "time": 1557738987751,
+          "articles": [
+            0,
+            2,
+            3,
+            4
+          ]
+        },
+        {
+          "time": 1557739887628,
+          "articles": [
+            0,
+            2,
+            3,
+            4
+          ]
+        },
+        {
+          "time": 1557740787888,
+          "articles": [
+            5,
+            0,
+            2,
+            3
+          ]
+        },
+        {
+          "time": 1557741687788,
+          "articles": [
+            5,
+            0,
+            2,
+            3
+          ]
+        },
+        {
+          "time": 1557742592206,
+          "articles": [
+            5,
+            0,
+            2,
+            3
+          ]
+        },
+        {
+          "time": 1557743488146,
+          "articles": [
+            5,
+            0,
+            2,
+            3
+          ]
+        },
+        {
+          "time": 1557744387645,
+          "articles": [
+            5,
+            0,
+            2,
+            3
+          ]
+        },
+        {
+          "time": 1557745287765,
+          "articles": [
+            5,
+            0,
+            2,
+            3
+          ]
+        },
+        {
+          "time": 1557746187185,
+          "articles": [
+            6,
+            0,
+            2,
+            3
+          ]
+        },
+        {
+          "time": 1557747087605,
+          "articles": [
+            6,
+            0,
+            2,
+            3
+          ]
+        },
+        {
+          "time": 1557747987506,
+          "articles": [
+            6,
+            0,
+            2,
+            3
+          ]
+        },
+        {
+          "time": 1557748887385,
+          "articles": [
+            6,
+            0,
+            2,
+            3
+          ]
+        },
+        {
+          "time": 1557749789288,
+          "articles": [
+            6,
+            0,
+            2,
+            3
+          ]
+        },
+        {
+          "time": 1557750687930,
+          "articles": [
+            6,
+            0,
+            2,
+            3
+          ]
+        },
+        {
+          "time": 1557751589093,
+          "articles": [
+            6,
+            0,
+            2,
+            3
+          ]
+        },
+        {
+          "time": 1557752487571,
+          "articles": [
+            6,
+            0,
+            2,
+            3
+          ]
+        },
+        {
+          "time": 1557753388112,
+          "articles": [
+            6,
+            0,
+            8,
+            3
+          ]
+        },
+        {
+          "time": 1557754287472,
+          "articles": [
+            6,
+            8,
+            3,
+            2
+          ]
+        },
+        {
+          "time": 1557755187211,
+          "articles": [
+            6,
+            8,
+            3,
+            2
+          ]
+        },
+        {
+          "time": 1557756089570,
+          "articles": [
+            6,
+            8,
+            3,
+            2
+          ]
+        },
+        {
+          "time": 1557756987691,
+          "articles": [
+            6,
+            8,
+            3,
+            2
+          ]
+        },
+        {
+          "time": 1557757889554,
+          "articles": [
+            7,
+            8,
+            3,
+            2
+          ]
+        },
+        {
+          "time": 1557758787456,
+          "articles": [
+            7,
+            8,
+            3,
+            2
+          ]
+        },
+        {
+          "time": 1557759687795,
+          "articles": [
+            7,
+            8,
+            3,
+            2
+          ]
+        },
+        {
+          "time": 1557760587654,
+          "articles": [
+            7,
+            8,
+            3,
+            2
+          ]
+        },
+        {
+          "time": 1557761487654,
+          "articles": [
+            7,
+            8,
+            3,
+            2
+          ]
+        },
+        {
+          "time": 1557762387796,
+          "articles": [
+            7,
+            8,
+            3,
+            2
+          ]
+        },
+        {
+          "time": 1557763288035,
+          "articles": [
+            7,
+            8,
+            3,
+            2
+          ]
+        },
+        {
+          "time": 1557764187356,
+          "articles": [
+            7,
+            8,
+            3,
+            2
+          ]
+        },
+        {
+          "time": 1557765087574,
+          "articles": [
+            7,
+            8,
+            3,
+            2
+          ]
+        },
+        {
+          "time": 1557765989360,
+          "articles": [
+            7,
+            8,
+            3,
+            2
+          ]
+        },
+        {
+          "time": 1557766887479,
+          "articles": [
+            9,
+            8,
+            3,
+            2
+          ]
+        },
+        {
+          "time": 1557767787880,
+          "articles": [
+            9,
+            8,
+            3,
+            2
+          ]
+        },
+        {
+          "time": 1557768687900,
+          "articles": [
+            9,
+            8,
+            3,
+            2
+          ]
+        },
+        {
+          "time": 1557769587499,
+          "articles": [
+            9,
+            8,
+            3,
+            2
+          ]
+        },
+        {
+          "time": 1557770487980,
+          "articles": [
+            9,
+            8,
+            3,
+            2
+          ]
+        },
+        {
+          "time": 1557771387379,
+          "articles": [
+            9,
+            8,
+            3,
+            2
+          ]
+        },
+        {
+          "time": 1557772287479,
+          "articles": [
+            9,
+            8,
+            3,
+            2
+          ]
+        },
+        {
+          "time": 1557773189216,
+          "articles": [
+            9,
+            8,
+            3,
+            2
+          ]
+        },
+        {
+          "time": 1557774087516,
+          "articles": [
+            9,
+            8,
+            3,
+            2
+          ]
+        },
+        {
+          "time": 1557774987396,
+          "articles": [
+            9,
+            8,
+            3,
+            2
+          ]
+        },
+        {
+          "time": 1557775887717,
+          "articles": [
+            9,
+            8,
+            3,
+            2
+          ]
+        },
+        {
+          "time": 1557776787876,
+          "articles": [
+            9,
+            8,
+            3,
+            2
+          ]
+        },
+        {
+          "time": 1557777687776,
+          "articles": [
+            9,
+            8,
+            3,
+            2
+          ]
+        },
+        {
+          "time": 1557778587676,
+          "articles": [
+            9,
+            8,
+            3,
+            2
+          ]
+        },
+        {
+          "time": 1557779487176,
+          "articles": [
+            9,
+            8,
+            3,
+            2
+          ]
+        },
+        {
+          "time": 1557780389007,
+          "articles": [
+            9,
+            8,
+            3,
+            2
+          ]
+        },
+        {
+          "time": 1557781287706,
+          "articles": [
+            10,
+            9,
+            11,
+            12
+          ]
+        },
+        {
+          "time": 1557782187628,
+          "articles": [
+            10,
+            9,
+            11,
+            12
+          ]
+        },
+        {
+          "time": 1557783087546,
+          "articles": [
+            10,
+            9,
+            11,
+            12
+          ]
+        },
+        {
+          "time": 1557783987386,
+          "articles": [
+            10,
+            9,
+            11,
+            12
+          ]
+        }
+      ]
+    }
+  }
+}

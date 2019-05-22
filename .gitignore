@@ -1,0 +1,5 @@
+.idea
+client/node_modules
+client/public
+srv/node_modules
+srv/js
