@@ -1,15 +1,17 @@
 <script>
-import {downloadDay} from './Downloader.ts'
+import {downloadDay} from './Downloader'
 import {hourHeightPx} from './Layouter'
-import {extractToDay} from './DayExtractor.ts';
-import NewsColumn from './NewsColumn.svelte';
-import TimeColumn from './TimeColumn.svelte';
-import {afterUpdate, beforeUpdate} from 'svelte';
+import {getHourHash} from './utils'
+import {extractToDay} from './DayExtractor.ts'
+import NewsColumn from './NewsColumn.svelte'
+import TimeColumn from './TimeColumn.svelte'
+import Sharer from './Sharer.svelte'
+import {afterUpdate, beforeUpdate} from 'svelte'
 
 
 export let name;
 export let name2 = 'bar';
-const defaultDomDate = "2019-05-21";
+const defaultDomDate = new Date(Date.now() - 86400 * 1e3).toISOString().substr(0, 10);
 let domDate = defaultDomDate;
 const currentDate = new Date();
 let nextDate = null;
@@ -40,9 +42,14 @@ const handleChange = (doUpdateHash) => {
     const [year, month, day] = (domDate || defaultDomDate).split('-').map(parseFloat);
     currentDate.setFullYear(year, month - 1, day);
     currentDate.setHours(12, 0, 0, 0);
-    const currentTimeHash = getHourHash();
-    nextDate = new Date(currentDate.getTime() + 86400 * 1e3).toISOString().substr(0, 10) + "T" + getHourHash();
-    prevDate = new Date(currentDate.getTime() - 86400 * 1e3).toISOString().substr(0, 10) + "T" + getHourHash();
+    const currentTimeHash = getCurrentHourHash();
+    const currentDateMidnight = new Date(currentDate);
+    currentDateMidnight.setHours(0,0,0);
+    const nextDateObj = new Date(currentDateMidnight.getTime() + 86400 * 1e3);
+    nextDate = nextDateObj.getTime() <= Date.now()
+        ? nextDateObj.toISOString().substr(0, 10) + "T" + getCurrentHourHash()
+        : null;
+    prevDate = new Date(currentDate.getTime() - 86400 * 1e3).toISOString().substr(0, 10) + "T" + getCurrentHourHash();
     promiseIsFulfilled = false;
     dayPromise = downloadDay(currentDate);
     dayPromise.then(value => promiseIsFulfilled = true);
@@ -65,15 +72,12 @@ afterUpdate(() => {
     }
 });
 
-const getHourHash = () => {
-    const hourDecimal = window.scrollY / hourHeightPx;
-    const hour = Math.floor(hourDecimal);
-    const minute = Math.floor((hourDecimal % 1) * 60);
-    return hour.toString().padStart(2, '0') + ":" + minute.toString().padStart(2, '0');
+const getCurrentHourHash = () => {
+    return getHourHash(window.scrollY);
 };
 
 const updateHash = () => {
-    window.location.hash = currentDate.toISOString().substr(0, 10) + "T" + getHourHash();
+    window.location.hash = currentDate.toISOString().substr(0, 10) + "T" + getCurrentHourHash();
 };
 
 document.addEventListener('mouseout', (evt) => {
@@ -138,7 +142,10 @@ const handleNextClick = () => {
             </span>
             <a href="#{prevDate}" on:click|preventDefault="{handlePrevClick}" class="prev" >&laquo;</a>
             <input type="date" bind:value="{domDate}" on:change="{handleChange}" min="2017-04-22" max="2019-05-21">
-            <a href="#{nextDate}" on:click|preventDefault="{handleNextClick}" class="next" >&raquo;</a>
+            {#if nextDate !== null}
+                <a href="#{nextDate}" on:click|preventDefault="{handleNextClick}" class="next" >&raquo;</a>
+            {/if}
+            <Sharer currentDate="{currentDate}" />
         </div>
         {#await dayPromise}
         loading.
@@ -155,7 +162,7 @@ const handleNextClick = () => {
         {:catch err}
         <div class="error-box-container">
             <div class="error-box">
-                Pro vybraný den nejsou k dispozici data. Data jsou dostupná pro období od 22.4.2017 do 21.5.2019.
+                Pro vybraný den nejsou k dispozici data. Data jsou dostupná pro období od včerejška do 22.4.2017.
             </div>
         </div>
         {/await}
