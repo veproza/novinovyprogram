@@ -15,8 +15,10 @@ export interface TimedArticle {
 }
 
 export interface SeenAtData {
-    date: Date,
-    articles: IArticleData[]
+    date: Date;
+    articles: IArticleData[];
+    lastSeenAt: SeenAtData | null;
+    nextSeenAt?: SeenAtData;
 }
 
 export function extractToDay (day: PublicationDay): ArticleView {
@@ -24,6 +26,7 @@ export function extractToDay (day: PublicationDay): ArticleView {
     let currentArticleId: number = -1;
     let currentArticleStart: Date = new Date();
     let currentArticleTimesSeen = 0;
+    let lastSeenAt: SeenAtData | null;
     let currentSeenAt: SeenAtData[] = [];
     day.hours
         .filter(h => h.articles.length)
@@ -41,10 +44,16 @@ export function extractToDay (day: PublicationDay): ArticleView {
                 currentArticleStart = new Date(hour.time);
                 currentSeenAt = [];
             }
-            currentSeenAt.push({
+            const seenAt: SeenAtData = {
                 date: new Date(hour.time),
-                articles: hour.articles.map(i => day.articles[i])
-            });
+                articles: hour.articles.map(i => day.articles[i]),
+                lastSeenAt
+            };
+            if(lastSeenAt) {
+                lastSeenAt.nextSeenAt = seenAt;
+            }
+            currentSeenAt.push(seenAt);
+            lastSeenAt = seenAt;
         });
     if(currentArticleId !== -1) {
         mainArticles.push({
