@@ -11,7 +11,7 @@ import {afterUpdate, beforeUpdate} from 'svelte'
 
 export let name;
 export let name2 = 'bar';
-const defaultDomDate = new Date(Date.now() - 86400 * 1e3).toISOString().substr(0, 10);
+const defaultDomDate = new Date(Date.now()).toISOString().substr(0, 10);
 let domDate = defaultDomDate;
 const currentDate = new Date();
 let nextDate = null;
@@ -144,7 +144,7 @@ const handleNextClick = () => {
                 {dayHuman}
             </span>
             <a href="#{prevDate}" on:click|preventDefault="{handlePrevClick}" class="prev" >&laquo;</a>
-            <input type="date" bind:value="{domDate}" on:change="{handleChange}" min="2017-04-22" max="2019-05-21">
+            <input type="date" bind:value="{domDate}" on:change="{handleChange}" min="2017-04-22" max="{defaultDomDate}">
             {#if nextDate !== null}
                 <a href="#{nextDate}" on:click|preventDefault="{handleNextClick}" class="next" >&raquo;</a>
             {/if}
