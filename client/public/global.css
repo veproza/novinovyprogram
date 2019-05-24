@@ -16,11 +16,11 @@ body {
 
 a {
 	color: rgb(0,100,200);
-	text-decoration: none;
+	text-decoration: underline;
 }
 
 a:hover {
-	text-decoration: underline;
+	text-decoration: none;
 }
 
 a:visited {
@@ -300,4 +300,20 @@ input[type="date"] {
 	background: #f8d7da;
 	color: #721c24;
 	text-align: center;
+}
+
+footer {
+	color: #888;
+	font-size: 0.8em;
+	padding: 10px 10px 20px 10px;
+	border-top: 1px solid #ccc;
+}
+
+footer p {
+	margin: 0.4em;
+	line-height: 1.4em;
+}
+
+footer a, footer a:visited {
+	color: #335;
 }

@@ -130,6 +130,7 @@ const handleNextClick = () => {
 	}
 	.prev, .next {
 	    color: #333;
+	    text-decoration: none;
 	}
 	.prev:hover, .next:hover {
 	    color: #aaa;
