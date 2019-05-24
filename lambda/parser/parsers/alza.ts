@@ -36,7 +36,7 @@ const findTitulka = async (html: string, date: Date): Promise<TitulkaResult | nu
     });
     if(issue) {
         const img = issue.querySelector('img').attributes.src;
-        const link = "https://www.alza.cz/" + issue.querySelector('a').attributes.href;
+        const link = "https://www.alza.cz" + issue.querySelector('a').attributes.href;
         return ({img, link});
     } else {
         return null;
