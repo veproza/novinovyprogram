@@ -1,6 +1,6 @@
 .idea
 client/node_modules
-client/public
+client/public/bundle.*
 srv/node_modules
 srv/js
 lambda/headlines/node_modules

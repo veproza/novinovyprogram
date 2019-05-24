@@ -16,7 +16,7 @@ let domDate = defaultDomDate;
 const currentDate = new Date();
 let nextDate = null;
 let prevDate = null;
-
+let displayPrint = false;
 let rememberedScrollPosition = null;
 const updateFromHash = () => {
     if(window.location.hash) {
@@ -53,6 +53,11 @@ const handleChange = (doUpdateHash) => {
     promiseIsFulfilled = false;
     dayPromise = downloadDay(currentDate);
     dayPromise.then(value => promiseIsFulfilled = true);
+    dayPromise.then(({data}) => {
+        displayPrint = Object.values(data.publications).some((publication) => {
+            return publication.print
+        });
+    });
     dayHuman = daysHuman[currentDate.getDay()];
     if(doUpdateHash !== false) {
         skipNextUpdateFromHash = true;
@@ -106,8 +111,6 @@ const handleNextClick = () => {
     handleChange();
 }
 
-
-
 </script>
 
 <style>
@@ -151,13 +154,13 @@ const handleNextClick = () => {
         loading.
         {:then value}
         <div class="publisher-columns">
-            <TimeColumn data="{value.data.publications.idnes}" />
-            <NewsColumn publisherId="idnes" data="{extractToDay(value.data.publications.idnes)}" />
-            <NewsColumn publisherId="lidovky" data="{extractToDay(value.data.publications.lidovky)}" />
-            <NewsColumn publisherId="irozhlas" data="{extractToDay(value.data.publications.irozhlas)}" />
-            <NewsColumn publisherId="aktualne" data="{extractToDay(value.data.publications.aktualne)}" />
-            <NewsColumn publisherId="novinky" data="{extractToDay(value.data.publications.novinky)}" />
-            <NewsColumn publisherId="ihned" data="{extractToDay(value.data.publications.ihned)}" />
+            <TimeColumn displayPrint="{displayPrint}" data="{value.data.publications.idnes}" />
+            <NewsColumn displayPrint="{displayPrint}" data="{extractToDay(value.data.publications.idnes)}" publisherId="idnes" />
+            <NewsColumn displayPrint="{displayPrint}" data="{extractToDay(value.data.publications.lidovky)}" publisherId="lidovky" />
+            <NewsColumn displayPrint="{displayPrint}" data="{extractToDay(value.data.publications.novinky)}" publisherId="novinky" />
+            <NewsColumn displayPrint="{displayPrint}" data="{extractToDay(value.data.publications.ihned)}" publisherId="ihned" />
+            <NewsColumn displayPrint="{displayPrint}" data="{extractToDay(value.data.publications.irozhlas)}" publisherId="irozhlas" />
+            <NewsColumn displayPrint="{displayPrint}" data="{extractToDay(value.data.publications.aktualne)}" publisherId="aktualne" />
         </div>
         {:catch err}
         <div class="error-box-container">

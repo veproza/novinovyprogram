@@ -1,8 +1,10 @@
 import {PublicationDay} from "./Downloader";
 import {IArticleData} from "../../srv/ts/parsers/interfaces";
+import {TitulkaResult} from "../../lambda/parser/parsers/alza";
 
 interface ArticleView {
     mainArticles: TimedArticle[]
+    print: TitulkaResult | null;
 }
 
 export interface TimedArticle {
@@ -38,6 +40,7 @@ export function extractToDay (day: PublicationDay): ArticleView {
             endDate: null
         })
     }
-    return {mainArticles};
+    const print = day.print || null;
+    return {mainArticles, print};
 
 }

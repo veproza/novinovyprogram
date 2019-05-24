@@ -5,8 +5,9 @@ import {toHumanTime} from './utils.ts'
 
 export let publisherId;
 export let data;
+export let displayPrint;
 
-
+const isPrintOnly = ['aktualne', 'irozhlas'].includes(publisherId);
 const entries = data.mainArticles.map(entry => {
     const layout = getLayout(entry);
     const style = `top: ${layout.top}px; height: ${layout.height}px`;
@@ -28,9 +29,26 @@ const entries = data.mainArticles.map(entry => {
 
 <div class="publisher-col publisher-col-{publisherId}">
     <div class="publisher-col-header"></div>
+    {#if displayPrint}
+        <div class="publisher-col-print publisher-col-item-background">
+            {#if data.print}
+                <a target="_blank" href="{data.print.link}"><img src="{data.print.img}" /></a>
+            {:else}
+                <div class="publisher-col-print-empty">
+                    <div class="text">
+                        {#if isPrintOnly}
+                            Pouze online deník
+                        {:else}
+                            Není k dispozici
+                        {/if}
+                    </div>
+                </div>
+            {/if}
+        </div>
+    {/if}
     <div class="publisher-col-content">
         {#each entries as {headline, perex, style, title, link}}
-        <div class="publisher-col-item" {style} {title}>
+        <div class="publisher-col-item publisher-col-item-background" {style} {title}>
             <div class="publisher-col-item-content">
                 <a href="{link}" target="_blank" class="headline">{headline}</a>
                 <div class="perex">{perex}</div>

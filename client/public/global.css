@@ -1,0 +1,302 @@
+*, *:before, *:after {
+	box-sizing: border-box;
+}
+html, body {
+	position: relative;
+	width: 100%;
+	height: 100%;
+}
+
+body {
+	color: #333;
+	margin: 0;
+	box-sizing: border-box;
+	font-family: Roboto, sans-serif;
+}
+
+a {
+	color: rgb(0,100,200);
+	text-decoration: none;
+}
+
+a:hover {
+	text-decoration: underline;
+}
+
+a:visited {
+	color: rgb(0,80,160);
+}
+
+label {
+	display: block;
+}
+
+input, button, select, textarea {
+	font-family: inherit;
+	font-size: inherit;
+	padding: 0.4em;
+	margin: 0 0 0.5em 0;
+	border: 1px solid #ccc;
+	border-radius: 2px;
+}
+
+input:disabled {
+	color: #ccc;
+}
+
+input[type="range"] {
+	height: 0;
+}
+
+button {
+	background-color: #f4f4f4;
+	outline: none;
+}
+
+button:active {
+	background-color: #ddd;
+}
+
+button:focus {
+	border-color: #666;
+}
+input[type="date"] {
+	padding: 3px 5px;
+}
+.header {
+	position: fixed;
+	top: 0;
+	width: 100%;
+	z-index: 3;
+	background: white;
+	padding: 10px 20px;
+}
+.publisher-columns {
+	display: flex;
+	min-width: 768px;
+}
+
+.publisher-col {
+	width: 100%;
+	position: relative;
+}
+
+.publisher-col-header {
+	height: 50px;
+	position: -webkit-sticky;
+	position: sticky;
+	top: 50px;
+	z-index: 5;
+	width: 100%;
+	border-bottom: 1px solid var(--bg-color);
+	background: white;
+}
+.publisher-col-header::after {
+	content: "";
+	position: absolute;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	width: 1px;
+	background: linear-gradient(to bottom, white, var(--bg-color));
+}
+.publisher-col-header::before {
+	background-size: contain;
+	background-repeat: no-repeat;
+	background-position: center;
+	background-color: white;
+	position: absolute;
+	top: 50%;
+	transform: translate(0, -50%);
+	left: 0;
+	content: "";
+	width: 100%;
+	height: 20px;
+}
+.publisher-col-idnes {
+	--full-color: rgb(228, 31, 31);
+	--bg-color: rgba(228, 31, 31, 0.2);
+	--bg-color-alpha-mid: #fef0ef;
+	--bg-color-alpha-low: rgba(228, 31, 31, 0.03);
+	--bg-color-light: #fff8f8;
+}
+.publisher-col-idnes .publisher-col-header::before {
+	background-image: url('https://1gr.cz/u/loga-n4/idnes.svg');
+}
+.publisher-col-lidovky {
+	--full-color: rgb(28, 66, 130);
+	--bg-color: rgba(28, 66, 130, 0.2);
+	--bg-color-alpha-mid: #f0f2f7;
+	--bg-color-alpha-low: rgba(28, 66, 130, 0.03);
+	--bg-color-light: #f8f9fb;
+}
+.publisher-col-lidovky .publisher-col-header::before {
+	height: 19px;
+	background-image: url('https://1gr.cz/o/lidovky_ln5/ln-logo.svg');
+}
+.publisher-col-aktualne {
+	--full-color: rgb(4, 133, 165);
+	--bg-color: rgba(4, 133, 165, 0.2);
+	--bg-color-alpha-mid: #f1f2f8;
+	--bg-color-alpha-low: rgba(4, 133, 165, 0.03);
+	--bg-color-light: #f8fbfc;
+}
+.publisher-col-aktualne .publisher-col-header {
+	background-color: #0485a5;
+}
+.publisher-col-aktualne .publisher-col-header::before {
+	height: 28px;
+	background-image: url('https://asset.stdout.cz/fe/aktualne/img/big-logo.png');
+	background-color: #0485a5;
+}
+.publisher-col-irozhlas {
+	--full-color: rgb(216, 37, 52);
+	--bg-color: rgba(216, 37, 52, 0.2);
+	--bg-color-alpha-mid: #fdf0f1;
+	--bg-color-alpha-low: rgba(216, 37, 52, 0.03);
+	--bg-color-light: #fef8f8;
+}
+.publisher-col-irozhlas .publisher-col-header::before {
+	height: 26px;
+	background-image: url('https://datarozhlas.cz/cpit-prez/img/logo.jpg');
+}
+.publisher-col-novinky {
+	--full-color: rgb(154, 5, 11);
+	--bg-color: rgba(154, 5, 11, 0.2);
+	--bg-color-alpha-mid: #f9eded;
+	--bg-color-alpha-low: rgba(154, 5, 11, 0.03);
+	--bg-color-light: #fbf7f7;
+}
+.publisher-col-novinky .publisher-col-header::before {
+	height: 28px;
+	background-image: url('https://www.novinky.cz/static/images/logo.gif');
+}
+.publisher-col-ihned {
+	--full-color: rgb(63, 69, 82);
+	--bg-color: rgba(63, 69, 82, 0.2);
+	--bg-color-alpha-mid: #f2f3f4;
+	--bg-color-alpha-low: rgba(63, 69, 82, 0.03);
+	--bg-color-light: #f9f9f9;
+}
+.publisher-col-ihned .publisher-col-header::before {
+	background-image: url('https://ihned.cz/img/v2/logo_hn.svg');
+}
+
+.publisher-col-print {
+	margin-top: 49px;
+	height: 280px;
+	text-align: center;
+}
+.publisher-col-print + .publisher-col-content {
+	margin-top: 0;
+}
+
+.publisher-col-print img {
+	max-width: 195px;
+}
+
+.publisher-col-print-empty {
+	display: inline-block;
+	width: 95%;
+	max-width: 195px;
+	height: 95%;
+	border: 1px dotted var(--full-color);
+	background-color: var(--bg-color-alpha-mid);
+	margin-top: 7px;
+	position: relative;
+}
+.publisher-col-print-empty .text {
+	position: absolute;
+	top: 50%;
+	left: 0;
+	right: 0;
+	font-size: 0.7em;
+	color: var(--full-color);
+	margin-top: -0.5em;
+	text-align: center;
+}
+.publisher-col-content {
+	position: relative;
+	margin-top: 49px;
+}
+.publisher-col-item {
+	border-top: 1px solid var(--bg-color);
+	position: absolute;
+
+}
+.publisher-col-item-background {
+	background-image: linear-gradient(to bottom, var(--bg-color-alpha-mid) 0, var(--bg-color-light) 50px);
+	background-color: white;
+}
+/*.publisher-col-item:hover {*/
+	/*z-index: 2;*/
+/*}*/
+/*.publisher-col-item:hover .publisher-col-item-content {*/
+	/*background: var(--bg-color-light);*/
+	/*border-bottom: 1px solid var(--bg-color);*/
+/*}*/
+
+
+.publisher-col-item-content {
+	padding: 2px 6px;
+	position: -webkit-sticky;
+	position: sticky;
+	top: 100px;
+	font-size: 0.9rem;
+	max-height: 100%;
+	overflow: hidden;
+}
+
+@media screen and (min-width: 1200px) {
+	.publisher-col-item-content {
+		padding: 8px 14px;
+	}
+}
+
+.publisher-col-item-content a {
+	color: var(--full-color);
+	text-decoration: underline;
+	font-weight: 500;
+}
+.publisher-col-item-content a:hover {
+	text-decoration: none;
+}
+
+.publisher-col-item-content .perex {
+	color: #666;
+	font-weight: 300;
+	margin-top: 0.3em;
+	font-size: 0.9em;
+}
+
+.time-col {
+	width: 16px;
+	position: relative;
+}
+.time-tick {
+	padding-top: 3px;
+	border-top: 1px solid #ccc;
+}
+.time-tick-content {
+	transform: rotate(90deg);
+	padding-left: 0.5em;
+	font-size: 0.7em;
+	color: #888;
+	white-space: nowrap;
+	text-transform: uppercase;
+}
+.error-box-container {
+	text-align: center;
+	position: absolute;
+	top: 80px;
+	width: 100%;
+}
+.error-box {
+	display: inline-block;
+	border: 1px solid #f5c6cb;
+	border-radius: 4px;
+	padding: 10px 10px;
+	background: #f8d7da;
+	color: #721c24;
+	text-align: center;
+}
