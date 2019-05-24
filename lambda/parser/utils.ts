@@ -3,6 +3,7 @@ import * as zlib from 'zlib';
 import * as http from "http";
 import * as https from "https";
 import {IArticleData} from "./parsers/interfaces";
+import {TitulkaResult} from "./parsers/alza";
 
 const s3 = new S3();
 
@@ -43,6 +44,7 @@ export interface DailyResult {
 export interface PublicationDay {
     articles: IArticleData[];
     hours: HourData[];
+    print?: TitulkaResult;
 }
 
 export interface HourData {
@@ -53,13 +55,14 @@ export interface HourData {
 
 
 export const uploadObject = (Key: string, Body: Buffer, ContentType?: string, ContentEncoding?: string): Promise<void> => new Promise<void>((resolve, reject) => {
-    s3.putObject({Bucket, Key, Body, ContentType, ContentEncoding}, (err => {
-        if(err) {
-            reject(err);
-        } else {
-            resolve();
-        }
-    }));
+    resolve();
+    // s3.putObject({Bucket, Key, Body, ContentType, ContentEncoding}, (err => {
+    //     if(err) {
+    //         reject(err);
+    //     } else {
+    //         resolve();
+    //     }
+    // }));
 });
 
 export const gzip = (data: Buffer): Promise<Buffer> => new Promise((resolve, reject) => {

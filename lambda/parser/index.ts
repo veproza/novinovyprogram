@@ -1,5 +1,6 @@
 process.env.TZ = 'Europe/Prague';
 
+import {getTitulka} from "./parsers/alza";
 import {IArticleData} from "./parsers/interfaces";
 import {
     DailyResult,
@@ -13,7 +14,6 @@ import {
     uploadObject
 } from "./utils";
 import {getParser, getPublicationId} from "./parsers/parsers";
-import * as fs from 'fs';
 
 export type Publication = 'idnes' | 'lidovky' | 'aktualne' | 'irozhlas' | 'novinky' | 'ihned';
 
@@ -99,6 +99,12 @@ const addFileToResult = async (file: FileAndDate, dailyResult: DailyResult): Pro
         const hour: HourData = {time: file.time, articles: articleIds};
         hours.push(hour);
         hours.sort((a, b) => a.time - b.time);
+        if(publication.print === undefined) {
+            if(file.date.getHours() >= 5) {
+                publication.print = null;
+                publication.print = await getTitulka(publicationId, file.date);
+            }
+        }
     } catch (e) {
         console.error("\n", e, publicationId, file.filename, "\n");
     }
