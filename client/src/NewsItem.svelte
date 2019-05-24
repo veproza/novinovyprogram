@@ -6,13 +6,12 @@
     const layout = getLayout(entry);
     const style = `top: ${layout.top}px; height: ${layout.height}px`;
     const timeDiff = layout.roundedEndDate.getTime() - layout.roundedStartDate.getTime();
-    const wasSeenOnlyOnce = timeDiff < 25 * 60000;
     const lastSeen = entry.seenAt[entry.seenAt.length - 1];
-    const lastSeenRounded = roundTime(lastSeen);
+    const lastSeenRounded = roundTime(lastSeen.date);
     const durationTitle = layout.wasUntilMidnight && lastSeenRounded.getHours() === 23 && lastSeenRounded.getMinutes() === 45
       ? `, vydržel do dalšího dne`
       : `, naposledy v ${toHumanTime(lastSeenRounded)}`;
-    const seenTitle = wasSeenOnlyOnce
+    const seenTitle = entry.seenAt.length === 1
         ? `Zaznamenán jen jednou v ${toHumanTime(layout.roundedStartDate)}`
         : `Zaznamenán poprvé v ${toHumanTime(layout.roundedStartDate)}` + durationTitle;
     const title = `${entry.article.headline}\n\n${seenTitle}`;

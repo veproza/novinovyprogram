@@ -37,7 +37,6 @@ interface Layoutable {
 }
 
 export function getLayout(articleItem: Layoutable): ArticleLayout {
-    console.log(articleItem);
     const roundedStartDate = roundTime(articleItem.startDate);
     const roundedEndDate = articleItem.endDate
         ? roundTime(articleItem.endDate)
