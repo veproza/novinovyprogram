@@ -3,3 +3,11 @@ client/node_modules
 client/public
 srv/node_modules
 srv/js
+lambda/headlines/node_modules
+lambda/parser/node_modules
+lambda/parser/*.js
+lambda/parser/*.js.map
+lambda/parser/parsers/*.js
+lambda/parser/parsers/*.js.map
+lambda/headlines/.env
+lambda/parser/.env

@@ -176,8 +176,8 @@ const getParser = (file: string): IParser => {
         throw new Error("No parser for " + file);
     }
 };
-const firstReferenceTime = new Date("2019-05-21T10:41:39.138Z").getTime();
-const lastReferenceTime = new Date("2019-05-20T10:41:39.138Z").getTime();
+const firstReferenceTime = new Date("2019-05-24T10:41:39.138Z").getTime();
+const lastReferenceTime = new Date("2019-05-22T10:41:39.138Z").getTime();
 // const lastReferenceTime = new Date("2019-05-16T10:41:39.138Z").getTime();
 let currentReferenceTime = firstReferenceTime;
 (async () => {

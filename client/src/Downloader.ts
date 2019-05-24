@@ -28,7 +28,7 @@ interface HourData {
 
 export async function downloadDay(date: Date): Promise<DayResponse> {
     const dayId = date.toISOString().replace(/[-:]/g, '').substr(0, 8);
-    const request = await fetch(`https://s3-eu-west-1.amazonaws.com/lidovky-headlines/day-${dayId}.json`);
+    const request = await fetch(`test${dayId}.json`);
     const data = await request.json();
     return {data};
 }
