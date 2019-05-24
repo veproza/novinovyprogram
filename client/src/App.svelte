@@ -116,6 +116,7 @@ const handleNextClick = () => {
 <style>
 	.center {
 		text-align: center;
+		min-height: 80vh;
 	}
 	.maxwidth {
 	    display: inline-block;

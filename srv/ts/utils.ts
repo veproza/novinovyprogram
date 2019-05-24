@@ -28,22 +28,21 @@ export const downloadObject = (Key: string): Promise<Buffer> => new Promise<Buff
 });
 
 
-export const uploadObject = (Key: string, content: DailyResult): Promise<void> => new Promise<void>((resolve, reject) => {
-    const json = Buffer.from(JSON.stringify(content));
-    zlib.gzip(json, (error, compressed) => {
-        if(error) {
-            reject(error);
-            return;
-        }
-        s3.putObject({Bucket, Key, Body: compressed, ContentType: "application/json", ContentEncoding: "gzip"}, (err => {
-            if(err) {
-                reject(err);
-            } else {
-                resolve();
-            }
-        }));
-    });
+export const uploadObject = async (Key: string, content: DailyResult): Promise<void> => {
 
+    const json = Buffer.from(JSON.stringify(content));
+    const compressed = await gzip(json);
+    return uploadFile(Key, compressed, "application/json", "gzip");
+};
+
+export const uploadFile = (Key: string, Body: Buffer, ContentType?: string, ContentEncoding?: string): Promise<void> => new Promise((resolve, reject) => {
+    s3.putObject({Bucket, Key, Body, ContentType, ContentEncoding}, (err => {
+        if(err) {
+            reject(err);
+        } else {
+            resolve();
+        }
+    }));
 });
 
 export const gzip = (data: Buffer): Promise<Buffer> => new Promise((resolve, reject) => {

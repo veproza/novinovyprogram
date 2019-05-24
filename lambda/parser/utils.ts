@@ -44,7 +44,7 @@ export interface DailyResult {
 export interface PublicationDay {
     articles: IArticleData[];
     hours: HourData[];
-    print?: TitulkaResult;
+    print?: TitulkaResult | null;
 }
 
 export interface HourData {
@@ -55,14 +55,13 @@ export interface HourData {
 
 
 export const uploadObject = (Key: string, Body: Buffer, ContentType?: string, ContentEncoding?: string): Promise<void> => new Promise<void>((resolve, reject) => {
-    resolve();
-    // s3.putObject({Bucket, Key, Body, ContentType, ContentEncoding}, (err => {
-    //     if(err) {
-    //         reject(err);
-    //     } else {
-    //         resolve();
-    //     }
-    // }));
+    s3.putObject({Bucket, Key, Body, ContentType, ContentEncoding}, (err => {
+        if(err) {
+            reject(err);
+        } else {
+            resolve();
+        }
+    }));
 });
 
 export const gzip = (data: Buffer): Promise<Buffer> => new Promise((resolve, reject) => {
@@ -92,8 +91,8 @@ export const getCurrentList = async (): Promise<FileAndDate[]> => {
         .map(fileToFileAndDate);
 };
 
-export const resetCurrentList = async (): Promise<void> => {
-    return uploadObject("list.txt", Buffer.from(""));
+export const setCurrentList = async (remainingList: string): Promise<void> => {
+    return uploadObject("list.txt", Buffer.from(remainingList));
 };
 
 export type FileAndDate = {

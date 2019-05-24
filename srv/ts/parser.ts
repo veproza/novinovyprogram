@@ -6,7 +6,7 @@ import irozhlasParser from "./parsers/irozhlas";
 import novinkyParser from "./parsers/novinky";
 import ihnedParser from "./parsers/ihned";
 import * as fs from 'fs';
-import {uploadObject} from "./utils";
+import {uploadFile, uploadObject} from "./utils";
 import {TitulkaResult} from "./titulkaInjector";
 
 type FileAndDate = {
@@ -179,7 +179,7 @@ const getParser = (file: string): IParser => {
     }
 };
 const firstReferenceTime = new Date("2019-05-24T10:41:39.138Z").getTime();
-const lastReferenceTime = new Date("2019-05-22T10:41:39.138Z").getTime();
+const lastReferenceTime = new Date("2019-05-23T10:41:39.138Z").getTime();
 // const lastReferenceTime = new Date("2019-05-16T10:41:39.138Z").getTime();
 let currentReferenceTime = firstReferenceTime;
 (async () => {
@@ -194,6 +194,8 @@ let currentReferenceTime = firstReferenceTime;
         const dayId = date.toISOString().replace(/[-:]/g, '').substr(0, 8);
         console.log("Uploading", date.toISOString());
         await uploadObject("day-" + dayId + '.json', day);
+        console.log('reset');
+        await uploadFile("list.txt", Buffer.from(""), "text/plain");
         console.log("Done", date.toISOString());
         currentReferenceTime -= 86400 * 1e3;
     } while (currentReferenceTime > lastReferenceTime)

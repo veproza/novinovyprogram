@@ -10,21 +10,28 @@ import {
     gunzip,
     gzip,
     HourData,
-    PublicationDay, resetCurrentList,
+    PublicationDay, setCurrentList,
     uploadObject
 } from "./utils";
 import {getParser, getPublicationId} from "./parsers/parsers";
+import {Lambda} from 'aws-sdk';
+const lambda = new Lambda({region: "eu-west-1"});
 
 export type Publication = 'idnes' | 'lidovky' | 'aktualne' | 'irozhlas' | 'novinky' | 'ihned';
 
 const publications: Publication[] = ['idnes', 'lidovky', 'aktualne', 'irozhlas', 'novinky', 'ihned'];
 
 const MAX_ARTICLE_LENGTH = 4;
+const maxFilesAtOnce = publications.length;
 
 exports.handler = async () => {
     const files = (await getCurrentList())
         .filter(f => getPublicationId(f.filename));
-    console.log(`Processing ${files.length} files`);
+    const remainingList = files.slice(maxFilesAtOnce).map(f => f.filename);
+    if(remainingList.length) {
+        files.length = maxFilesAtOnce;
+    }
+    console.log(`Processing ${files.length} files`, files.map(f => f.filename));
     const openDailies = new Map<string, Promise<DailyResult>>();
     await Promise.all(files
         .map(async (file) => {
@@ -36,10 +43,25 @@ exports.handler = async () => {
             return addFileToResult(file, daily);
     }));
     await Promise.all(Array.from(openDailies).map(async ([fileId, dailyResult]) => {
+        console.log('uploading', fileId);
         uploadDailyResult(fileId, await dailyResult);
     }));
-    await resetCurrentList();
+    console.log('resetting list, remaining: ', remainingList.length);
+    await setCurrentList(remainingList.join("\n") + "\n");
+    if(remainingList.length) {
+        await callParser();
+    }
 };
+
+const callParser = async () => new Promise((resolve, reject) => {
+    lambda.invoke({
+        FunctionName: "arn:aws:lambda:eu-west-1:558611468927:function:headline-parser-development",
+        InvocationType: "Event"
+    }, (err, response) => {
+        err ? reject(err) : resolve();
+    });
+});
+
 
 const getDailyJson = async (date: Date): Promise<DailyResult> => {
     try {
@@ -77,6 +99,11 @@ const getEmptyPublicationDay = (): PublicationDay => {
 const addFileToResult = async (file: FileAndDate, dailyResult: DailyResult): Promise<void> => {
     const publicationId = getPublicationId(file.filename)!;
     const publication = dailyResult.publications[publicationId];
+    const alreadyExists = publication.hours.some(existingHour => existingHour.time === file.time);
+    if(alreadyExists) {
+        console.log('Already existing hour', file.filename);
+        return;
+    }
     const parser = getParser(publicationId)!;
     try {
         const articlesInFile = (await parser(file.filename)).slice(0, MAX_ARTICLE_LENGTH);
@@ -103,6 +130,7 @@ const addFileToResult = async (file: FileAndDate, dailyResult: DailyResult): Pro
             if(file.date.getHours() >= 5) {
                 publication.print = null;
                 publication.print = await getTitulka(publicationId, file.date);
+                console.log('Got titulka', publicationId);
             }
         }
     } catch (e) {

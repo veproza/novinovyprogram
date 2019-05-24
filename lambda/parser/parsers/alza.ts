@@ -23,7 +23,7 @@ const findTitulka = async (html: string, date: Date): Promise<TitulkaResult | nu
     const desiredMonth = (date.getMonth() + 1).toString();
     const desiredDate = date.getDate().toString().padStart(2, '0');
     const splitterRegex = /[-\\.]/;
-    const issue = issues.find(issue => {
+    const issue = issues.find((issue: any) => {
         const issueDate = issue.querySelector('.name').rawText;
         if(issue.attributes['data-year'] !== desiredYear) {
             return false;
