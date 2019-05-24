@@ -45,3 +45,12 @@ export const uploadObject = (Key: string, content: DailyResult): Promise<void> =
     });
 
 });
+
+export const gzip = (data: Buffer): Promise<Buffer> => new Promise((resolve, reject) => {
+    zlib.gzip(data, (error, compressed) => error ? reject(error) : resolve(compressed));
+});
+
+
+export const gunzip = (data: Buffer): Promise<Buffer> => new Promise((resolve, reject) => {
+    zlib.gunzip(data, (error, compressed) => error ? reject(error) : resolve(compressed));
+});

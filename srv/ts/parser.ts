@@ -7,6 +7,7 @@ import novinkyParser from "./parsers/novinky";
 import ihnedParser from "./parsers/ihned";
 import * as fs from 'fs';
 import {uploadObject} from "./utils";
+import {TitulkaResult} from "./titulkaInjector";
 
 type FileAndDate = {
     filename: string;
@@ -14,7 +15,7 @@ type FileAndDate = {
     time: number;
 }
 
-type Publication = 'idnes' | 'lidovky' | 'aktualne' | 'irozhlas' | 'novinky' | 'ihned';
+export type Publication = 'idnes' | 'lidovky' | 'aktualne' | 'irozhlas' | 'novinky' | 'ihned';
 
 const publications: Publication[] = ['idnes', 'lidovky', 'aktualne', 'irozhlas', 'novinky', 'ihned'];
 
@@ -33,6 +34,7 @@ export interface DailyResult {
 interface PublicationDay {
     articles: IArticleData[];
     hours: HourData[];
+    print?: TitulkaResult | null;
 }
 
 interface HourData {
