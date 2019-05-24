@@ -28,7 +28,7 @@ const entries = data.mainArticles.map(entry => {
 </script>
 
 <div class="publisher-col publisher-col-{publisherId}">
-    <div class="publisher-col-header"></div>
+    <a href="https://www.{publisherId}.cz" class="publisher-col-header" target="_blank"></a>
     {#if displayPrint}
         <div class="publisher-col-print publisher-col-item-background">
             {#if data.print}

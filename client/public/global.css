@@ -90,6 +90,7 @@ input[type="date"] {
 	width: 100%;
 	border-bottom: 1px solid var(--bg-color);
 	background: white;
+	display: block;
 }
 .publisher-col-header::after {
 	content: "";
