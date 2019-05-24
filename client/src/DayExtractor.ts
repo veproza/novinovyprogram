@@ -8,9 +8,10 @@ interface ArticleView {
 }
 
 export interface TimedArticle {
-    startDate: Date,
-    endDate: Date | null,
+    startDate: Date;
+    endDate: Date | null;
     article: IArticleData;
+    seenAt: Date[];
 }
 
 export function extractToDay (day: PublicationDay): ArticleView {
@@ -18,6 +19,7 @@ export function extractToDay (day: PublicationDay): ArticleView {
     let currentArticleId: number = -1;
     let currentArticleStart: Date = new Date();
     let currentArticleTimesSeen = 0;
+    let currentSeenAt: Date[] = [];
     day.hours
         .filter(h => h.articles.length)
         .forEach(hour => {
@@ -27,17 +29,21 @@ export function extractToDay (day: PublicationDay): ArticleView {
                         article: day.articles[currentArticleId],
                         startDate: currentArticleStart,
                         endDate: new Date(hour.time),
+                        seenAt: currentSeenAt
                     })
                 }
                 currentArticleId = hour.articles[0];
                 currentArticleStart = new Date(hour.time);
+                currentSeenAt = [];
             }
+            currentSeenAt.push(new Date(hour.time));
         });
     if(currentArticleId !== -1) {
         mainArticles.push({
             article: day.articles[currentArticleId],
             startDate: currentArticleStart,
-            endDate: null
+            endDate: null,
+            seenAt: currentSeenAt
         })
     }
     const print = day.print || null;

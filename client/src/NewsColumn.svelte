@@ -1,5 +1,5 @@
 <script>
-import {getLayout} from './Layouter.ts'
+import {getLayout, roundTime} from './Layouter.ts'
 import {entityRemover} from './entityRemover'
 import {toHumanTime} from './utils.ts'
 
@@ -13,9 +13,11 @@ const entries = data.mainArticles.map(entry => {
     const style = `top: ${layout.top}px; height: ${layout.height}px`;
     const timeDiff = layout.roundedEndDate.getTime() - layout.roundedStartDate.getTime();
     const wasSeenOnlyOnce = timeDiff < 25 * 60000;
-    const durationTitle = layout.wasUntilMidnight
-      ? `, vydržel nejméně do půlnoci`
-      : `, naposledy v ${toHumanTime(new Date(layout.roundedEndDate.getTime() - 15 * 60 * 1e3))}`;
+    const lastSeen = entry.seenAt[entry.seenAt.length - 1];
+    const lastSeenRounded = roundTime(lastSeen);
+    const durationTitle = layout.wasUntilMidnight && lastSeenRounded.getHours() === 23 && lastSeenRounded.getMinutes() === 45
+      ? `, vydržel do dalšího dne`
+      : `, naposledy v ${toHumanTime(lastSeenRounded)}`;
     const seenTitle = wasSeenOnlyOnce
         ? `Zaznamenán jen jednou v ${toHumanTime(layout.roundedStartDate)}`
         : `Zaznamenán poprvé v ${toHumanTime(layout.roundedStartDate)}` + durationTitle;

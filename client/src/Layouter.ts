@@ -1,18 +1,18 @@
-import {TimedArticle} from "./DayExtractor";
 import {PublicationDay} from "./Downloader";
 
 interface ArticleLayout {
     top: number;
     height: number;
-    roundedStartDate: Date,
-    roundedEndDate: Date,
-    wasUntilMidnight: boolean
+    roundedStartDate: Date;
+    roundedEndDate: Date;
+    wasUntilMidnight: boolean;
+    seenAt: Date[];
 }
 
 export const hourHeightPx = 164;
 const timeRoundingFactor = 15 * 60000; // 15 minutes
 
-const roundTime = (date: Date): Date => {
+export const roundTime = (date: Date): Date => {
     const roundedTime = Math.round(date.getTime() / timeRoundingFactor) * timeRoundingFactor;
     return new Date(roundedTime);
 };
@@ -31,11 +31,13 @@ const getPixelsForDate = (date: Date) => {
 };
 
 interface Layoutable {
-    startDate: Date,
+    startDate: Date;
     endDate: Date | null;
+    seenAt: Date[]
 }
 
 export function getLayout(articleItem: Layoutable): ArticleLayout {
+    console.log(articleItem);
     const roundedStartDate = roundTime(articleItem.startDate);
     const roundedEndDate = articleItem.endDate
         ? roundTime(articleItem.endDate)
@@ -48,7 +50,8 @@ export function getLayout(articleItem: Layoutable): ArticleLayout {
         height,
         roundedStartDate: roundedStartDate,
         roundedEndDate: roundedEndDate,
-        wasUntilMidnight: articleItem.endDate === null
+        wasUntilMidnight: articleItem.endDate === null,
+        seenAt: articleItem.seenAt
     };
 }
 
