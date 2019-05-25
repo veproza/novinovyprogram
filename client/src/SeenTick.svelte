@@ -13,11 +13,14 @@
     const height = timeToNext / hourMs * hourHeightPx;
     const style = `height: ${height}px; top: ${top}px`;
     let link;
+    const prefix = ['irozhlas', 'novinky'].includes(publisherId)
+        ?  'https://0yh5xmhkm0.execute-api.eu-west-1.amazonaws.com/prod?file='
+        : 'https://s3-eu-west-1.amazonaws.com/lidovky-headlines/';
     if(item.date.getTime() < 1558094783000) {
-        link = `https://s3-eu-west-1.amazonaws.com/lidovky-headlines/${publisherId}-cz_${item.date.getTime()}.html`;
+        const link = `${prefix}${publisherId}-cz_${item.date.getTime()}.html`;
     } else {
         const datestamp = item.date.toISOString().replace(/[-:]/g, '').substr(0,15);
-        link = `https://s3-eu-west-1.amazonaws.com/lidovky-headlines/${datestamp}_${publisherId}-cz.html`;
+        link = `${prefix}${datestamp}_${publisherId}-cz.html`;
     }
     const articlesList = item.articles.map((article, index) => {
         return `${index + 1}) ${article.headline}`;
