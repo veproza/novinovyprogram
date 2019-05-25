@@ -17,11 +17,15 @@ export const getTitulka = async (publication: Publication): Promise<Map<string, 
 const findTitulka = (html: string): Map<string, TitulkaResult> => {
     const root = parse(html);
     const issues = (root as any).querySelectorAll('.issue');
-    const splitterRegex = /[-\\.]/;
+    const splitterRegex = /[-_\\.]/;
     const outMap: Map<string, TitulkaResult> = new Map();
+    console.log(issues.length, html.length);
     issues.forEach((issue: any) => {
         const issueDate = issue.querySelector('.name').rawText;
         const [dayOrYear1, month, dayOrYear2] = issueDate.split(splitterRegex);
+        if(!dayOrYear2) {
+            console.log(issueDate);
+        }
         const [day, year] = dayOrYear2.length === 4
             ? [dayOrYear1, dayOrYear2]
             : [dayOrYear2, dayOrYear1];
@@ -41,28 +45,35 @@ const downloadPage = async (publication: Publication): Promise<string | null> =>
 
 (async () => {
     const maps: Map<string, Map<string, TitulkaResult>> = new Map();
-    const printPublications: Publication[] = ['idnes', 'novinky', 'ihned', 'lidovky'];
+    const printPublications: Publication[] = ['denik'];
     await Promise.all(printPublications.map(async (publication) => {
         const map = await getTitulka(publication);
         maps.set(publication, map);
     }));
     const minDay = 20170422;
-    const days = Array.from(maps.get('idnes')!.keys())
+    const days = Array.from(maps.get(printPublications[0])!.keys())
         .filter(d => parseInt(d, 10) > minDay)
         .slice(1);
+    console.log(days);
     days.forEach(async (day) => {
         try {
             const filename = "day-" + day + '.json';
             const json = JSON.parse((await downloadObject(filename)).toString()) as DailyResult;
             let some = false;
             printPublications.forEach(publication => {
+                if(json.publications[publication] === undefined) {
+                    json.publications[publication] = {articles: [], hours: []};
+                }
                 if (json.publications[publication].print === undefined) {
                     json.publications[publication].print = maps.get(publication)!.get(day);
                     some = true;
                 }
             });
             if (some) {
+                console.log('!', day);
                 uploadObject(filename, json);
+            } else {
+                console.log('.', day);
             }
         } catch (e) {
             console.error('Fuck', day, e);
