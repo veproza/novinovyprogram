@@ -12,7 +12,7 @@ const isPrintOnly = ['aktualne', 'irozhlas'].includes(publisherId);
     {#if displayPrint}
         <div class="publisher-col-print publisher-col-item-background">
             {#if data.print}
-                <a target="_blank" href="{data.print.link}"><img src="{data.print.img}" /></a>
+                <a target="_blank" href="{data.print.link}"><img src="{data.print.img}" alt="Titulní strana deníku" /></a>
             {:else}
                 <div class="publisher-col-print-empty">
                     <div class="text">
