@@ -1,0 +1,8 @@
+{
+  "key": "value",
+  "key2": "value2",
+  "other_key": "other_value",
+  "queryStringParameters": {
+    "file": "20190525T064627_novinky-cz.html"
+  }
+}

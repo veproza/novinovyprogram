@@ -1,0 +1,16 @@
+{
+  "name": "asset-downloader",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@types/node": "^12.0.2",
+    "aws-sdk": "^2.463.0"
+  }
+}

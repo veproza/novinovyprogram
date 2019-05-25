@@ -1,13 +1,11 @@
 .idea
-client/node_modules
+node_modules
 client/public/bundle.*
-srv/node_modules
 srv/js
-lambda/headlines/node_modules
-lambda/parser/node_modules
 lambda/parser/*.js
 lambda/parser/*.js.map
 lambda/parser/parsers/*.js
 lambda/parser/parsers/*.js.map
-lambda/headlines/.env
-lambda/parser/.env
+lambda/view-modifier/*.js
+lambda/view-modifier/*.js.map
+.env
