@@ -38,6 +38,8 @@ export interface DailyResult {
         irozhlas: PublicationDay;
         novinky: PublicationDay;
         ihned: PublicationDay;
+        denikn?: PublicationDay;
+        denik?: PublicationDay;
     }
 }
 

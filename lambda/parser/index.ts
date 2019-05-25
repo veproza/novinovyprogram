@@ -17,9 +17,9 @@ import {getParser, getPublicationId} from "./parsers/parsers";
 import {Lambda} from 'aws-sdk';
 const lambda = new Lambda({region: "eu-west-1"});
 
-export type Publication = 'idnes' | 'lidovky' | 'aktualne' | 'irozhlas' | 'novinky' | 'ihned';
+export type Publication = 'idnes' | 'lidovky' | 'aktualne' | 'irozhlas' | 'novinky' | 'ihned' | 'denik' | 'denikn';
 
-const publications: Publication[] = ['idnes', 'lidovky', 'aktualne', 'irozhlas', 'novinky', 'ihned'];
+const publications: Publication[] = ['idnes', 'lidovky', 'aktualne', 'irozhlas', 'novinky', 'ihned', 'denik', 'denikn'];
 
 const MAX_ARTICLE_LENGTH = 4;
 const maxFilesAtOnce = publications.length;
@@ -83,7 +83,9 @@ const getEmptyDailyResult= (): DailyResult => {
             ihned: getEmptyPublicationDay(),
             irozhlas: getEmptyPublicationDay(),
             lidovky: getEmptyPublicationDay(),
-            novinky: getEmptyPublicationDay()
+            novinky: getEmptyPublicationDay(),
+            denikn: getEmptyPublicationDay(),
+            denik: getEmptyPublicationDay()
         }
     }
 
@@ -98,7 +100,10 @@ const getEmptyPublicationDay = (): PublicationDay => {
 
 const addFileToResult = async (file: FileAndDate, dailyResult: DailyResult): Promise<void> => {
     const publicationId = getPublicationId(file.filename)!;
-    const publication = dailyResult.publications[publicationId];
+    if(dailyResult.publications[publicationId] === undefined) {
+        dailyResult.publications[publicationId] = getEmptyPublicationDay();
+    }
+    const publication: PublicationDay = dailyResult.publications[publicationId]!;
     const alreadyExists = publication.hours.some(existingHour => existingHour.time === file.time);
     if(alreadyExists) {
         console.log('Already existing hour', file.filename);

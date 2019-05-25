@@ -9,7 +9,7 @@ interface ObjectsReturn {
 (async () => {
     const getObjects = (ContinuationToken?: string) => new Promise<ObjectsReturn>((resolve, reject) => {
         const Bucket = "lidovky-headlines";
-        s3.listObjectsV2({Bucket, ContinuationToken, Prefix: '2019'}, (err, data) => {
+        s3.listObjectsV2({Bucket, ContinuationToken, Prefix: '2019052'}, (err, data) => {
             if(err) {
                 reject(err);
             } else {

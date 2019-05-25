@@ -6,6 +6,8 @@ import irozhlasParser from "./irozhlas";
 import novinkyParser from "./novinky";
 import ihnedParser from "./ihned";
 import {Publication} from "../index";
+import deniknParser from "./denikn";
+import denikParser from "./denik";
 
 export const getPublicationId = (file: string): Publication | null => {
     if (file.includes('idnes')) {
@@ -20,6 +22,10 @@ export const getPublicationId = (file: string): Publication | null => {
         return 'novinky';
     } else if (file.includes('ihned')) {
         return 'ihned';
+    } else if (file.includes('denikn-cz')) {
+        return 'denikn';
+    } else if (file.includes('denik-cz')) {
+        return 'denik';
     } else {
         return null;
     }
@@ -38,6 +44,10 @@ export const getParser = (publicationId: Publication): IParser|null => {
         return novinkyParser;
     } else if (publicationId === 'ihned') {
         return ihnedParser;
+    } else if (publicationId === 'denikn') {
+        return deniknParser;
+    } else if (publicationId === 'denik') {
+        return denikParser;
     } else {
         return null;
     }
