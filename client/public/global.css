@@ -142,13 +142,9 @@ input[type="date"] {
 	--bg-color-alpha-low: rgba(4, 133, 165, 0.03);
 	--bg-color-light: #f8fbfc;
 }
-.publisher-col-aktualne .publisher-col-header {
-	background-color: #0485a5;
-}
 .publisher-col-aktualne .publisher-col-header::before {
 	height: 28px;
-	background-image: url('https://asset.stdout.cz/fe/aktualne/img/big-logo.png');
-	background-color: #0485a5;
+	background-image: url('assets/aktualne.svg');
 }
 .publisher-col-irozhlas {
 	--full-color: rgb(216, 37, 52);
