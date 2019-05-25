@@ -20,9 +20,7 @@
         ? `Zaznamenán jen jednou v ${toHumanTime(layout.roundedStartDate)}`
         : `Zaznamenán poprvé v ${toHumanTime(layout.roundedStartDate)}` + durationTitle;
     const title = `${entry.article.headline}\n\n${seenTitle}`;
-    const headline = entityRemover(entry.article.headline);
-    const perex = entityRemover(entry.article.perex);
-    const link = entry.article.link;
+    const {headline, perex, link} = entry.article;
 </script>
 <style>
 .seen-ticks {
