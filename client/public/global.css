@@ -179,6 +179,30 @@ input[type="date"] {
 	background-image: url('https://ihned.cz/img/v2/logo_hn.svg');
 }
 
+
+.publisher-col-denikn {
+	--full-color: rgb(199, 36, 55);
+	--bg-color: rgba(199, 36, 55, 0.2);
+	--bg-color-alpha-mid: #fbeeef; /* A 0.08 */
+	--bg-color-alpha-low: rgba(199, 36, 55, 0.03);
+	--bg-color-light: #fef8f9 /* A 0.03 */
+}
+.publisher-col-denikn .publisher-col-header::before {
+	background-image: url('https://denikn.cz/wp-content/themes/dn-2-cz/logo.svg');
+}
+
+
+.publisher-col-denik {
+	--full-color: rgb(1, 128, 200);
+	--bg-color: rgba(1, 128, 200, 0.2);
+	--bg-color-alpha-mid: #e8f2fa;
+	--bg-color-alpha-low: rgba(1, 128, 200, 0.03);
+	--bg-color-light: #f8fbfd;
+}
+.publisher-col-denik .publisher-col-header::before {
+	background-image: url('https://g.denik.cz/images/dv4/logo/denik.svg');
+}
+
 .publisher-col-print {
 	margin-top: 49px;
 	height: 280px;

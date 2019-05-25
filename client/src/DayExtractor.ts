@@ -22,6 +22,10 @@ export interface SeenAtData {
 }
 
 export function extractToDay (day: PublicationDay): ArticleView {
+    if(day === undefined) {
+        // when viewing days before the publication was actually added
+        day = getEmptyPublicationDay();
+    }
     const mainArticles: TimedArticle[] = [];
     let currentArticleId: number = -1;
     let currentArticleStart: Date = new Date();
@@ -67,3 +71,11 @@ export function extractToDay (day: PublicationDay): ArticleView {
     return {mainArticles, print};
 
 }
+
+
+const getEmptyPublicationDay = (): PublicationDay => {
+    return {
+        hours: [],
+        articles: []
+    };
+};

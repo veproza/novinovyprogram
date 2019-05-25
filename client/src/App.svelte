@@ -161,8 +161,10 @@ const handleNextClick = () => {
             <NewsColumn displayPrint="{displayPrint}" data="{extractToDay(value.data.publications.lidovky)}" publisherId="lidovky" />
             <NewsColumn displayPrint="{displayPrint}" data="{extractToDay(value.data.publications.novinky)}" publisherId="novinky" />
             <NewsColumn displayPrint="{displayPrint}" data="{extractToDay(value.data.publications.ihned)}" publisherId="ihned" />
-            <NewsColumn displayPrint="{displayPrint}" data="{extractToDay(value.data.publications.irozhlas)}" publisherId="irozhlas" />
-            <NewsColumn displayPrint="{displayPrint}" data="{extractToDay(value.data.publications.aktualne)}" publisherId="aktualne" />
+            <!-- <NewsColumn displayPrint="{displayPrint}" data="{extractToDay(value.data.publications.irozhlas)}" publisherId="irozhlas" /> -->
+            <!-- <NewsColumn displayPrint="{displayPrint}" data="{extractToDay(value.data.publications.aktualne)}" publisherId="aktualne" /> -->
+            <NewsColumn displayPrint="{displayPrint}" data="{extractToDay(value.data.publications.denikn)}" publisherId="denikn" />
+            <NewsColumn displayPrint="{displayPrint}" data="{extractToDay(value.data.publications.denik)}" publisherId="denik" />
         </div>
         {:catch err}
         <div class="error-box-container">

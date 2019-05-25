@@ -13,7 +13,7 @@
     const height = timeToNext / hourMs * hourHeightPx;
     const style = `height: ${height}px; top: ${top}px`;
     let link;
-    const prefix = ['irozhlas', 'novinky'].includes(publisherId)
+    const prefix = ['irozhlas', 'novinky', 'denik'].includes(publisherId)
         ?  'https://0yh5xmhkm0.execute-api.eu-west-1.amazonaws.com/prod?file='
         : 'https://s3-eu-west-1.amazonaws.com/lidovky-headlines/';
     if(item.date.getTime() < 1558094783000) {
