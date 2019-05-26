@@ -1,6 +1,7 @@
 <script>
     import {hourHeightPx} from "./Layouter";
     import {toHumanTime} from "./utils";
+    import {publisherMeta} from "./publisherMeta";
     export let item;
     export let article;
     export let publisherId;
@@ -16,11 +17,12 @@
     const prefix = ['irozhlas', 'novinky', 'denik'].includes(publisherId)
         ?  'https://0yh5xmhkm0.execute-api.eu-west-1.amazonaws.com/prod?file='
         : 'https://s3-eu-west-1.amazonaws.com/lidovky-headlines/';
+    const fileId = publisherMeta[publisherId].fileId;
     if(item.date.getTime() < 1558094783000) {
-        const link = `${prefix}${publisherId}-cz_${item.date.getTime()}.html`;
+        link = `${prefix}${fileId}_${item.date.getTime()}.html`;
     } else {
         const datestamp = item.date.toISOString().replace(/[-:]/g, '').substr(0,15);
-        link = `${prefix}${datestamp}_${publisherId}-cz.html`;
+        link = `${prefix}${datestamp}_${fileId}.html`;
     }
     const articlesList = item.articles.map((article, index) => {
         return `${index + 1}) ${article.headline}`;

@@ -8,6 +8,11 @@ import ihnedParser from "./parsers/ihned";
 import * as fs from 'fs';
 import {uploadFile, uploadObject} from "./utils";
 import {TitulkaResult} from "./titulkaInjector";
+import bbcParser from "./parsers/bbc";
+import ftParser from "./parsers/ft";
+import lemondeParser from "./parsers/lemonde";
+import wyborczaParser from "./parsers/wyborcza";
+import spiegelParser from "./parsers/spiegel";
 
 type FileAndDate = {
     filename: string;
@@ -15,9 +20,7 @@ type FileAndDate = {
     time: number;
 }
 
-export type Publication = 'idnes' | 'lidovky' | 'aktualne' | 'irozhlas' | 'novinky' | 'ihned' | 'denik' | 'denikn';
-
-const publications: Publication[] = ['idnes', 'lidovky', 'aktualne', 'irozhlas', 'novinky', 'ihned', 'denik', 'denikn'];
+export type Publication = 'idnes' | 'lidovky' | 'aktualne' | 'irozhlas' | 'novinky' | 'ihned' | 'denik' | 'denikn' | 'bbc' | 'ft' | 'lemonde' | 'wyborcza' | 'spiegel';
 
 export interface DailyResult {
     lastFileTime: number,
@@ -31,7 +34,7 @@ export interface DailyResult {
     }
 }
 
-interface PublicationDay {
+export interface PublicationDay {
     articles: IArticleData[];
     hours: HourData[];
     print?: TitulkaResult | null;
@@ -69,12 +72,7 @@ const datafile = fs.readFileSync(__dirname + '/../data/keys.txt', 'utf-8') + "\n
 const files = datafile.split("\n")
     .slice(1) // remove  -idnes-cz1492763826366.html
     .filter(file => {
-        return file.includes('idnes')
-            || file.includes('lidovky')
-            || file.includes('aktualne')
-            || file.includes('irozhlas')
-            || file.includes('novinky')
-            || file.includes('ihned');
+        return file.includes('spiegel-')
     })
     .map((filename): FileAndDate => {
         const date = getDateFromFileName(filename);
@@ -135,27 +133,12 @@ const getPublicationDay = async (publicationId: Publication, files: FileAndDate[
     };
 };
 
-const downloadDay = async (referenceTime: number): Promise<DailyResult> => {
+const downloadDay = async (referenceTime: number, publication: Publication): Promise<PublicationDay> => {
     const {dateStart, dateEnd} = getTimeBounds(referenceTime);
     const timeStart = dateStart.getTime();
     const timeEnd = dateEnd.getTime();
     const matchingFiles = files.filter(f => timeStart <= f.time && f.time <= timeEnd);
-
-    const responses = await Promise.all(publications.map(((publication: Publication): Promise<PublicationDay> => {
-        return getPublicationDay(publication, matchingFiles);
-    })));
-    const lastMatchingFile = matchingFiles[matchingFiles.length - 1];
-    return {
-        lastFileTime: lastMatchingFile.time,
-        publications: {
-            idnes: responses[0],
-            lidovky: responses[1],
-            aktualne: responses[2],
-            irozhlas: responses[3],
-            novinky: responses[4],
-            ihned: responses[5]
-        }
-    };
+    return getPublicationDay(publication, matchingFiles);
 };
 
 
@@ -174,14 +157,25 @@ const getParser = (file: string): IParser => {
         return novinkyParser;
     } else if (file.includes('ihned')) {
         return ihnedParser;
+    } else if (file.includes('bbc')) {
+        return bbcParser;
+    } else if (file.includes('ft')) {
+        return ftParser;
+    } else if (file.includes('lemonde')) {
+        return lemondeParser;
+    } else if (file.includes('wyborcza')) {
+        return wyborczaParser;
+    } else if (file.includes('spiegel')) {
+        return spiegelParser;
     } else {
         throw new Error("No parser for " + file);
     }
 };
-const firstReferenceTime = new Date("2019-05-24T10:41:39.138Z").getTime();
-const lastReferenceTime = new Date("2019-05-23T10:41:39.138Z").getTime();
-// const lastReferenceTime = new Date("2019-05-16T10:41:39.138Z").getTime();
+const firstReferenceTime = new Date("2019-05-26T10:41:39.138Z").getTime();
+const lastReferenceTime = new Date("2017-04-20T10:41:39.138Z").getTime();
+// const lastReferenceTime = new Date("2019-05-22T10:41:39.138Z").getTime();
 let currentReferenceTime = firstReferenceTime;
+const publicationId = 'spiegel';
 (async () => {
     do {
         const file = files.pop();
@@ -190,13 +184,14 @@ let currentReferenceTime = firstReferenceTime;
         }
         const date = new Date(currentReferenceTime);
         console.log("Downloading ", date.toISOString());
-        const day = await downloadDay(currentReferenceTime);
+        const day = await downloadDay(currentReferenceTime, publicationId);
         const dayId = date.toISOString().replace(/[-:]/g, '').substr(0, 8);
-        console.log("Uploading", date.toISOString());
-        await uploadObject("day-" + dayId + '.json', day);
-        console.log('reset');
-        await uploadFile("list.txt", Buffer.from(""), "text/plain");
-        console.log("Done", date.toISOString());
+        const key = "daypub-" + dayId + '-'+ publicationId + '.json';
+        console.log("Uploading", key);
+        await uploadObject(key, day);
+        // console.log('reset');
+        // await uploadFile("list.txt", Buffer.from(""), "text/plain");
+        // console.log("Done", date.toISOString());
         currentReferenceTime -= 86400 * 1e3;
     } while (currentReferenceTime > lastReferenceTime)
 })();

@@ -194,6 +194,45 @@ input[type="date"] {
 	--bg-color-light: #f9f9f9;
 }
 
+.publisher-col-bbc {
+	--full-color: rgb(29, 29, 27);
+	--bg-color: rgba(29, 29, 27, 0.2);
+	--bg-color-alpha-mid: #ededed;
+	--bg-color-alpha-low: rgba(29, 29, 27, 0.03);
+	--bg-color-light: #f8f8f8;
+}
+
+.publisher-col-ft {
+	--full-color: rgb(51, 48, 46);
+	--bg-color: rgba(51, 48, 46, 0.2);
+	--bg-color-alpha-mid: #efefef;
+	--bg-color-alpha-low: rgba(51, 48, 46, 0.03);
+	--bg-color-light: #f9f9f8;
+}
+
+.publisher-col-lemonde {
+	--full-color: rgb(26, 22, 26);
+	--bg-color: rgba(26, 22, 26, 0.2);
+	--bg-color-alpha-mid: #ededed;
+	--bg-color-alpha-low: rgba(26, 22, 26, 0.03);
+	--bg-color-light: #f8f8f8;
+}
+
+.publisher-col-wyborcza {
+	--full-color: rgb(230, 23, 57);
+	--bg-color: rgba(230, 23, 57, 0.2);
+	--bg-color-alpha-mid: #feecef;
+	--bg-color-alpha-low: rgba(230, 23, 57, 0.03);
+	--bg-color-light: #fff7f9
+}
+
+.publisher-col-spiegel {
+	--full-color: rgb(151, 25, 20);
+	--bg-color: rgba(151, 25, 20, 0.2);
+	--bg-color-alpha-mid: #f7edec;
+	--bg-color-alpha-low: rgba(151, 25, 20, 0.03);
+	--bg-color-light: #fcf8f7;
+}
 
 .publisher-col-denikn {
 	--full-color: rgb(199, 36, 55);

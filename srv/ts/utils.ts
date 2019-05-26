@@ -1,6 +1,6 @@
 import * as S3 from 'aws-sdk/clients/s3';
 import * as zlib from 'zlib';
-import {DailyResult} from "./parser";
+import {DailyResult, PublicationDay} from "./parser";
 import * as http from "http";
 import * as https from "https";
 
@@ -28,7 +28,7 @@ export const downloadObject = (Key: string): Promise<Buffer> => new Promise<Buff
 });
 
 
-export const uploadObject = async (Key: string, content: DailyResult): Promise<void> => {
+export const uploadObject = async (Key: string, content: PublicationDay): Promise<void> => {
 
     const json = Buffer.from(JSON.stringify(content));
     const compressed = await gzip(json);

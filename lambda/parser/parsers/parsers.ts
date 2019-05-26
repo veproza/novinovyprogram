@@ -8,6 +8,11 @@ import ihnedParser from "./ihned";
 import {Publication} from "../index";
 import deniknParser from "./denikn";
 import denikParser from "./denik";
+import bbcParser from "./bbc";
+import lemondeParser from "./lemonde";
+import ftParser from "./ft";
+import spiegelParser from "./spiegel";
+import wyborczaParser from "./wyborcza";
 
 export const getPublicationId = (file: string): Publication | null => {
     if (file.includes('idnes')) {
@@ -26,6 +31,16 @@ export const getPublicationId = (file: string): Publication | null => {
         return 'denikn';
     } else if (file.includes('denik-cz')) {
         return 'denik';
+    } else if (file.includes('bbc')) {
+        return 'bbc';
+    } else if (file.includes('wyborcza')) {
+        return 'wyborcza';
+    } else if (file.includes('lemonde')) {
+        return 'lemonde';
+    } else if (file.includes('ft-com')) {
+        return 'ft';
+    } else if (file.includes('spiegel')) {
+        return 'spiegel';
     } else {
         return null;
     }
@@ -48,6 +63,16 @@ export const getParser = (publicationId: Publication): IParser|null => {
         return deniknParser;
     } else if (publicationId === 'denik') {
         return denikParser;
+    } else if (publicationId === 'bbc') {
+        return bbcParser;
+    } else if (publicationId === 'lemonde') {
+        return lemondeParser;
+    } else if (publicationId === 'ft') {
+        return ftParser;
+    } else if (publicationId === 'spiegel') {
+        return spiegelParser;
+    } else if (publicationId === 'wyborcza') {
+        return wyborczaParser;
     } else {
         return null;
     }

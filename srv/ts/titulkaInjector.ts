@@ -71,7 +71,7 @@ const downloadPage = async (publication: Publication): Promise<string | null> =>
             });
             if (some) {
                 console.log('!', day);
-                uploadObject(filename, json);
+                // uploadObject(filename, json); // TODO needs rework to new per-publication format
             } else {
                 console.log('.', day);
             }
