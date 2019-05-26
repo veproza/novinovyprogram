@@ -7,7 +7,7 @@ import TimeColumn from './TimeColumn.svelte'
 import Sharer from './Sharer.svelte'
 import {afterUpdate, beforeUpdate} from 'svelte'
 import {getHashLink} from './hashLinks';
-import {columns} from './ColumnManager';
+import {columns, getCanAddNewColumn, addNewColumn} from './ColumnManager';
 
 
 export let name;
@@ -134,7 +134,7 @@ const handleNextClick = () => {
     const nextDay = new Date(currentDate.getTime() + 86400 * 1e3);
     domDate = nextDay.toISOString().substr(0, 10);
     handleChange();
-}
+};
 
 </script>
 
@@ -145,8 +145,6 @@ const handleNextClick = () => {
 	}
 	.maxwidth {
 	    display: inline-block;
-	    max-width: 1600px;
-	    width: 100%;
 	    text-align: left;
 	}
 	.sameWidthDay {
@@ -161,6 +159,19 @@ const handleNextClick = () => {
 	.prev:hover, .next:hover {
 	    color: #aaa;
 	    text-decoration: none;
+	}
+	.addColummLink {
+	    display: block;
+	    width: 20px;
+	    height: 40px;
+	    line-height: 40px;
+	    text-align: center;
+	    margin-top: 60px;
+	    text-decoration: none;
+	    color: #888;
+	}
+	.addColummLink:hover {
+	    color: #333;
 	}
 </style>
 <div class="center">
@@ -184,6 +195,10 @@ const handleNextClick = () => {
             {#each $columns as publisherId (publisherId)}
                 <NewsColumn {displayPrint} {publisherId} date="{currentDate}" promiseCallback="{onColumnPromise}" />
             {/each}
+            {#if getCanAddNewColumn()}
+                <a class="addColummLink" href="#" on:click|preventDefault="{addNewColumn}">+</a>
+            {/if}
         </div>
+
     </div>
 </div>

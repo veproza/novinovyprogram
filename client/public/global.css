@@ -66,7 +66,7 @@ input[type="date"] {
 .header {
 	position: fixed;
 	top: 0;
-	width: 100%;
+	min-width: 100%;
 	z-index: 3;
 	background: white;
 	padding: 10px 20px;
@@ -74,11 +74,11 @@ input[type="date"] {
 .publisher-columns {
 	display: flex;
 	min-width: 768px;
+    position: relative;
 }
 
 .publisher-col {
-	width: 100%;
-    min-width: 220px;
+    width: 220px;
 	position: relative;
 }
 

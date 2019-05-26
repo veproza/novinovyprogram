@@ -56,6 +56,7 @@ let selectedColumn = publisherId;
             {#each getOtherColumnOptions(publisherId) as possiblePublisherId}
                 <option value="{possiblePublisherId}">{publisherMeta[possiblePublisherId].name}</option>
             {/each}
+            <option value="">(zrušit sloupec)</option>
         </select>
     </div>
     {#if displayPrint}
