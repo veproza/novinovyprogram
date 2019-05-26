@@ -1,18 +1,18 @@
 <script>
-import {getHourHash} from './utils'
-export let currentDate = null;
+
+export let getCurrentHash;
 const escapedUrl = encodeURIComponent(window.location.toString());
 const handleFbClick = () => {
     const url = "https://www.facebook.com/sharer/sharer.php?u=";
     window.open(url + encodeURIComponent(getCurrentHashUrl()));
-}
+};
 const handleTwClick = () => {
     const url = "https://twitter.com/home?status=";
     window.open(url + encodeURIComponent(getCurrentHashUrl()));
-}
+};
 const getCurrentHashUrl = () => {
     const url = window.location.toString().split('#')[0];
-    return url + '#' + currentDate.toISOString().substr(0,10) + "T" + getHourHash(window.scrollY);
+    return url + '#' + getCurrentHash();
 }
 </script>
 <style>

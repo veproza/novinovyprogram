@@ -1,12 +1,12 @@
 <script>
 import {downloadDay} from './Downloader'
 import {hourHeightPx} from './Layouter'
-import {getHourHash} from './utils'
 import {extractToDay} from './DayExtractor.ts'
 import NewsColumn from './NewsColumn.svelte'
 import TimeColumn from './TimeColumn.svelte'
 import Sharer from './Sharer.svelte'
 import {afterUpdate, beforeUpdate} from 'svelte'
+import {getHashLink} from './hashLinks';
 import {columns} from './ColumnManager';
 
 
@@ -49,9 +49,9 @@ const handleChange = (doUpdateHash) => {
     currentDateMidnight.setHours(0,0,0);
     const nextDateObj = new Date(currentDateMidnight.getTime() + 86400 * 1e3);
     nextDate = nextDateObj.getTime() <= Date.now()
-        ? nextDateObj.toISOString().substr(0, 10) + "T" + getCurrentHourHash()
+        ?  getHashLink(new Date(getCurrentDateTime().getTime() - 86400 * 1e3))
         : null;
-    prevDate = new Date(currentDate.getTime() - 86400 * 1e3).toISOString().substr(0, 10) + "T" + getCurrentHourHash();
+    prevDate = getHashLink(new Date(getCurrentDateTime().getTime() - 86400 * 1e3));
     promiseIsFulfilled = false;
     promises.length = 0;
     columnData.length = 0;
@@ -92,12 +92,22 @@ afterUpdate(() => {
     }
 });
 
-const getCurrentHourHash = () => {
-    return getHourHash(window.scrollY);
+const getCurrentDateTime = () => {
+    const date = new Date(currentDate);
+    const hourDecimal = scrollY / hourHeightPx;
+    const hour = Math.floor(hourDecimal);
+    const minute = Math.floor((hourDecimal % 1) * 60);
+    date.setHours(hour);
+    date.setMinutes(minute);
+    return date;
+};
+
+const getCurrentHash = () => {
+    return getHashLink(getCurrentDateTime());
 };
 
 const updateHash = () => {
-    window.location.hash = currentDate.toISOString().substr(0, 10) + "T" + getCurrentHourHash();
+    window.location.hash = getCurrentHash();
 };
 
 document.addEventListener('mouseout', (evt) => {
@@ -165,7 +175,7 @@ const handleNextClick = () => {
             {#if nextDate !== null}
                 <a href="#{nextDate}" on:click|preventDefault="{handleNextClick}" class="next" >&raquo;</a>
             {/if}
-            <Sharer currentDate="{currentDate}" />
+            <Sharer {getCurrentHash} />
         </div>
         <div class="publisher-columns">
             {#if referencePublication}

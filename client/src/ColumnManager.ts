@@ -3,11 +3,31 @@ import {publisherMeta} from "./publisherMeta";
 
 type Column = string;
 const availableColumns = Object.keys(publisherMeta);
+
+const getCurrentHashColumns = (): string[] => {
+    const [date, cols] = window.location.hash.split('|');
+    if(cols) {
+        return cols.split(',');
+    } else {
+        return [];
+    }
+};
+
 const getDefaultColumns = (): Column[] => {
-    return ['idnes', 'lidovky', 'novinky', 'ihned', 'aktualne'];
+    const receivedColumns = getCurrentHashColumns()
+        .filter(column => availableColumns.includes(column));
+    if(receivedColumns.length) {
+        return receivedColumns;
+    } else {
+        return ['idnes', 'lidovky', 'novinky', 'aktualne', 'irozhlas'];
+    }
 };
 
 let currentColumns = getDefaultColumns();
+
+export const getCurrentDisplayedColumns = (): Column[] => {
+    return currentColumns.slice();
+};
 
 export const columns = writable<Column[]>(currentColumns);
 columns.subscribe(value => {
