@@ -7,6 +7,7 @@ import NewsColumn from './NewsColumn.svelte'
 import TimeColumn from './TimeColumn.svelte'
 import Sharer from './Sharer.svelte'
 import {afterUpdate, beforeUpdate} from 'svelte'
+import {columns} from './ColumnManager';
 
 
 export let name;
@@ -18,7 +19,7 @@ let nextDate = null;
 let prevDate = null;
 let displayPrint = false;
 let rememberedScrollPosition = null;
-let displayedColumns = ['idnes', 'lidovky', 'novinky', 'ihned', 'irozhlas'];
+
 const updateFromHash = () => {
     if(window.location.hash) {
         const match = window.location.hash.match('([0-9]{4})-([0-9]{2})-([0-9]{2})T([0-9]{2}):([0-9]{2})');
@@ -170,7 +171,7 @@ const handleNextClick = () => {
             {#if referencePublication}
                 <TimeColumn displayPrint="{displayPrint}" data="{referencePublication}" />
             {/if}
-            {#each displayedColumns as publisherId}
+            {#each $columns as publisherId (publisherId)}
                 <NewsColumn {displayPrint} {publisherId} date="{currentDate}" promiseCallback="{onColumnPromise}" />
             {/each}
         </div>

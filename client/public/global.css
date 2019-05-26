@@ -78,6 +78,7 @@ input[type="date"] {
 
 .publisher-col {
 	width: 100%;
+    min-width: 220px;
 	position: relative;
 }
 
@@ -106,9 +107,37 @@ input[type="date"] {
 	top: 50%;
 	transform: translate(-50%, -50%);
 	left: 50%;
-	content: "";
-	max-width: 100%;
+	max-width: calc(100% - 40px);
 	height: 20px;
+    z-index: 1;
+}
+.publisher-col-header select {
+    position: absolute;
+    right: 0;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    height: 100%;
+    width: 100%;
+    z-index: 2;
+    color: black;
+    background-color: transparent;
+    border: none;
+    opacity: 0.001;
+}
+.publisher-col-publisher .publisher-col-header::before {
+    content: "▼";
+    position: absolute;
+    top: 50%;
+    right: 10px;
+    transform: translate(0, -50%);
+    font-size: 0.6em;
+    color: #333;
+    opacity: 0.2;
+    transition: opacity 0.2s;
+}
+.publisher-col-header:hover::before {
+    opacity: 1;
 }
 .publisher-col-idnes {
 	--full-color: rgb(228, 31, 31);
@@ -272,6 +301,7 @@ input[type="date"] {
 .time-col {
 	width: 16px;
 	position: relative;
+    min-width: 16px;
 }
 .time-tick {
 	padding-top: 3px;
