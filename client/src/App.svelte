@@ -18,6 +18,7 @@ let nextDate = null;
 let prevDate = null;
 let displayPrint = false;
 let rememberedScrollPosition = null;
+let displayedColumns = ['idnes', 'lidovky', 'novinky', 'ihned', 'irozhlas'];
 const updateFromHash = () => {
     if(window.location.hash) {
         const match = window.location.hash.match('([0-9]{4})-([0-9]{2})-([0-9]{2})T([0-9]{2}):([0-9]{2})');
@@ -169,12 +170,9 @@ const handleNextClick = () => {
             {#if referencePublication}
                 <TimeColumn displayPrint="{displayPrint}" data="{referencePublication}" />
             {/if}
-            <NewsColumn displayPrint="{displayPrint}" date="{currentDate}" promiseCallback="{onColumnPromise}" publisherId="idnes" />
-            <NewsColumn displayPrint="{displayPrint}" date="{currentDate}" promiseCallback="{onColumnPromise}" publisherId="lidovky" />
-            <NewsColumn displayPrint="{displayPrint}" date="{currentDate}" promiseCallback="{onColumnPromise}" publisherId="novinky" />
-            <NewsColumn displayPrint="{displayPrint}" date="{currentDate}" promiseCallback="{onColumnPromise}" publisherId="ihned" />
-            <NewsColumn displayPrint="{displayPrint}" date="{currentDate}" promiseCallback="{onColumnPromise}" publisherId="irozhlas" />
-            <NewsColumn displayPrint="{displayPrint}" date="{currentDate}" promiseCallback="{onColumnPromise}" publisherId="aktualne" />
+            {#each displayedColumns as publisherId}
+                <NewsColumn {displayPrint} {publisherId} date="{currentDate}" promiseCallback="{onColumnPromise}" />
+            {/each}
         </div>
     </div>
 </div>

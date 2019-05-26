@@ -101,17 +101,13 @@ input[type="date"] {
 	width: 1px;
 	background: linear-gradient(to bottom, white, var(--bg-color));
 }
-.publisher-col-header::before {
-	background-size: contain;
-	background-repeat: no-repeat;
-	background-position: center;
-	background-color: white;
+.publisher-col-header img.logo {
 	position: absolute;
 	top: 50%;
-	transform: translate(0, -50%);
-	left: 0;
+	transform: translate(-50%, -50%);
+	left: 50%;
 	content: "";
-	width: 100%;
+	max-width: 100%;
 	height: 20px;
 }
 .publisher-col-idnes {
@@ -121,9 +117,6 @@ input[type="date"] {
 	--bg-color-alpha-low: rgba(228, 31, 31, 0.03);
 	--bg-color-light: #fff8f8;
 }
-.publisher-col-idnes .publisher-col-header::before {
-	background-image: url('https://1gr.cz/u/loga-n4/idnes.svg');
-}
 .publisher-col-lidovky {
 	--full-color: rgb(28, 66, 130);
 	--bg-color: rgba(28, 66, 130, 0.2);
@@ -131,9 +124,8 @@ input[type="date"] {
 	--bg-color-alpha-low: rgba(28, 66, 130, 0.03);
 	--bg-color-light: #f8f9fb;
 }
-.publisher-col-lidovky .publisher-col-header::before {
+.publisher-col-lidovky .publisher-col-header img.logo {
 	height: 19px;
-	background-image: url('https://1gr.cz/o/lidovky_ln5/ln-logo.svg');
 }
 .publisher-col-aktualne {
 	--full-color: rgb(4, 133, 165);
@@ -142,9 +134,8 @@ input[type="date"] {
 	--bg-color-alpha-low: rgba(4, 133, 165, 0.03);
 	--bg-color-light: #f8fbfc;
 }
-.publisher-col-aktualne .publisher-col-header::before {
+.publisher-col-aktualne .publisher-col-header img.logo {
 	height: 28px;
-	background-image: url('assets/aktualne.svg');
 }
 .publisher-col-irozhlas {
 	--full-color: rgb(216, 37, 52);
@@ -153,9 +144,8 @@ input[type="date"] {
 	--bg-color-alpha-low: rgba(216, 37, 52, 0.03);
 	--bg-color-light: #fef8f8;
 }
-.publisher-col-irozhlas .publisher-col-header::before {
+.publisher-col-irozhlas .publisher-col-header img.logo {
 	height: 26px;
-	background-image: url('https://datarozhlas.cz/cpit-prez/img/logo.jpg');
 }
 .publisher-col-novinky {
 	--full-color: rgb(154, 5, 11);
@@ -164,9 +154,8 @@ input[type="date"] {
 	--bg-color-alpha-low: rgba(154, 5, 11, 0.03);
 	--bg-color-light: #fbf7f7;
 }
-.publisher-col-novinky .publisher-col-header::before {
+.publisher-col-novinky .publisher-col-header img.logo {
 	height: 28px;
-	background-image: url('https://www.novinky.cz/static/images/logo.gif');
 }
 .publisher-col-ihned {
 	--full-color: rgb(63, 69, 82);
@@ -174,9 +163,6 @@ input[type="date"] {
 	--bg-color-alpha-mid: #f2f3f4;
 	--bg-color-alpha-low: rgba(63, 69, 82, 0.03);
 	--bg-color-light: #f9f9f9;
-}
-.publisher-col-ihned .publisher-col-header::before {
-	background-image: url('https://ihned.cz/img/v2/logo_hn.svg');
 }
 
 
@@ -187,10 +173,6 @@ input[type="date"] {
 	--bg-color-alpha-low: rgba(199, 36, 55, 0.03);
 	--bg-color-light: #fef8f9 /* A 0.03 */
 }
-.publisher-col-denikn .publisher-col-header::before {
-	background-image: url('https://denikn.cz/wp-content/themes/dn-2-cz/logo.svg');
-}
-
 
 .publisher-col-denik {
 	--full-color: rgb(1, 128, 200);
@@ -198,9 +180,6 @@ input[type="date"] {
 	--bg-color-alpha-mid: #e8f2fa;
 	--bg-color-alpha-low: rgba(1, 128, 200, 0.03);
 	--bg-color-light: #f8fbfd;
-}
-.publisher-col-denik .publisher-col-header::before {
-	background-image: url('https://g.denik.cz/images/dv4/logo/denik.svg');
 }
 
 .publisher-col-print {

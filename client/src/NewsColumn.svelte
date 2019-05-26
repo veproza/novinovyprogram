@@ -3,6 +3,8 @@ import NewsItem from './NewsItem.svelte'
 import {downloadDayPublication} from './Downloader'
 import {extractToDay} from './DayExtractor.ts'
 import {afterUpdate, beforeUpdate} from 'svelte'
+import {publisherMeta} from './publisherMeta'
+import {toHumanDate} from './utils'
 
 export let publisherId;
 export let date;
@@ -26,8 +28,8 @@ afterUpdate(() => {
     }
 });
 
-const isPrintOnly = ['aktualne', 'irozhlas'].includes(publisherId);
-
+const meta = publisherMeta[publisherId];
+const isPrintOnly = !!meta.printName;
 </script>
 <style>
     .error {
@@ -41,11 +43,13 @@ const isPrintOnly = ['aktualne', 'irozhlas'].includes(publisherId);
 ...
 {:then data}
 <div class="publisher-col publisher-col-{publisherId}">
-    <a href="https://www.{publisherId}.cz" class="publisher-col-header" target="_blank"></a>
+    <a href="{meta.link}" class="publisher-col-header" target="_blank">
+        <img src="{meta.logo}" alt="Logo {meta.name}" class="logo">
+    </a>
     {#if displayPrint}
         <div class="publisher-col-print publisher-col-item-background">
             {#if data && data.print}
-                <a target="_blank" href="{data.print.link}"><img src="{data.print.img}" alt="Titulní strana deníku" /></a>
+                <a target="_blank" href="{data.print.link}"><img src="{data.print.img}" alt="Titulní strana deníku {meta.printName} {toHumanDate(date)}" /></a>
             {:else}
                 <div class="publisher-col-print-empty">
                     <div class="text">
