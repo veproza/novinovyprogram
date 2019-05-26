@@ -13,7 +13,7 @@ export let name;
 export let name2 = 'bar';
 const defaultDomDate = new Date(Date.now()).toISOString().substr(0, 10);
 let domDate = defaultDomDate;
-const currentDate = new Date();
+let currentDate = new Date();
 let nextDate = null;
 let prevDate = null;
 let displayPrint = false;
@@ -32,17 +32,17 @@ const updateFromHash = () => {
 };
 updateFromHash();
 
-let dayPromise;
 const daysHuman = ['z neděle', 'z pondělí', 'z úterý', 'ze středy', 'z čtvrtka', 'z pátku', 'ze soboty'];
 let dayHuman = "";
 
 let promiseIsFulfilled = null;
 let skipNextUpdateFromHash = false;
+let referencePublication = null;
 const handleChange = (doUpdateHash) => {
     const [year, month, day] = (domDate || defaultDomDate).split('-').map(parseFloat);
     currentDate.setFullYear(year, month - 1, day);
     currentDate.setHours(12, 0, 0, 0);
-    const currentTimeHash = getCurrentHourHash();
+    currentDate = new Date(currentDate); // TODO check trigger update
     const currentDateMidnight = new Date(currentDate);
     currentDateMidnight.setHours(0,0,0);
     const nextDateObj = new Date(currentDateMidnight.getTime() + 86400 * 1e3);
@@ -51,18 +51,31 @@ const handleChange = (doUpdateHash) => {
         : null;
     prevDate = new Date(currentDate.getTime() - 86400 * 1e3).toISOString().substr(0, 10) + "T" + getCurrentHourHash();
     promiseIsFulfilled = false;
-    dayPromise = downloadDay(currentDate);
-    dayPromise.then(value => promiseIsFulfilled = true);
-    dayPromise.then(({data}) => {
-        displayPrint = Object.values(data.publications).some((publication) => {
-            return publication.print
-        });
-    });
+    promises.length = 0;
+    columnData.length = 0;
     dayHuman = daysHuman[currentDate.getDay()];
     if(doUpdateHash !== false) {
         skipNextUpdateFromHash = true;
         updateHash();
     }
+};
+const promises = [];
+const columnData = [];
+const onColumnPromise = (promise) => {
+    promises.push(promise);
+    promise.then(data => {
+        columnData.push(data);
+        if(columnData.length === promises.length) {
+            promiseIsFulfilled = true;
+            setTimeout(() => {
+                displayPrint = columnData.some(publication => publication && publication.print);
+                referencePublication = columnData
+                    .filter(p => p !== null && p.hours)
+                    .sort((a, b) => b.hours.length - a.hours.length)[0];
+            }, 1)
+
+        }
+    })
 };
 
 beforeUpdate(() => {
@@ -152,26 +165,16 @@ const handleNextClick = () => {
             {/if}
             <Sharer currentDate="{currentDate}" />
         </div>
-        {#await dayPromise}
-        loading.
-        {:then value}
         <div class="publisher-columns">
-            <TimeColumn displayPrint="{displayPrint}" data="{value.data.publications.idnes}" />
-            <NewsColumn displayPrint="{displayPrint}" data="{extractToDay(value.data.publications.idnes)}" publisherId="idnes" />
-            <NewsColumn displayPrint="{displayPrint}" data="{extractToDay(value.data.publications.lidovky)}" publisherId="lidovky" />
-            <NewsColumn displayPrint="{displayPrint}" data="{extractToDay(value.data.publications.novinky)}" publisherId="novinky" />
-            <NewsColumn displayPrint="{displayPrint}" data="{extractToDay(value.data.publications.ihned)}" publisherId="ihned" />
-            <!-- <NewsColumn displayPrint="{displayPrint}" data="{extractToDay(value.data.publications.irozhlas)}" publisherId="irozhlas" /> -->
-            <!-- <NewsColumn displayPrint="{displayPrint}" data="{extractToDay(value.data.publications.aktualne)}" publisherId="aktualne" /> -->
-            <NewsColumn displayPrint="{displayPrint}" data="{extractToDay(value.data.publications.denikn)}" publisherId="denikn" />
-            <NewsColumn displayPrint="{displayPrint}" data="{extractToDay(value.data.publications.denik)}" publisherId="denik" />
+            {#if referencePublication}
+                <TimeColumn displayPrint="{displayPrint}" data="{referencePublication}" />
+            {/if}
+            <NewsColumn displayPrint="{displayPrint}" date="{currentDate}" promiseCallback="{onColumnPromise}" publisherId="idnes" />
+            <NewsColumn displayPrint="{displayPrint}" date="{currentDate}" promiseCallback="{onColumnPromise}" publisherId="lidovky" />
+            <NewsColumn displayPrint="{displayPrint}" date="{currentDate}" promiseCallback="{onColumnPromise}" publisherId="novinky" />
+            <NewsColumn displayPrint="{displayPrint}" date="{currentDate}" promiseCallback="{onColumnPromise}" publisherId="ihned" />
+            <NewsColumn displayPrint="{displayPrint}" date="{currentDate}" promiseCallback="{onColumnPromise}" publisherId="irozhlas" />
+            <NewsColumn displayPrint="{displayPrint}" date="{currentDate}" promiseCallback="{onColumnPromise}" publisherId="aktualne" />
         </div>
-        {:catch err}
-        <div class="error-box-container">
-            <div class="error-box">
-                Pro vybraný den nejsou k dispozici data. Data jsou dostupná pro období od včerejška do 22.4.2017.
-            </div>
-        </div>
-        {/await}
     </div>
 </div>

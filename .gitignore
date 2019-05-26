@@ -9,3 +9,4 @@ lambda/parser/parsers/*.js.map
 lambda/view-modifier/*.js
 lambda/view-modifier/*.js.map
 .env
+srv/data

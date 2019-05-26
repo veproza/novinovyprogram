@@ -1,4 +1,4 @@
-import {DailyResult} from "./Downloader";
+import {DailyResult, PublicationDay} from "./Downloader";
 
 const element = document.createElement('span');
 export function entityRemover(input: string) {
@@ -6,11 +6,13 @@ export function entityRemover(input: string) {
     return element.textContent;
 }
 
-export function cleanupDay(input: DailyResult) {
-    Object.values(input.publications).forEach(publication => {
-        publication.articles.forEach(article => {
-            article.headline = entityRemover(article.headline);
-            article.perex = entityRemover(article.perex);
-        });
+export function cleanupPublication(publication: PublicationDay) {
+    publication.articles.forEach(article => {
+        article.headline = entityRemover(article.headline);
+        article.perex = entityRemover(article.perex);
     });
+}
+
+export function cleanupDay(input: DailyResult) {
+    Object.values(input.publications).forEach(cleanupPublication);
 }

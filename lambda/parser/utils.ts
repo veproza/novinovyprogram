@@ -28,21 +28,6 @@ export const downloadObject = (Key: string): Promise<Buffer> => new Promise<Buff
     })
 });
 
-
-export interface DailyResult {
-    lastFileTime: number,
-    publications: {
-        idnes: PublicationDay;
-        lidovky: PublicationDay;
-        aktualne: PublicationDay;
-        irozhlas: PublicationDay;
-        novinky: PublicationDay;
-        ihned: PublicationDay;
-        denikn?: PublicationDay;
-        denik?: PublicationDay;
-    }
-}
-
 export interface PublicationDay {
     articles: IArticleData[];
     hours: HourData[];
@@ -54,9 +39,8 @@ export interface HourData {
     articles: number[];
 }
 
-
-
 export const uploadObject = (Key: string, Body: Buffer, ContentType?: string, ContentEncoding?: string): Promise<void> => new Promise<void>((resolve, reject) => {
+    // require('fs').writeFileSync(__dirname + "/temp/" + Key, Body);
     s3.putObject({Bucket, Key, Body, ContentType, ContentEncoding}, (err => {
         if(err) {
             reject(err);

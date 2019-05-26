@@ -3,7 +3,6 @@ process.env.TZ = 'Europe/Prague';
 import {getTitulka} from "./parsers/alza";
 import {IArticleData} from "./parsers/interfaces";
 import {
-    DailyResult,
     FileAndDate,
     getCurrentList,
     getObject,
@@ -32,19 +31,19 @@ exports.handler = async () => {
         files.length = maxFilesAtOnce;
     }
     console.log(`Processing ${files.length} files`, files.map(f => f.filename));
-    const openDailies = new Map<string, Promise<DailyResult>>();
+    const openFiles = new Map<string, Promise<PublicationDay>>();
     await Promise.all(files
         .map(async (file) => {
-            const fileId = toResultFilename(file.date);
-            if(!openDailies.has(fileId)) {
-                openDailies.set(fileId, getDailyJson(file.date));
+            const filename = toResultFilename(file);
+            if(!openFiles.has(filename)) {
+                openFiles.set(filename, getPublicationFile(filename));
             }
-            const daily = await openDailies.get(fileId)!;
+            const daily = await openFiles.get(filename)!;
             return addFileToResult(file, daily);
     }));
-    await Promise.all(Array.from(openDailies).map(async ([fileId, dailyResult]) => {
+    await Promise.all(Array.from(openFiles).map(async ([fileId, publicationResult]) => {
         console.log('uploading', fileId);
-        uploadDailyResult(fileId, await dailyResult);
+        uploadDailyResult(fileId, await publicationResult);
     }));
     console.log('resetting list, remaining: ', remainingList.length);
     await setCurrentList(remainingList.join("\n") + "\n");
@@ -58,37 +57,19 @@ const callParser = async () => new Promise((resolve, reject) => {
         FunctionName: "arn:aws:lambda:eu-west-1:558611468927:function:headline-parser-development",
         InvocationType: "Event"
     }, (err, response) => {
-        err ? reject(err) : resolve();
+        err ? reject(err) : resolve(response);
     });
 });
 
 
-const getDailyJson = async (date: Date): Promise<DailyResult> => {
+const getPublicationFile = async (filename: string): Promise<PublicationDay> => {
     try {
-        const data = await getObject(toResultFilename(date));
+        const data = await getObject(filename);
         const json = await gunzip(data);
-        return JSON.parse(json.toString()) as DailyResult;
+        return JSON.parse(json.toString()) as PublicationDay;
     } catch (e) {
-        return getEmptyDailyResult();
+        return getEmptyPublicationDay();
     }
-};
-
-
-const getEmptyDailyResult= (): DailyResult => {
-    return {
-        lastFileTime: Date.now(),
-        publications: {
-            aktualne: getEmptyPublicationDay(),
-            idnes: getEmptyPublicationDay(),
-            ihned: getEmptyPublicationDay(),
-            irozhlas: getEmptyPublicationDay(),
-            lidovky: getEmptyPublicationDay(),
-            novinky: getEmptyPublicationDay(),
-            denikn: getEmptyPublicationDay(),
-            denik: getEmptyPublicationDay()
-        }
-    }
-
 };
 
 const getEmptyPublicationDay = (): PublicationDay => {
@@ -98,17 +79,13 @@ const getEmptyPublicationDay = (): PublicationDay => {
     };
 };
 
-const addFileToResult = async (file: FileAndDate, dailyResult: DailyResult): Promise<void> => {
-    const publicationId = getPublicationId(file.filename)!;
-    if(dailyResult.publications[publicationId] === undefined) {
-        dailyResult.publications[publicationId] = getEmptyPublicationDay();
-    }
-    const publication: PublicationDay = dailyResult.publications[publicationId]!;
+const addFileToResult = async (file: FileAndDate, publication: PublicationDay): Promise<void> => {
     const alreadyExists = publication.hours.some(existingHour => existingHour.time === file.time);
     if(alreadyExists) {
         console.log('Already existing hour', file.filename);
         return;
     }
+    const publicationId = getPublicationId(file.filename)!;
     const parser = getParser(publicationId)!;
     try {
         const articlesInFile = (await parser(file.filename)).slice(0, MAX_ARTICLE_LENGTH);
@@ -150,11 +127,11 @@ const toDayId = (date: Date): string => {
     return y + m + d;
 };
 
-const toResultFilename = (date: Date): string => {
-    return `day-${toDayId(date)}.json`
+const toResultFilename = (file: FileAndDate): string => {
+    return `daypub-${toDayId(file.date)}-${getPublicationId(file.filename)}.json`
 };
 
-const uploadDailyResult = async (filename: string, content: DailyResult) => {
+const uploadDailyResult = async (filename: string, content: PublicationDay) => {
     const json = Buffer.from(JSON.stringify(content));
     const compressed = await gzip(json);
     uploadObject(filename, compressed, "application/json", "gzip");

@@ -1,17 +1,50 @@
 <script>
 import NewsItem from './NewsItem.svelte'
+import {downloadDayPublication} from './Downloader'
+import {extractToDay} from './DayExtractor.ts'
+import {afterUpdate, beforeUpdate} from 'svelte'
 
 export let publisherId;
-export let data;
+export let date;
+
 export let displayPrint;
+export let promiseCallback;
+let dataPromise;
+let currentDisplayedDate;
+
+const downloadNewData = () => {
+    const download = downloadDayPublication(date, publisherId);
+    dataPromise = download.then((day) => day ? extractToDay(day) : null);
+    currentDisplayedDate = date.toISOString();
+    promiseCallback(download);
+};
+downloadNewData();
+
+afterUpdate(() => {
+    if(date.toISOString() !== currentDisplayedDate) {
+        downloadNewData();
+    }
+});
 
 const isPrintOnly = ['aktualne', 'irozhlas'].includes(publisherId);
+
 </script>
+<style>
+    .error {
+        color: #721c24;
+        font-size: 0.8em;
+        text-align: center;
+        margin-top: 1em;
+    }
+</style>
+{#await dataPromise}
+...
+{:then data}
 <div class="publisher-col publisher-col-{publisherId}">
     <a href="https://www.{publisherId}.cz" class="publisher-col-header" target="_blank"></a>
     {#if displayPrint}
         <div class="publisher-col-print publisher-col-item-background">
-            {#if data.print}
+            {#if data && data.print}
                 <a target="_blank" href="{data.print.link}"><img src="{data.print.img}" alt="Titulní strana deníku" /></a>
             {:else}
                 <div class="publisher-col-print-empty">
@@ -27,8 +60,15 @@ const isPrintOnly = ['aktualne', 'irozhlas'].includes(publisherId);
         </div>
     {/if}
     <div class="publisher-col-content">
-        {#each data.mainArticles as entry}
-            <NewsItem {entry} {publisherId} />
-        {/each}
+        {#if data !== null && data.mainArticles.length > 0}
+            {#each data.mainArticles as entry}
+                <NewsItem {entry} {publisherId} />
+            {/each}
+        {:else}
+            <div class="error">
+                Web nearchivován
+            </div>
+        {/if}
     </div>
 </div>
+{/await}

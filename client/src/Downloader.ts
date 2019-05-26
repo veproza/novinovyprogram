@@ -1,6 +1,6 @@
 import {IArticleData} from "../../srv/ts/parsers/interfaces";
 import {TitulkaResult} from "../../lambda/parser/parsers/alza";
-import {cleanupDay} from "./entityRemover";
+import {cleanupDay, cleanupPublication} from "./entityRemover";
 
 export interface DayResponse {
     data: DailyResult;
@@ -35,4 +35,16 @@ export async function downloadDay(date: Date): Promise<DayResponse> {
     const data = (await request.json()) as DailyResult;
     cleanupDay(data);
     return {data};
+}
+
+export async function downloadDayPublication(date: Date, publicationId: string): Promise<PublicationDay|null> {
+    try {
+        const dayId = date.toISOString().replace(/[-:]/g, '').substr(0, 8);
+        const request = await fetch(`https://s3-eu-west-1.amazonaws.com/lidovky-headlines/daypub-${dayId}-${publicationId}.json`);
+        const data = (await request.json()) as PublicationDay;
+        cleanupPublication(data);
+        return data;
+    } catch (e) {
+        return null;
+    }
 }
