@@ -32,7 +32,7 @@ afterUpdate(() => {
 });
 
 const meta = publisherMeta[publisherId];
-const isPrintOnly = !!meta.printName;
+const isPrintOnly = !meta.printName;
 const onColumnChange = (evt) => {
     changeColumn(publisherId, selectedColumn);
 };
