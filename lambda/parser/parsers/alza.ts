@@ -9,11 +9,35 @@ export type TitulkaResult = {
 
 export const getTitulka = async (publication: Publication, date: Date): Promise<TitulkaResult|null> => {
     console.log(`Loading titulka ${publication}`);
+    if(publication === 'denikn') {
+        return findEnkoTitulka(date);
+    }
     const html = await downloadPage(publication);
     if(!html) {
         return null;
     }
     return findTitulka(html, date);
+};
+
+const findEnkoTitulka = async (date: Date): Promise<TitulkaResult | null> => {
+    const url = "https://noviny.denikn.cz/";
+    const html = await request({url, gzip: true});
+    const match = html.match(/<figure><img src="(.*?)" alt="(.*?)"><\/figure>/)!;
+    if(match !== null) {
+        const [_, src, alt] = match;
+        const issue = src.split('/').pop();
+        const ymd = alt.split(".").reverse().join('');
+        const desiredYear = date.getFullYear().toString();
+        const desiredMonth = (date.getMonth() + 1).toString().padStart(2, '0');
+        const desiredDate = date.getDate().toString().padStart(2, '0');
+        if (ymd === desiredYear + desiredMonth + desiredDate) {
+            return ({
+                img: src,
+                link: `https://noviny.denikn.cz/denikn/issues/${issue}`
+            });
+        }
+    }
+    return null;
 };
 
 const findTitulka = async (html: string, date: Date): Promise<TitulkaResult | null> => {
