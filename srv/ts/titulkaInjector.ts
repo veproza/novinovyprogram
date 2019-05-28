@@ -1,4 +1,4 @@
-import {DailyResult, Publication} from "./parser";
+import {Publication, PublicationDay} from "./parser";
 import * as fs from 'fs';
 import {parse} from "node-html-parser";
 import {downloadObject, uploadObject} from "./utils";
@@ -50,31 +50,20 @@ const downloadPage = async (publication: Publication): Promise<string | null> =>
         const map = await getTitulka(publication);
         maps.set(publication, map);
     }));
-    const minDay = 20170422;
+    const minDay = 20190526;
     const days = Array.from(maps.get(printPublications[0])!.keys())
-        .filter(d => parseInt(d, 10) > minDay)
-        .slice(1);
+        .filter(d => parseInt(d, 10) > minDay);
     console.log(days);
     days.forEach(async (day) => {
         try {
-            const filename = "day-" + day + '.json';
-            const json = JSON.parse((await downloadObject(filename)).toString()) as DailyResult;
-            let some = false;
-            printPublications.forEach(publication => {
-                if(json.publications[publication] === undefined) {
-                    json.publications[publication] = {articles: [], hours: []};
-                }
-                if (json.publications[publication].print === undefined) {
-                    json.publications[publication].print = maps.get(publication)!.get(day);
-                    some = true;
+            printPublications.forEach(async(publication) => {
+                const filename = `daypub-${day}-${publication}.json`;
+                const json = JSON.parse((await downloadObject(filename)).toString()) as PublicationDay;
+                if (json.print === undefined || true) {
+                    json.print = maps.get(publication)!.get(day);
+                    await uploadObject(filename, json);
                 }
             });
-            if (some) {
-                console.log('!', day);
-                // uploadObject(filename, json); // TODO needs rework to new per-publication format
-            } else {
-                console.log('.', day);
-            }
         } catch (e) {
             console.error('Fuck', day, e);
         }
