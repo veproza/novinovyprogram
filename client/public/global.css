@@ -234,6 +234,14 @@ input[type="date"] {
 	--bg-color-light: #fcf8f7;
 }
 
+.publisher-col-seznamzpravy {
+	--full-color: rgb(222, 0, 0);
+	--bg-color: rgba(222, 0, 0, 0.2);
+	--bg-color-alpha-mid: #fdebeb;
+	--bg-color-alpha-low: rgba(222, 0, 0, 0.03);
+	--bg-color-light: #fef7f7;
+}
+
 .publisher-col-denikn {
 	--full-color: rgb(199, 36, 55);
 	--bg-color: rgba(199, 36, 55, 0.2);

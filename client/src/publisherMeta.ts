@@ -71,6 +71,14 @@ export const publisherMeta: {[index: string]: PublisherMeta} = {
         link: "https://www.denik.cz",
         fileId: "denik-cz"
     },
+    seznamzpravy: {
+        logo: "https://d50-a.sdn.szn.cz/d_50/c_img_F_B/H6TiL.png?fl=cro,0,0,600,120%7Cres,160,,1",
+        name: "Seznam Zprávy",
+        onlineName: "Seznam Zprávy",
+        printName: null,
+        link: "https://www.seznamzpravy.cz/",
+        fileId: "seznamzpravy-cz"
+    },
     bbc: {
         logo: "https://nav.files.bbci.co.uk/orbit/2.0.0-566.f12ae5e9/img/blq-orbit-blocks_grey.svg",
         name: "BBC",
