@@ -26,6 +26,8 @@ const getDomain = (file: string) => {
         return "https://www.irozhlas.cz";
     } else if (file.includes('denik-cz')) {
         return "https://www.denik.cz"
+    } else if (file.includes('seznam-cz')) {
+        return "https://www.seznam.cz"
     } else {
         return null;
     }

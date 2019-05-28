@@ -77,7 +77,7 @@ export const publisherMeta: {[index: string]: PublisherMeta} = {
         onlineName: "Seznam Zprávy",
         printName: null,
         link: "https://www.seznamzpravy.cz/",
-        fileId: "seznamzpravy-cz"
+        fileId: "seznam-cz"
     },
     bbc: {
         logo: "https://nav.files.bbci.co.uk/orbit/2.0.0-566.f12ae5e9/img/blq-orbit-blocks_grey.svg",
