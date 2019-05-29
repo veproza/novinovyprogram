@@ -9,7 +9,7 @@ const seznamzpravyParser: IParser = async (file) => {
     const data = JSON.parse(parsable);
     return data.gadgets.gadgetRss.feeds[163425].data.items.map((item: any): IArticleData => {
         return {
-            link: item.url,
+            link: item.url.split("?")[0],
             perex: item.perex,
             headline: item.title
         }
