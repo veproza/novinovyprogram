@@ -40,7 +40,7 @@ const findTitulka = (html: string): Map<string, TitulkaResult> => {
 };
 
 const downloadPage = async (publication: Publication): Promise<string | null> => {
-    return await request({url: "https://www.alza.cz/media/prazsky-denik-29-05-2019-d5616715.htm", gzip: true});
+    return await request({url: "https://www.alza.cz/media/prazsky-denik-29-05-2019-d5616715.htm", gzip: true})
     // return fs.readFileSync(__dirname + "/../data/" + publication + ".htm", 'utf-8');
 };
 

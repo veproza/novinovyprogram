@@ -13,6 +13,7 @@ import ftParser from "./parsers/ft";
 import lemondeParser from "./parsers/lemonde";
 import wyborczaParser from "./parsers/wyborcza";
 import spiegelParser from "./parsers/spiegel";
+import seznamzpravyParser from "./parsers/seznamzpravy";
 
 type FileAndDate = {
     filename: string;
@@ -20,7 +21,7 @@ type FileAndDate = {
     time: number;
 }
 
-export type Publication = 'idnes' | 'lidovky' | 'aktualne' | 'irozhlas' | 'novinky' | 'ihned' | 'denik' | 'denikn' | 'bbc' | 'ft' | 'lemonde' | 'wyborcza' | 'spiegel';
+export type Publication = 'idnes' | 'lidovky' | 'aktualne' | 'irozhlas' | 'novinky' | 'ihned' | 'denik' | 'denikn' | 'bbc' | 'ft' | 'lemonde' | 'wyborcza' | 'spiegel' | 'seznamzpravy';
 
 export interface DailyResult {
     lastFileTime: number,
@@ -68,11 +69,11 @@ const getDateFromFileName = (filename: string): Date => {
         throw new Error("Unparsable: " + filename);
     }
 };
-const datafile = fs.readFileSync(__dirname + '/../data/keys.txt', 'utf-8') + "\n" + fs.readFileSync(__dirname + '/../data/keys2.txt', 'utf-8');
+const datafile = fs.readFileSync(__dirname + '/../data/keys2.txt', 'utf-8');
 const files = datafile.split("\n")
-    .slice(1) // remove  -idnes-cz1492763826366.html
+    // .slice(1) // remove  -idnes-cz1492763826366.html
     .filter(file => {
-        return file.includes('spiegel-')
+        return file.includes('seznam')
     })
     .map((filename): FileAndDate => {
         const date = getDateFromFileName(filename);
@@ -97,8 +98,8 @@ const getTimeBounds = function (referenceTime: number) {
 
 const getPublicationDay = async (publicationId: Publication, files: FileAndDate[]): Promise<PublicationDay> => {
     const parser = getParser(publicationId);
-
-    const matchingFiles = files.filter(f => f.filename.includes(publicationId));
+    const matchingFiles = files.filter(f => f.filename.includes( publicationId === 'seznamzpravy' ? 'seznam' : publicationId));
+    // console.log(matchingFiles.map(f => f.filename));
     const articles: IArticleData[] = [];
     const urlToId: Map<string, number> = new Map();
 
@@ -167,21 +168,19 @@ const getParser = (file: string): IParser => {
         return wyborczaParser;
     } else if (file.includes('spiegel')) {
         return spiegelParser;
+    } else if (file.includes('seznam')) {
+        return seznamzpravyParser;
     } else {
         throw new Error("No parser for " + file);
     }
 };
-const firstReferenceTime = new Date("2019-05-26T10:41:39.138Z").getTime();
-const lastReferenceTime = new Date("2017-04-20T10:41:39.138Z").getTime();
+const firstReferenceTime = new Date("2019-05-29T10:41:39.138Z").getTime();
+const lastReferenceTime = new Date("2019-05-29T10:41:39.138Z").getTime();
 // const lastReferenceTime = new Date("2019-05-22T10:41:39.138Z").getTime();
 let currentReferenceTime = firstReferenceTime;
-const publicationId = 'spiegel';
+const publicationId = 'seznamzpravy';
 (async () => {
     do {
-        const file = files.pop();
-        if (!file) {
-            return;
-        }
         const date = new Date(currentReferenceTime);
         console.log("Downloading ", date.toISOString());
         const day = await downloadDay(currentReferenceTime, publicationId);
