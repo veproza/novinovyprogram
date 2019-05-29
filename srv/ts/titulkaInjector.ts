@@ -2,6 +2,7 @@ import {Publication, PublicationDay} from "./parser";
 import * as fs from 'fs';
 import {parse} from "node-html-parser";
 import {downloadObject, uploadObject} from "./utils";
+import * as request from "request-promise";
 
 export type TitulkaResult = {
     img: string;
@@ -39,7 +40,8 @@ const findTitulka = (html: string): Map<string, TitulkaResult> => {
 };
 
 const downloadPage = async (publication: Publication): Promise<string | null> => {
-    return fs.readFileSync(__dirname + "/../data/" + publication + ".htm", 'utf-8');
+    return await request({url: "https://www.alza.cz/media/prazsky-denik-29-05-2019-d5616715.htm", gzip: true});
+    // return fs.readFileSync(__dirname + "/../data/" + publication + ".htm", 'utf-8');
 };
 
 
@@ -50,7 +52,7 @@ const downloadPage = async (publication: Publication): Promise<string | null> =>
         const map = await getTitulka(publication);
         maps.set(publication, map);
     }));
-    const minDay = 20190526;
+    const minDay = 20190528;
     const days = Array.from(maps.get(printPublications[0])!.keys())
         .filter(d => parseInt(d, 10) > minDay);
     console.log(days);
