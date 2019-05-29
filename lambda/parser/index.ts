@@ -109,7 +109,8 @@ const addFileToResult = async (file: FileAndDate, publication: PublicationDay): 
         hours.push(hour);
         hours.sort((a, b) => a.time - b.time);
         if(publication.print === undefined) {
-            if(file.date.getHours() >= 6) {
+            const timeToGetTitulka = publicationId === 'denik' ? 7 : 5;
+            if(file.date.getHours() >= timeToGetTitulka) {
                 publication.print = null;
                 publication.print = await getTitulka(publicationId, file.date);
                 console.log('Got titulka', publicationId);
