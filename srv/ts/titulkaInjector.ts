@@ -20,7 +20,6 @@ const findTitulka = (html: string): Map<string, TitulkaResult> => {
     const issues = (root as any).querySelectorAll('.issue');
     const splitterRegex = /[-_\\.]/;
     const outMap: Map<string, TitulkaResult> = new Map();
-    console.log(issues.length, html.length);
     issues.forEach((issue: any) => {
         const issueDate = issue.querySelector('.name').rawText;
         const [dayOrYear1, month, dayOrYear2] = issueDate.split(splitterRegex);
@@ -40,21 +39,39 @@ const findTitulka = (html: string): Map<string, TitulkaResult> => {
 };
 
 const downloadPage = async (publication: Publication): Promise<string | null> => {
-    return await request({url: "https://www.alza.cz/media/prazsky-denik-29-05-2019-d5616715.htm", gzip: true})
+    const url = getAddressForPublication(publication)!;
+    return await request({url, gzip: true})
     // return fs.readFileSync(__dirname + "/../data/" + publication + ".htm", 'utf-8');
+};
+
+const getAddressForPublication = (publication: Publication): string | null => {
+    switch (publication) {
+        case "idnes":
+            return "https://www.alza.cz/media/mf-dnes-d2172048.htm";
+        case "lidovky":
+            return "https://www.alza.cz/media/lidove-noviny-d2172049.htm";
+        case "novinky":
+            return "https://www.alza.cz/media/pravo-d2172145.htm";
+        case "ihned":
+            return "https://www.alza.cz/media/hospodarske-noviny-d2172555.htm";
+        case "denik":
+            return "https://www.alza.cz/media/prazsky-denik-d4721295.htm";
+        default:
+            return null;
+    }
 };
 
 
 (async () => {
     const maps: Map<string, Map<string, TitulkaResult>> = new Map();
-    const printPublications: Publication[] = ['denik'];
+    const printPublications: Publication[] = ['denik', 'idnes', 'lidovky', 'novinky', 'ihned'];
     await Promise.all(printPublications.map(async (publication) => {
         const map = await getTitulka(publication);
         maps.set(publication, map);
     }));
-    const minDay = 20190528;
+    const minDay = 20190531;
     const days = Array.from(maps.get(printPublications[0])!.keys())
-        .filter(d => parseInt(d, 10) > minDay);
+        .filter(d => parseInt(d, 10) >= minDay);
     console.log(days);
     days.forEach(async (day) => {
         try {
