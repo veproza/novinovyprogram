@@ -6,7 +6,7 @@ import irozhlasParser from "./parsers/irozhlas";
 import novinkyParser from "./parsers/novinky";
 import ihnedParser from "./parsers/ihned";
 import * as fs from 'fs';
-import {uploadFile, uploadObject} from "./utils";
+import {downloadObject, uploadFile, uploadObject} from "./utils";
 import {TitulkaResult} from "./titulkaInjector";
 import bbcParser from "./parsers/bbc";
 import ftParser from "./parsers/ft";
@@ -48,7 +48,7 @@ interface HourData {
 
 const MAX_ARTICLE_LENGTH = 4;
 
-const getDateFromFileName = (filename: string): Date => {
+export const getDateFromFileName = (filename: string): Date => {
     try {
         if (filename.startsWith('20')) {
             // 20190517T130127_ihned-cz.html
@@ -69,11 +69,11 @@ const getDateFromFileName = (filename: string): Date => {
         throw new Error("Unparsable: " + filename);
     }
 };
-const datafile = fs.readFileSync(__dirname + '/../data/keys2.txt', 'utf-8');
+const datafile = fs.readFileSync(__dirname + '/../data/keys.txt', 'utf-8');
 const files = datafile.split("\n")
     // .slice(1) // remove  -idnes-cz1492763826366.html
     .filter(file => {
-        return file.includes('seznam')
+        return file.includes('ihned')
     })
     .map((filename): FileAndDate => {
         const date = getDateFromFileName(filename);
@@ -99,6 +99,7 @@ const getTimeBounds = function (referenceTime: number) {
 const getPublicationDay = async (publicationId: Publication, files: FileAndDate[]): Promise<PublicationDay> => {
     const parser = getParser(publicationId);
     const matchingFiles = files.filter(f => f.filename.includes( publicationId === 'seznamzpravy' ? 'seznam' : publicationId));
+    console.log(publicationId);
     // console.log(matchingFiles.map(f => f.filename));
     const articles: IArticleData[] = [];
     const urlToId: Map<string, number> = new Map();
@@ -174,11 +175,12 @@ const getParser = (file: string): IParser => {
         throw new Error("No parser for " + file);
     }
 };
-const firstReferenceTime = new Date("2019-05-29T10:41:39.138Z").getTime();
-const lastReferenceTime = new Date("2019-05-29T10:41:39.138Z").getTime();
-// const lastReferenceTime = new Date("2019-05-22T10:41:39.138Z").getTime();
+const firstReferenceTime = new Date("2018-01-02T10:41:39.138Z").getTime();
+// const lastReferenceTime = new Date("2019-05-29T10:41:39.138Z").getTime();
+const lastReferenceTime = new Date("2017-04-20T10:41:39.138Z").getTime();
 let currentReferenceTime = firstReferenceTime;
-const publicationId = 'seznamzpravy';
+const publicationId = 'ihned';
+
 (async () => {
     do {
         const date = new Date(currentReferenceTime);
@@ -187,7 +189,20 @@ const publicationId = 'seznamzpravy';
         const dayId = date.toISOString().replace(/[-:]/g, '').substr(0, 8);
         const key = "daypub-" + dayId + '-'+ publicationId + '.json';
         console.log("Uploading", key);
-        await uploadObject(key, day);
+        try {
+            const existing = JSON.parse((await downloadObject(key)).toString()) as PublicationDay;
+            existing.articles = day.articles;
+            existing.hours = day.hours;
+            console.log('Updating');
+            await uploadObject(key, existing);
+
+        } catch(e) {
+            console.log("Not existing");
+            // await uploadObject(key, day);
+        }
+
+        // process.exit();
+
         // console.log('reset');
         // await uploadFile("list.txt", Buffer.from(""), "text/plain");
         // console.log("Done", date.toISOString());
