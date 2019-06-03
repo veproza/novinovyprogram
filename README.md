@@ -21,7 +21,7 @@ Všechny soubory mají otevřený CORS přístup `Access-Control-Allow-Origin: *
 
 ### Denní per-publication JSONy
 
-Každá pulibkace má na každý den svůj souhrnný JSON s top 3-4 články v každý 15minutový "slot". JSON má vždy konstantní název `daypub-YYYYMMDD-publikace.json`, např. [daypub-20190603-lidovky.json](https://s3-eu-west-1.amazonaws.com/lidovky-headlines/daypub-20190603-lidovky.json). Seznam publikací viz pole `fileId` v [publisherMeta.ts](https://github.com/veproza/novinovyprogram/blob/master/client/src/publisherMeta.ts). Dny jsou ohraničené lokálním časem v TZ `Europe/Prague`, respektují letní čas (v přechodné dny tak bude o hodinu záznamů víc/míň).
+Každá pulibkace má na každý den svůj souhrnný JSON s top 3-4 články v každý 15minutový "slot". JSON má vždy konstantní název `daypub-YYYYMMDD-publikace.json`, např. [daypub-20190603-lidovky.json](https://s3-eu-west-1.amazonaws.com/lidovky-headlines/daypub-20190603-lidovky.json). Publikace odpovídá **klíči** v [publisherMeta.ts](https://github.com/veproza/novinovyprogram/blob/master/client/src/publisherMeta.ts) (pozor, není to pole `fileId`, s jeho pomocí se konstruuje adresa HTML souboru, viz dále). Dny jsou ohraničené lokálním časem v TZ `Europe/Prague`, respektují letní čas (v přechodné dny tak bude o hodinu záznamů víc/míň).
 
 JSON odpovídá interface [PublicationDay](https://github.com/veproza/novinovyprogram/blob/c4ef8560632a61e76309240fe5b7e1f148da0ef1/lambda/parser/utils.ts#L31), v poli `articles` je array [IArticleData](https://github.com/veproza/novinovyprogram/blob/c4ef8560632a61e76309240fe5b7e1f148da0ef1/lambda/parser/parsers/interfaces.ts#L1), tedy titulek, perex a odkaz.
 
