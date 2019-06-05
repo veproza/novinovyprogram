@@ -8,5 +8,7 @@ lambda/parser/parsers/*.js
 lambda/parser/parsers/*.js.map
 lambda/view-modifier/*.js
 lambda/view-modifier/*.js.map
+lambda/proxy/*.js
+lambda/proxy/*.js.map
 .env
 srv/data
