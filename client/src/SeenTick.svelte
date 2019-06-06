@@ -1,17 +1,12 @@
 <script>
-    import {hourHeightPx} from "./Layouter";
+    import {calculateTickDimensions} from "./Layouter";
     import {toHumanTime} from "./utils";
     import {publisherMeta} from "./publisherMeta";
     export let item;
     export let article;
     export let publisherId;
-    const timeSinceTop = item.date.getTime() - article.startDate.getTime();
-    const timeToNext = item.nextSeenAt
-        ? item.nextSeenAt.date.getTime() - item.date.getTime()
-        : 15 * 60 * 1e3;
-    const hourMs = (3600 * 1e3);
-    const top = timeSinceTop / hourMs * hourHeightPx;
-    const height = timeToNext / hourMs * hourHeightPx;
+
+    const {height, top} = calculateTickDimensions(article, item);
     const style = `height: ${height}px; top: ${top}px`;
     let link;
     const prefix = ['irozhlas', 'novinky', 'denik', 'seznamzpravy'].includes(publisherId)

@@ -1,5 +1,5 @@
 <script>
-import {downloadDay} from './Downloader'
+import {downloadDay} from './Downloader';
 import {hourHeightPx} from './Layouter'
 import {extractToDay} from './DayExtractor.ts'
 import NewsColumn from './NewsColumn.svelte'
@@ -9,9 +9,8 @@ import {afterUpdate, beforeUpdate} from 'svelte'
 import {getHashLink} from './hashLinks';
 import {columns, getCanAddNewColumn, addNewColumn} from './ColumnManager';
 
-
-export let name;
-export let name2 = 'bar';
+let query = "";
+let queryValue = "";
 const defaultDomDate = new Date(Date.now()).toISOString().substr(0, 10);
 let domDate = defaultDomDate;
 let currentDate = new Date();
@@ -19,6 +18,7 @@ let nextDate = null;
 let prevDate = null;
 let displayPrint = false;
 let rememberedScrollPosition = null;
+let showFilter = false;
 
 const updateFromHash = () => {
     if(window.location.hash) {
@@ -136,6 +136,15 @@ const handleNextClick = () => {
     handleChange();
 };
 
+const handleQueryChange = () => {
+    query = queryValue;
+};
+
+window.showFilter = () => {
+    console.log("Jej :-) Nevypínejte konzoli, zobrazují se sem číselné výsledky.");
+    showFilter = true;
+}
+
 </script>
 
 <style>
@@ -173,6 +182,33 @@ const handleNextClick = () => {
 	.addColummLink:hover {
 	    color: #333;
 	}
+	.query-legend {
+	    display: inline-flex;
+	    margin: 0;
+	}
+	.query-legend li {
+	    list-style: none;
+	    padding: 10px;
+	    margin: 0;
+	    color: #333;
+	}
+	.query-legend li:nth-child(1) {
+        background: rgba(103,0,13, 0.4);
+	}
+	.query-legend li:nth-child(2) {
+        background: rgba(203,24,29, 0.4);
+	}
+	.query-legend li:nth-child(3) {
+        background: rgba(251,106,74, 0.4);
+	}
+	.query-legend li:nth-child(4) {
+        background: rgba(252,187,161, 0.4);
+	}
+	.query-legend li:nth-child(5) {
+	    border: 1px dashed #ccc;
+	    border-left: 0;
+	    padding: 9px;
+	}
 </style>
 <div class="center">
     <div class="maxwidth">
@@ -187,13 +223,26 @@ const handleNextClick = () => {
                 <a href="#{nextDate}" on:click|preventDefault="{handleNextClick}" class="next" >&raquo;</a>
             {/if}
             <Sharer {getCurrentHash} />
+            {#if showFilter}
+            <input type="text" placeholder="Filtrovat články podle klíčového slova" bind:value="{queryValue}" on:change="{handleQueryChange}" title="Pro vyhledání dvou klíčových slov v režimu 'NEBO' lze použít znak |. Pro vyloučení klíčového slova jde na první místo napsat !. Tedy výraz 'Babiš|audit|!EET' vyhledá všechny články, které obsahují Babiš nebo audit, ale zároveň neobsahují EET. Vyhledávání je exact-match, včetně velikosti písmen a případného whitespace.">
+            {/if}
+            {#if query}
+            <ol class="query-legend">
+               <li>Článek na otvíráku</li>
+               <li>2. pozice</li>
+               <li>3. pozice</li>
+               <li>4. pozice</li>
+               <li>pozdější/žádná</li>
+            </ol>
+            {/if}
         </div>
         <div class="publisher-columns">
             {#if referencePublication}
                 <TimeColumn displayPrint="{displayPrint}" data="{referencePublication}" />
             {/if}
             {#each $columns as publisherId (publisherId)}
-                <NewsColumn {displayPrint} {publisherId} date="{currentDate}" promiseCallback="{onColumnPromise}" />
+                <!-- Babiš|!Čech|!EET|!loterie|!vyasfaltovat -->
+                <NewsColumn {displayPrint} {publisherId} date="{currentDate}" promiseCallback="{onColumnPromise}" {query} />
             {/each}
             {#if getCanAddNewColumn()}
                 <a class="addColummLink" href="#" on:click|preventDefault="{addNewColumn}">+</a>

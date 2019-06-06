@@ -2,7 +2,7 @@ import {PublicationDay} from "./Downloader";
 import {IArticleData} from "../../srv/ts/parsers/interfaces";
 import {TitulkaResult} from "../../lambda/parser/parsers/alza";
 
-interface ArticleView {
+export interface ArticleView {
     mainArticles: TimedArticle[]
     print: TitulkaResult | null;
 }
@@ -12,6 +12,7 @@ export interface TimedArticle {
     endDate: Date | null;
     article: IArticleData;
     seenAt: SeenAtData[];
+    position?: number;
 }
 
 export interface SeenAtData {
@@ -21,22 +22,26 @@ export interface SeenAtData {
     nextSeenAt?: SeenAtData;
 }
 
-export function extractToDay (day: PublicationDay): ArticleView {
+type ArticleFilter = (article: IArticleData) => boolean;
+
+export function extractToDay (day: PublicationDay, articleFilter?: ArticleFilter): ArticleView {
     if(day === undefined) {
         // when viewing days before the publication was actually added
         day = getEmptyPublicationDay();
     }
     const mainArticles: TimedArticle[] = [];
-    let currentArticleId: number = -1;
-    let currentArticleStart: Date = new Date();
-    let currentArticleTimesSeen = 0;
+    let currentArticleId: number | undefined = undefined;
+    let currentArticleStart: Date = new Date(day.hours[0].time);
     let lastSeenAt: SeenAtData | null;
     let currentSeenAt: SeenAtData[] = [];
     day.hours
         .filter(h => h.articles.length)
         .forEach(hour => {
-            if(currentArticleId !== hour.articles[0]) {
-                if(currentArticleId !== -1) {
+            const eligibleArticles = articleFilter
+                ? hour.articles.filter(articleId => articleFilter(day.articles[articleId]))
+                : hour.articles;
+            if(currentArticleId !== eligibleArticles[0]) {
+                if(currentSeenAt.length) {
                     mainArticles.push({
                         article: day.articles[currentArticleId],
                         startDate: currentArticleStart,
@@ -44,7 +49,7 @@ export function extractToDay (day: PublicationDay): ArticleView {
                         seenAt: currentSeenAt
                     })
                 }
-                currentArticleId = hour.articles[0];
+                currentArticleId = eligibleArticles[0];
                 currentArticleStart = new Date(hour.time);
                 currentSeenAt = [];
             }
@@ -59,7 +64,7 @@ export function extractToDay (day: PublicationDay): ArticleView {
             currentSeenAt.push(seenAt);
             lastSeenAt = seenAt;
         });
-    if(currentArticleId !== -1) {
+    if(currentSeenAt.length) {
         mainArticles.push({
             article: day.articles[currentArticleId],
             startDate: currentArticleStart,
@@ -76,6 +81,7 @@ export function extractToDay (day: PublicationDay): ArticleView {
 const getEmptyPublicationDay = (): PublicationDay => {
     return {
         hours: [],
-        articles: []
+        articles: [],
+        publicationId: ""
     };
 };

@@ -1,4 +1,5 @@
 import {PublicationDay} from "./Downloader";
+import {SeenAtData, TimedArticle} from "./DayExtractor";
 
 interface ArticleLayout {
     top: number;
@@ -68,4 +69,15 @@ export function getTimeTicks(publication: PublicationDay): Date[] {
         currentTime += 3600 * 1e3;
     }
     return output;
+}
+const hourMs = (3600 * 1e3);
+export function calculateTickDimensions(article: TimedArticle, item: SeenAtData): {top: number, height: number} {
+    const timeSinceTop = item.date.getTime() - article.startDate.getTime();
+    const timeToNext = item.nextSeenAt
+        ? item.nextSeenAt.date.getTime() - item.date.getTime()
+        : 15 * 60 * 1e3;
+    const top = timeSinceTop / hourMs * hourHeightPx;
+    const height = timeToNext / hourMs * hourHeightPx;
+    return {top, height};
+
 }

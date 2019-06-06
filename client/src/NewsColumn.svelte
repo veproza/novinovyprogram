@@ -6,27 +6,56 @@ import {afterUpdate, beforeUpdate} from 'svelte'
 import {publisherMeta, publisherMetaList} from './publisherMeta'
 import {toHumanDate} from './utils'
 import {changeColumn, getOtherColumnOptions} from './ColumnManager';
+import {extractEligibleArticlesToDay} from './keywordTransformer';
 
 export let publisherId;
 export let date;
-
+export let query;
 export let displayPrint;
 export let promiseCallback;
 let dataPromise;
 let currentDisplayedDate;
 let currentDisplayedPublisher = publisherId;
-
+let currentQuery;
+let displayPosition = false;
+let filledHoursTitle = "";
 const downloadNewData = () => {
     const download = downloadDayPublication(date, publisherId);
-    dataPromise = download.then((day) => day ? extractToDay(day) : null);
+    dataPromise = download.then((day) =>{
+        displayPosition = !!query;
+        if (!day) {
+            return null;
+        }
+        if(query) {
+            return extractEligibleArticlesToDay(day, query);
+        } else {
+            return extractToDay(day);
+        }
+    });
+    if(query) {
+        dataPromise.then((dayData => {
+            const seenAtValidSum = dayData.mainArticles.reduce((previousValue, currentValue) => {
+                return previousValue + (currentValue.article ? currentValue.seenAt.length : 0);
+            }, 0);
+            const seenAtAllSum = dayData.mainArticles.reduce((previousValue, currentValue) => {
+                return previousValue + currentValue.seenAt.length;
+            }, 0);
+            const filledValidHours = 15 / 60 * seenAtValidSum;
+            const filledAllHours = 15 / 60 * seenAtAllSum;
+            filledHoursTitle = `${filledValidHours} hodin byly na titulních pozicích filtrované články, z ${filledAllHours} možných hodin ten den`;
+        }));
+    } else {
+        filledHoursTitle = "";
+    }
     currentDisplayedDate = date.toISOString();
     currentDisplayedPublisher = publisherId;
+    currentQuery = query;
     promiseCallback(download);
 };
 downloadNewData();
 
 afterUpdate(() => {
-    if(date.toISOString() !== currentDisplayedDate || publisherId !== currentDisplayedPublisher) {
+    if(date.toISOString() !== currentDisplayedDate || publisherId !== currentDisplayedPublisher || query !== currentQuery) {
         downloadNewData();
     }
 });
@@ -50,7 +79,7 @@ let selectedColumn = publisherId;
 ...
 {:then data}
 <div class="publisher-col publisher-col-{publisherId} publisher-col-publisher">
-    <div class="publisher-col-header" >
+    <div class="publisher-col-header" title="{filledHoursTitle}" >
         <img src="{meta.logo}" alt="Logo {meta.onlineName}" class="logo">
         <select name="" id="" on:change="{onColumnChange}" bind:value="{selectedColumn}">
             {#each getOtherColumnOptions(publisherId) as possiblePublisherId}
@@ -79,7 +108,7 @@ let selectedColumn = publisherId;
     <div class="publisher-col-content">
         {#if data !== null && data.mainArticles.length > 0}
             {#each data.mainArticles as entry}
-                <NewsItem {entry} {publisherId} />
+                <NewsItem {entry} {publisherId} {displayPosition} />
             {/each}
         {:else}
             <div class="error">

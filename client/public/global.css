@@ -298,7 +298,7 @@ input[type="date"] {
 .publisher-col-item {
 	border-top: 1px solid var(--bg-color);
 	position: absolute;
-
+	width: 100%;
 }
 .publisher-col-item-background {
 	background-image: linear-gradient(to bottom, var(--bg-color-alpha-mid) 0, var(--bg-color-light) 50px);
