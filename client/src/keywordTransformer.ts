@@ -47,7 +47,19 @@ export const extractEligibleArticlesToDay = async (day: PublicationDay, keyword:
 
 const articleToId = (url: string): string => {
     if(url.includes('novinky.cz')) {
-        return url.split('/').pop().split('-')[0]
+        return "novinky" + url.split('/').pop().split('-')[0]
+    } else if(url.includes('denikn.cz')) {
+        return "denikn" + url.split("/")[3];
+    } else if(url.includes('lidovky.cz') || url.includes('idnes.cz')) {
+        return "idnes" + url.split(".").pop();
+    } else if(url.includes('aktualne.cz')) {
+        return "aktualne" + url.split("/").reverse()[1];
+    } else if(url.includes('irozhlas.cz')) {
+        return "irozhlas" + url.substr(url.indexOf("_"));
+    } else if(url.includes('ihned.cz')) {
+        return "ihned" + url.split("/").pop().split('-').slice(0, 2).join('-');
+    } else if(url.includes('seznamzpravy.cz')) {
+        return "seznamzpravy" + url.split("-").pop();
     } else {
         return url;
     }
@@ -84,18 +96,23 @@ const downloadArtricleContent = async (url: string): Promise<string> => {
     if(url.includes(".ihned.cz")) {
         return "";
     }
-    const response = await fetch("https://29pnk6zzeb.execute-api.eu-west-1.amazonaws.com/default?url=" + encodeURIComponent(url));
-    const text = await response.text();
-    const documentClone = document.cloneNode(true) as any;
-    const body = sanitizeBody(getBodyFromHtml(text));
-    const element = document.createElement("div");
-    element.innerHTML = body;
-    documentClone.body.innerHTML = body;
-    const reader = new window['Readability'](documentClone);
-    const result = reader.parse();
-    if(result) {
-        return result.textContent.trim()
-    } else {
+    try {
+        const response = await fetch("https://29pnk6zzeb.execute-api.eu-west-1.amazonaws.com/default?url=" + encodeURIComponent(url));
+        const text = await response.text();
+        const documentClone = document.cloneNode(true) as any;
+        const body = sanitizeBody(getBodyFromHtml(text));
+        const element = document.createElement("div");
+        element.innerHTML = body;
+        documentClone.body.innerHTML = body;
+        const reader = new window['Readability'](documentClone);
+        const result = reader.parse();
+        if (result) {
+            return result.textContent.trim()
+        } else {
+            return "";
+        }
+    } catch (e) {
+        console.error(e);
         return "";
     }
 };
@@ -157,5 +174,10 @@ const onProcessEnd = (result: PublicationResult) => {
     loadingCount--;
     if(loadingCount === 0) {
         console.table(reporterResults);
+        const days = Object.keys(reporterResults);
+        const pubKeys = Object.keys(reporterResults[days[0]]);
+        const tsv = ['datum', ...pubKeys].join("\t") + "\n" +
+            days.map(day => [day, ...pubKeys.map(pub => reporterResults[day][pub])].join("\t")).join("\n");
+        console.log(tsv);
     }
 }
