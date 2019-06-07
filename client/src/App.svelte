@@ -139,10 +139,13 @@ const handleNextClick = () => {
 const handleQueryChange = () => {
     query = queryValue;
 };
-
+setTimeout(() => {
+    console.info("Chcete zapnout možnost filtrování článků? Zadejte sem showFilter().");
+}, 1000);
 window.showFilter = () => {
     console.log("Jej :-) Nevypínejte konzoli, zobrazují se sem číselné výsledky.");
     showFilter = true;
+    return "📊";
 }
 
 </script>
