@@ -23,7 +23,6 @@ export const extractEligibleArticlesToDay = async (day: PublicationDay, keyword:
         const articleId = articleToId(article.link);
         if(!alreadySeenArticleIds.get(articleId)) {
             totalArticleCount++;
-            console.log(articleId);
             if(isMatch) {
                 matchingArticleCount++;
             }
