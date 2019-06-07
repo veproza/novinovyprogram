@@ -1,7 +1,7 @@
 import {PublicationDay} from "./Downloader";
 import {ArticleView, extractToDay} from "./DayExtractor";
 import {IArticleData} from "../../srv/ts/parsers/interfaces";
-
+const alreadySeenArticleIds: Map<string, boolean> = new Map();
 export const extractEligibleArticlesToDay = async (day: PublicationDay, keyword: string): Promise<ArticleView> => {
     onProcessStart();
     await loadScript('Readability.js');
@@ -16,9 +16,20 @@ export const extractEligibleArticlesToDay = async (day: PublicationDay, keyword:
             yesKeywords.push(keyword);
         }
     });
-
+    let totalArticleCount = 0;
+    let matchingArticleCount = 0;
     await Promise.all(day.articles.map(async (article) => {
-        articlesToMatch.set(article, await getArticleMatchesKeyword(article, yesKeywords, notKeywords));
+        const isMatch = await getArticleMatchesKeyword(article, yesKeywords, notKeywords);
+        const articleId = articleToId(article.link);
+        if(!alreadySeenArticleIds.get(articleId)) {
+            totalArticleCount++;
+            console.log(articleId);
+            if(isMatch) {
+                matchingArticleCount++;
+            }
+            alreadySeenArticleIds.set(articleId, true);
+        }
+        articlesToMatch.set(article, isMatch);
     }));
 
     const articleView = extractToDay(day, (article) => articlesToMatch.get(article));
@@ -30,11 +41,18 @@ export const extractEligibleArticlesToDay = async (day: PublicationDay, keyword:
     }, 0);
     const date = new Date(day.hours[0].time);
     const dateId = [date.getFullYear(), date.getMonth() + 1, date.getDate()].map(d => d.toString().padStart(2, '0')).join('-');
-    onProcessEnd({dateId, totalCount, matchingCount, publicationId: day.publicationId});
+    onProcessEnd({dateId, totalCount, matchingCount, totalArticleCount, matchingArticleCount, publicationId: day.publicationId});
 
     return articleView;
 };
 
+const articleToId = (url: string): string => {
+    if(url.includes('novinky.cz')) {
+        return url.split('/').pop().split('-')[0]
+    } else {
+        return url;
+    }
+}
 const getArticleMatchesKeyword = async (article: IArticleData, yesKeywords: string[], notKeywords: string[]) => {
     if(matchKeywords(article.headline, notKeywords) || matchKeywords(article.perex, notKeywords)) {
         return false;
@@ -124,6 +142,8 @@ type PublicationResult = {
     dateId: string;
     matchingCount: number;
     totalCount: number;
+    totalArticleCount: number;
+    matchingArticleCount: number;
 }
 const reporterResults = {};
 const onProcessEnd = (result: PublicationResult) => {
@@ -133,6 +153,8 @@ const onProcessEnd = (result: PublicationResult) => {
     const row = reporterResults[result.dateId];
     row[result.publicationId + "-matching"] = result.matchingCount;
     row[result.publicationId + "-total"] = result.totalCount;
+    row[result.publicationId + "-articles-matching"] = result.matchingArticleCount;
+    row[result.publicationId + "-articles-total"] = result.totalArticleCount;
     loadingCount--;
     if(loadingCount === 0) {
         console.table(reporterResults);
