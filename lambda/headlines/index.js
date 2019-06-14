@@ -18,7 +18,8 @@ const sites = [
     "http://wyborcza.pl/",
     "https://www.spiegel.de/",
     "https://www.ft.com/",
-    "https://www.seznamzpravy.cz/"
+    "https://www.seznamzpravy.cz/",
+    "https://www.blesk.cz/"
 ];
 const bucket = "lidovky-headlines";
 

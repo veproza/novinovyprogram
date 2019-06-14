@@ -14,6 +14,7 @@ import lemondeParser from "./parsers/lemonde";
 import wyborczaParser from "./parsers/wyborcza";
 import spiegelParser from "./parsers/spiegel";
 import seznamzpravyParser from "./parsers/seznamzpravy";
+import bleskParser from "./parsers/blesk";
 
 type FileAndDate = {
     filename: string;
@@ -21,7 +22,7 @@ type FileAndDate = {
     time: number;
 }
 
-export type Publication = 'idnes' | 'lidovky' | 'aktualne' | 'irozhlas' | 'novinky' | 'ihned' | 'denik' | 'denikn' | 'bbc' | 'ft' | 'lemonde' | 'wyborcza' | 'spiegel' | 'seznamzpravy';
+export type Publication = 'idnes' | 'lidovky' | 'aktualne' | 'irozhlas' | 'novinky' | 'ihned' | 'denik' | 'denikn' | 'bbc' | 'ft' | 'lemonde' | 'wyborcza' | 'spiegel' | 'seznamzpravy' | 'blesk';
 
 export interface DailyResult {
     lastFileTime: number,
@@ -32,6 +33,7 @@ export interface DailyResult {
         irozhlas: PublicationDay;
         novinky: PublicationDay;
         ihned: PublicationDay;
+        blesk: PublicationDay;
     }
 }
 
@@ -171,6 +173,8 @@ const getParser = (file: string): IParser => {
         return spiegelParser;
     } else if (file.includes('seznam')) {
         return seznamzpravyParser;
+    } else if (file.includes('blesk')) {
+        return bleskParser;
     } else {
         throw new Error("No parser for " + file);
     }
