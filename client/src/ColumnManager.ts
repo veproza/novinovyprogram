@@ -28,7 +28,7 @@ const getDefaultColumns = (): Column[] => {
             }
         }
     }
-    return ['idnes', 'lidovky', 'novinky', 'ihned', 'denikn', 'denik', 'irozhlas', 'aktualne']
+    return ['idnes', 'lidovky', 'novinky', 'ihned', 'denikn', 'denik', 'blesk', 'irozhlas', 'aktualne']
         .slice(0, Math.round((window.innerWidth || 1200) / 220));
 };
 
