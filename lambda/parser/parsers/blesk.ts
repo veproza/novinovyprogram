@@ -5,8 +5,7 @@ import { parse } from "node-html-parser";
 const bleskParser: IParser = async (file) => {
     const content = await downloadObject(file);
     const root = parse(content.toString());
-    const elements = ((root as any).querySelectorAll('.item-middle-top, .item-middle'));
-    
+    const elements = [...(root as any).querySelectorAll('.item-middle-top'), ...(root as any).querySelectorAll('.item-middle')];
     return elements
         .map((e: any): IArticleData | null => {
             const headlineElement = e.querySelector('h3');
