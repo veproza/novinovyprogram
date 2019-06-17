@@ -28,6 +28,8 @@ const getDomain = (file: string) => {
         return "https://www.denik.cz"
     } else if (file.includes('seznam-cz')) {
         return "https://www.seznam.cz"
+    } else if (file.includes('blesk-cz')) {
+        return "https://www.blesk.cz"
     } else {
         return null;
     }

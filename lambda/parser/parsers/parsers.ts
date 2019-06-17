@@ -14,6 +14,7 @@ import ftParser from "./ft";
 import spiegelParser from "./spiegel";
 import wyborczaParser from "./wyborcza";
 import seznamzpravyParser from "./seznamzpravy";
+import bleskParser from "./blesk";
 
 export const getPublicationId = (file: string): Publication | null => {
     if (file.includes('idnes')) {
@@ -44,6 +45,8 @@ export const getPublicationId = (file: string): Publication | null => {
         return 'spiegel';
     } else if (file.includes('seznam')) {
         return 'seznamzpravy';
+    } else if (file.includes('blesk')) {
+        return 'blesk';
     } else {
         return null;
     }
@@ -78,6 +81,8 @@ export const getParser = (publicationId: Publication): IParser|null => {
         return wyborczaParser;
     } else if (publicationId === 'seznamzpravy') {
         return seznamzpravyParser;
+    } else if (publicationId === 'blesk') {
+        return bleskParser;
     } else {
         return null;
     }

@@ -87,6 +87,8 @@ const getAddressForPublication = (publication: Publication): string | null => {
             return "https://www.alza.cz/media/hospodarske-noviny-d2172555.htm";
         case "denik":
             return "https://www.alza.cz/media/prazsky-denik-d4721295.htm";
+        case "blesk":
+            return "https://www.alza.cz/media/blesk-d5628082.htm";
         default:
             return null;
     }

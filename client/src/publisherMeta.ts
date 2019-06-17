@@ -118,7 +118,15 @@ export const publisherMeta: {[index: string]: PublisherMeta} = {
         printName: null,
         link: "https://www.spiegel.de/",
         fileId: "spiegel-de"
-    }
+    },
+    blesk: {
+		logo: 'assets/blesk.svg',
+		name: 'Blesk.cz + Blesk',
+		onlineName: 'Blesk.cz',
+		printName: 'Blesk',
+		link: 'https://www.blesk.cz',
+		fileId: 'blesk-cz'
+	}
 };
 
 export const publisherMetaList = Object.keys(publisherMeta).map((publisherId) => {

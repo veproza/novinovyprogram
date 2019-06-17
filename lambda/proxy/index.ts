@@ -10,7 +10,8 @@ const allowedDomains = [
     ['cz', 'ihned'],
     ['cz', 'denik'],
     ['cz', 'denikn'],
-    ['cz', 'seznamzpravy']
+    ['cz', 'seznamzpravy'],
+    ['cz', 'blesk']
 ];
 exports.handler = async (env: any) => {
     try {
