@@ -10,5 +10,7 @@ lambda/view-modifier/*.js
 lambda/view-modifier/*.js.map
 lambda/proxy/*.js
 lambda/proxy/*.js.map
+util/*.js
+util/*.js.map
 .env
 srv/data

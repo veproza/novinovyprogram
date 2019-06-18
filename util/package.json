@@ -1,0 +1,22 @@
+{
+  "name": "util",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@types/mime": "^2.0.1",
+    "@types/node": "^12.0.8",
+    "@types/node-zopfli": "^2.0.0",
+    "mime": "^2.4.4",
+    "node-zopfli": "^2.0.3"
+  },
+  "devDependencies": {
+    "aws-sdk": "^2.477.0"
+  }
+}
