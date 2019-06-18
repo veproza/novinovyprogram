@@ -27,7 +27,7 @@ const uploadFile = async (sourcePath: string, destinationPath: string, name: str
     const destinationAddress = `${destinationPath}/${name}`.substr(1);
     const content = await getContent(sourceAddress);
     console.log(`upload file ${sourcePath}/${name} to ${destinationAddress} as ${content.ContentType}`);
-    await uploadObject(destinationAddress, content.Body, content.ContentType, content.ContentEncoding);
+    await uploadObject(destinationAddress, content.Body, content.ContentType || undefined, content.ContentEncoding);
 };
 
 const getContent = async (path: string) => {
