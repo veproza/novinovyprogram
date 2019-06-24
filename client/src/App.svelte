@@ -1,5 +1,4 @@
 <script>
-import {downloadDay} from './Downloader';
 import {hourHeightPx} from './Layouter'
 import {extractToDay} from './DayExtractor.ts'
 import NewsColumn from './NewsColumn.svelte'
