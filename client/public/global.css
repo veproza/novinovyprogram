@@ -266,6 +266,14 @@ input[type="date"] {
 	--bg-color-light: #fef8f9 /* A 0.03 */
 }
 
+.publisher-col-e15 {
+	--full-color: rgb(208, 17, 43);
+	--bg-color: rgba(208, 17, 43, 0.2);
+	--bg-color-alpha-mid: #fbeeef; /* A 0.08 */
+	--bg-color-alpha-low: rgba(199, 36, 55, 0.03);
+	--bg-color-light: #fef8f9 /* A 0.03 */
+}
+
 .publisher-col-print {
 	margin-top: 49px;
 	height: 280px;

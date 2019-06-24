@@ -16,9 +16,9 @@ import {getParser, getPublicationId} from "./parsers/parsers";
 import {Lambda} from 'aws-sdk';
 const lambda = new Lambda({region: "eu-west-1"});
 
-export type Publication = 'idnes' | 'lidovky' | 'aktualne' | 'irozhlas' | 'novinky' | 'ihned' | 'denik' | 'denikn' | 'bbc' | 'ft' | 'lemonde' | 'wyborcza' | 'spiegel' | 'seznamzpravy' | 'blesk';
+export type Publication = 'idnes' | 'lidovky' | 'aktualne' | 'irozhlas' | 'novinky' | 'ihned' | 'denik' | 'denikn' | 'bbc' | 'ft' | 'lemonde' | 'wyborcza' | 'spiegel' | 'seznamzpravy' | 'blesk' | 'e15';
 
-const publications: Publication[] = ['idnes', 'lidovky', 'aktualne', 'irozhlas', 'novinky', 'ihned', 'denik', 'denikn', 'bbc', 'ft', 'lemonde', 'wyborcza', 'spiegel', 'seznamzpravy', 'blesk'];
+const publications: Publication[] = ['idnes', 'lidovky', 'aktualne', 'irozhlas', 'novinky', 'ihned', 'denik', 'denikn', 'bbc', 'ft', 'lemonde', 'wyborcza', 'spiegel', 'seznamzpravy', 'blesk', 'e15'];
 
 const MAX_ARTICLE_LENGTH = 4;
 const maxFilesAtOnce = publications.length;
