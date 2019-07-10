@@ -243,7 +243,6 @@ window.showFilter = () => {
                 <TimeColumn displayPrint="{displayPrint}" data="{referencePublication}" />
             {/if}
             {#each $columns as publisherId (publisherId)}
-                <!-- Babiš|!Čech|!EET|!loterie|!vyasfaltovat -->
                 <NewsColumn {displayPrint} {publisherId} date="{currentDate}" promiseCallback="{onColumnPromise}" {query} />
             {/each}
             {#if getCanAddNewColumn()}
