@@ -1,6 +1,7 @@
 import { IParser, IArticleData } from "./interfaces";
 import { downloadObject } from "../utils";
 import { parse } from "node-html-parser";
+
 const e15Parser: IParser = async (file) => {
     const content = await downloadObject(file);
     const root = parse(content.toString());

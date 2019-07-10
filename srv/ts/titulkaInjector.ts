@@ -1,5 +1,4 @@
 import {Publication, PublicationDay} from "./parser";
-import * as fs from 'fs';
 import {parse} from "node-html-parser";
 import {downloadObject, uploadObject} from "./utils";
 import * as request from "request-promise";
@@ -18,11 +17,15 @@ export const getTitulka = async (publication: Publication): Promise<Map<string, 
 const findTitulka = (html: string): Map<string, TitulkaResult> => {
     const root = parse(html);
     const issues = (root as any).querySelectorAll('.issue');
-    const splitterRegex = /[-_\\.]/;
     const outMap: Map<string, TitulkaResult> = new Map();
     issues.forEach((issue: any) => {
         const issueDate = issue.querySelector('.name').rawText;
-        const [dayOrYear1, month, dayOrYear2] = issueDate.split(splitterRegex);
+        const match = issueDate.match(/([0-9]+)[-_\\. ]+([0-9]+)[-_\\. ]+([0-9]+)/);
+        if(!match) {
+            console.log("Unmatchable", issueDate);
+            return;
+        }
+        const [_, dayOrYear1, month, dayOrYear2] = match;
         if(!dayOrYear2) {
             console.log(issueDate);
         }
@@ -66,26 +69,36 @@ const getAddressForPublication = (publication: Publication): string | null => {
 };
 
 
+const download = async function (filename: string): Promise<PublicationDay> {
+    try {
+        return JSON.parse((await downloadObject(filename)).toString()) as PublicationDay;
+    } catch (e) {
+        return {
+            articles: [],
+            hours: []
+        }
+    }
+};
 (async () => {
     const maps: Map<string, Map<string, TitulkaResult>> = new Map();
-    const printPublications: Publication[] = ['denik', 'idnes', 'lidovky', 'novinky', 'ihned'];
+    const printPublications: Publication[] = ['e15'];
     await Promise.all(printPublications.map(async (publication) => {
         const map = await getTitulka(publication);
         maps.set(publication, map);
     }));
-    const minDay = 20190531;
+    const minDay = 20170531;
     const days = Array.from(maps.get(printPublications[0])!.keys())
         .filter(d => parseInt(d, 10) >= minDay);
+    console.log(maps);
     console.log(days);
     days.forEach(async (day) => {
+        console.log(day);
         try {
             printPublications.forEach(async(publication) => {
                 const filename = `daypub-${day}-${publication}.json`;
-                const json = JSON.parse((await downloadObject(filename)).toString()) as PublicationDay;
-                if (json.print === undefined || true) {
-                    json.print = maps.get(publication)!.get(day);
-                    await uploadObject(filename, json);
-                }
+                const json = await download(filename);
+                json.print = maps.get(publication)!.get(day);
+                await uploadObject(filename, json);
             });
         } catch (e) {
             console.error('Fuck', day, e);
