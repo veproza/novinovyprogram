@@ -1,6 +1,7 @@
 import {PublicationDay} from "./Downloader";
 import {IArticleData} from "../../srv/ts/parsers/interfaces";
 import {TitulkaResult} from "../../lambda/parser/parsers/alza";
+import {getPublicationId} from "../../lambda/parser/parsers/parsers";
 
 export interface ArticleView {
     mainArticles: TimedArticle[]
@@ -31,7 +32,7 @@ export function extractToDay (day: PublicationDay, articleFilter?: ArticleFilter
     }
     const mainArticles: TimedArticle[] = [];
     let currentArticleId: number | undefined = undefined;
-    let currentArticleStart: Date = new Date(day.hours[0].time);
+    let currentArticleStart: Date = new Date(day.hours.length ? day.hours[0].time : 0);
     let lastSeenAt: SeenAtData | null;
     let currentSeenAt: SeenAtData[] = [];
     day.hours
