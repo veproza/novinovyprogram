@@ -126,6 +126,14 @@ export const publisherMeta: {[index: string]: PublisherMeta} = {
 		printName: 'Blesk',
 		link: 'https://www.blesk.cz',
 		fileId: 'blesk-cz'
+    },
+    e15: {
+		logo: 'assets/e15-cz.png',
+		name: 'E15.cz + E15',
+		onlineName: 'E15.cz',
+		printName: 'E15',
+		link: 'https://www.e15.cz',
+		fileId: 'e15-cz'
 	}
 };
 
