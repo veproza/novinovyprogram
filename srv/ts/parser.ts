@@ -6,7 +6,7 @@ import irozhlasParser from "./parsers/irozhlas";
 import novinkyParser from "./parsers/novinky";
 import ihnedParser from "./parsers/ihned";
 import * as fs from 'fs';
-import {downloadObject, uploadFile, uploadObject} from "./utils";
+import {downloadObject, getDateFromFileName, uploadObject} from "./utils";
 import {TitulkaResult} from "./titulkaInjector";
 import bbcParser from "./parsers/bbc";
 import ftParser from "./parsers/ft";
@@ -51,32 +51,11 @@ interface HourData {
 
 const MAX_ARTICLE_LENGTH = 4;
 
-export const getDateFromFileName = (filename: string): Date => {
-    try {
-        if (filename.startsWith('20')) {
-            // 20190517T130127_ihned-cz.html
-            //2019-05-20T12:29:25.476Z
-            const date = filename.split("_")[0];
-            const isoDate = date.substr(0, 4) + '-' + date.substr(4, 2) + '-' + date.substr(6, 2);
-            const isoTime = date.substr(9, 2) + ':' + date.substr(11, 2) + ':' + date.substr(13, 2);
-            const isoDateTime = isoDate + 'T' + isoTime + '.000Z';
-            return new Date(isoDateTime);
-        } else {
-            // aktualne-cz_1529537487974.html
-            const time = filename.split('_')[1].split('.')[0];
-            const d = new Date();
-            d.setTime(parseInt(time, 10));
-            return d;
-        }
-    } catch (e) {
-        throw new Error("Unparsable: " + filename);
-    }
-};
-const datafile = fs.readFileSync(__dirname + '/../data/keys.txt', 'utf-8');
+const datafile = fs.readFileSync(__dirname + '/../data/keys2.txt', 'utf-8');
 const files = datafile.split("\n")
     // .slice(1) // remove  -idnes-cz1492763826366.html
     .filter(file => {
-        return file.includes('ihned')
+        return file.includes('novinky')
     })
     .map((filename): FileAndDate => {
         const date = getDateFromFileName(filename);
@@ -182,11 +161,12 @@ const getParser = (file: string): IParser => {
         throw new Error("No parser for " + file);
     }
 };
-const firstReferenceTime = new Date("2018-01-02T10:41:39.138Z").getTime();
-// const lastReferenceTime = new Date("2019-05-29T10:41:39.138Z").getTime();
-const lastReferenceTime = new Date("2017-04-20T10:41:39.138Z").getTime();
+//20190717T093131_seznam
+const firstReferenceTime = new Date("2019-08-25T10:41:39.138Z").getTime();
+
+const lastReferenceTime = new Date("2019-08-25T10:41:39.138Z").getTime();
 let currentReferenceTime = firstReferenceTime;
-const publicationId = 'ihned';
+const publicationId: Publication = 'novinky';
 
 (async () => {
     do {

@@ -1,8 +1,7 @@
 import {IParser, IArticleData} from "./interfaces";
-import {downloadObject} from "../utils";
+import {downloadObject, getDateFromFileName} from "../utils";
 import * as iconv from "iconv-lite";
 import {parse} from "node-html-parser";
-import {getDateFromFileName} from "../parser";
 
 const ihnedParser: IParser = async (file) => {
     const content = await downloadObject(file);

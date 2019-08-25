@@ -1,6 +1,6 @@
 import * as S3 from 'aws-sdk/clients/s3';
 import * as zlib from 'zlib';
-import {DailyResult, PublicationDay} from "./parser";
+import {PublicationDay} from "./parser";
 import * as http from "http";
 import * as https from "https";
 
@@ -53,3 +53,25 @@ export const gzip = (data: Buffer): Promise<Buffer> => new Promise((resolve, rej
 export const gunzip = (data: Buffer): Promise<Buffer> => new Promise((resolve, reject) => {
     zlib.gunzip(data, (error, compressed) => error ? reject(error) : resolve(compressed));
 });
+
+export const getDateFromFileName = (filename: string): Date => {
+    try {
+        if (filename.startsWith('20')) {
+            // 20190517T130127_ihned-cz.html
+            //2019-05-20T12:29:25.476Z
+            const date = filename.split("_")[0];
+            const isoDate = date.substr(0, 4) + '-' + date.substr(4, 2) + '-' + date.substr(6, 2);
+            const isoTime = date.substr(9, 2) + ':' + date.substr(11, 2) + ':' + date.substr(13, 2);
+            const isoDateTime = isoDate + 'T' + isoTime + '.000Z';
+            return new Date(isoDateTime);
+        } else {
+            // aktualne-cz_1529537487974.html
+            const time = filename.split('_')[1].split('.')[0];
+            const d = new Date();
+            d.setTime(parseInt(time, 10));
+            return d;
+        }
+    } catch (e) {
+        throw new Error("Unparsable: " + filename);
+    }
+};
