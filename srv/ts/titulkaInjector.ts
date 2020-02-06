@@ -43,7 +43,11 @@ const findTitulka = (html: string): Map<string, TitulkaResult> => {
 
 const downloadPage = async (publication: Publication): Promise<string | null> => {
     const url = getAddressForPublication(publication)!;
-    return await request({url, gzip: true})
+    return await request({url, gzip: true, headers: {
+        'accept-language': 'cs,en-US;q=0.9,en;q=0.8,sk;q=0.7',
+        'user-agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/79.0.3945.130 Safari/537.36',
+        'x-bot-contact': 'marcel@sulek.cz // +420777603288 // novinovyprogram.cz'
+    }})
     // return fs.readFileSync(__dirname + "/../data/" + publication + ".htm", 'utf-8');
 };
 
@@ -81,12 +85,12 @@ const download = async function (filename: string): Promise<PublicationDay> {
 };
 (async () => {
     const maps: Map<string, Map<string, TitulkaResult>> = new Map();
-    const printPublications: Publication[] = ['e15'];
+    const printPublications: Publication[] = ['lidovky', 'novinky', 'ihned', 'denik', 'blesk' /*, 'e15' */];
     await Promise.all(printPublications.map(async (publication) => {
         const map = await getTitulka(publication);
         maps.set(publication, map);
     }));
-    const minDay = 20170531;
+    const minDay = 20191108;
     const days = Array.from(maps.get(printPublications[0])!.keys())
         .filter(d => parseInt(d, 10) >= minDay);
     console.log(maps);

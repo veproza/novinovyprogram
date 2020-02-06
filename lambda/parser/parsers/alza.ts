@@ -72,7 +72,14 @@ const downloadPage = async (publication: Publication): Promise<string | null> =>
     if (!url) {
         return null;
     }
-    return await request({url, gzip: true});
+    const headers = {
+        'accept-language': 'cs,en-US;q=0.9,en;q=0.8,sk;q=0.7',
+        'user-agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/79.0.3945.130 Safari/537.36',
+        'x-contact': 'marcel@sulek.cz // +420777603288 // novinovyprogram.cz',
+        'Accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9',
+        'cookie': '_ga=GA1.1.1151472783.1581024262; VZTX=2094961091; _gcl_au=1.1.94503966.1581024264; __ssds=2; _ga_FGLGFS7LP0=GS1.1.1581024262.1.1.1581024264.58; __ssuzjsr2=a9be0cd8e; __uzmaj2=5064d36d-0bf3-4c64-bfd1-7b6618b89244; __uzmbj2=1581024262; __uzmcj2=402331077365; __uzmdj2=1581024262'
+    };
+    return await request({url, gzip: true, headers});
 };
 
 const getAddressForPublication = (publication: Publication): string | null => {

@@ -78,7 +78,7 @@ const getEmptyPublicationDay = (): PublicationDay => {
         articles: []
     };
 };
-
+let titulkaGotInThisRun = false;
 const addFileToResult = async (file: FileAndDate, publication: PublicationDay): Promise<void> => {
     const alreadyExists = publication.hours.some(existingHour => existingHour.time === file.time);
     if(alreadyExists) {
@@ -110,7 +110,8 @@ const addFileToResult = async (file: FileAndDate, publication: PublicationDay): 
         hours.sort((a, b) => a.time - b.time);
         if(publication.print === undefined) {
             const timeToGetTitulka = publicationId === 'denik' ? 8 : 7;
-            if(file.date.getHours() >= timeToGetTitulka) {
+            if(file.date.getHours() >= timeToGetTitulka && !titulkaGotInThisRun) {
+                titulkaGotInThisRun = true;
                 publication.print = null;
                 publication.print = await getTitulka(publicationId, file.date);
                 console.log('Got titulka', publicationId);
