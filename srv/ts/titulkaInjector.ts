@@ -33,7 +33,15 @@ const findTitulka = (html: string): Map<string, TitulkaResult> => {
             ? [dayOrYear1, dayOrYear2]
             : [dayOrYear2, dayOrYear1];
         const dayId = year + month + day;
-        const img = issue.querySelector('img').attributes.src;
+        const imgSet = issue.querySelector('img').attributes['data-srcset'];
+        if(!imgSet) {
+            return;
+        }
+        const match2 = imgSet.match(/(https:(.*?)) /);
+        if(!match2) {
+            return;
+        }
+        const img = match2[1];
         const link = "https://www.alza.cz/" + issue.querySelector('a').attributes.href;
         const titulka: TitulkaResult = ({img, link});
         outMap.set(dayId, titulka);
@@ -85,12 +93,12 @@ const download = async function (filename: string): Promise<PublicationDay> {
 };
 (async () => {
     const maps: Map<string, Map<string, TitulkaResult>> = new Map();
-    const printPublications: Publication[] = ['lidovky', 'novinky', 'ihned', 'denik', 'blesk' /*, 'e15' */];
+    const printPublications: Publication[] = ['lidovky', 'novinky', 'ihned', 'denik', 'blesk', 'idnes' /*, 'e15' */];
     await Promise.all(printPublications.map(async (publication) => {
         const map = await getTitulka(publication);
         maps.set(publication, map);
     }));
-    const minDay = 20191108;
+    const minDay = 20201110;
     const days = Array.from(maps.get(printPublications[0])!.keys())
         .filter(d => parseInt(d, 10) >= minDay);
     console.log(maps);

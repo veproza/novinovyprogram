@@ -59,7 +59,15 @@ const findTitulka = async (html: string, date: Date): Promise<TitulkaResult | nu
         return dayOrYear1 === desiredDate || dayOrYear2 === desiredDate;
     });
     if(issue) {
-        const img = issue.querySelector('img').attributes.src;
+        const imgSet = issue.querySelector('img').attributes['data-srcset'];
+        if(!imgSet) {
+            return null;
+        }
+        const match2 = imgSet.match(/(https:(.*?)) /);
+        if(!match2) {
+            return null;
+        }
+        const img = match2[1];
         const link = "https://www.alza.cz" + issue.querySelector('a').attributes.href;
         return ({img, link});
     } else {
