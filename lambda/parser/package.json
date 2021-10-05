@@ -13,7 +13,7 @@
     "@types/request-promise": "^4.1.43",
     "aws-sdk": "^2.457.0",
     "iconv-lite": "^0.4.24",
-    "node-html-parser": "^1.1.15",
+    "node-html-parser": "^4.1.5",
     "request": "^2.88.0",
     "request-promise": "^4.2.4"
   },
