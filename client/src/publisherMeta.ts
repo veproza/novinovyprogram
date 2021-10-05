@@ -40,7 +40,7 @@ export const publisherMeta: {[index: string]: PublisherMeta} = {
         fileId: "irozhlas-cz"
     },
     novinky: {
-        logo: "https://www.novinky.cz/static/images/logo.gif",
+        logo: "assets/novinky.svg",
         name: "Novinky.cz + Právo",
         onlineName: "Novinky.cz",
         printName: "Právo",
