@@ -11,16 +11,15 @@ const lidovkyParser: IParser = async (file) => {
     const elements = ((root as any).querySelectorAll('.art'));
     return elements
         .map((e: any): IArticleData | null => {
-            const headlineElement = e.querySelector('h1') || e.querySelector('h2');
+            const headlineElement = e.querySelector('h3');
             if(!headlineElement) {
                 return null;
             }
             const headline = headlineElement.rawText.trim();
             const perexElement = e.querySelector('p');
-            if(!perexElement) {
-                return null;
-            }
-            const perex = perexElement.rawText.trim();
+            const perex = perexElement
+                ? perexElement.rawText.trim()
+                : '';
             const linkElement = e.querySelector('a');
             if(!linkElement || !linkElement.attributes) {
                 return null;
