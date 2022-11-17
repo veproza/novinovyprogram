@@ -5,18 +5,16 @@ import { parse } from "node-html-parser";
 const bleskParser: IParser = async (file) => {
     const content = await downloadObject(file);
     const root = parse(content.toString());
-    const elements = ((root as any).querySelectorAll('.item-middle-top, .item-middle'));
-    
+    const elements = ((root as any).querySelectorAll('article'));
     return elements
         .map((e: any): IArticleData | null => {
-            const headlineElement = e.querySelector('h3');
-            if (!headlineElement) {
+            const headline = e.attributes['title'];
+            console.log(e.attributes);
+            if (!headline) {
                 return null;
             }
-            const headline = headlineElement.rawText.trim();
             const perex = '';
-
-             const linkElement = e.querySelector('a');
+            const linkElement = e.querySelector('a');
             if (!linkElement || !linkElement.attributes) {
                 return null;
             }
