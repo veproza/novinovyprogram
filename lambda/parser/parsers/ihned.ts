@@ -11,18 +11,18 @@ const ihnedParser: IParser = async (file) => {
     const elements = ((root as any).querySelectorAll('article'));
     return elements
         .map((e: any): IArticleData | null => {
-            const headlineElement = e.querySelector('h2');
-            if(!headlineElement) {
+            const headlineElement = e.querySelector('h3');
+            if (!headlineElement) {
                 return null;
             }
             const headline = headlineElement.rawText.trim();
-            const perexElement = e.querySelector('.article-perex');
-            if(!perexElement) {
+            const perexElement = e.querySelector('.perex');
+            if (!perexElement) {
                 return null;
             }
             const perex = perexElement.rawText.trim().split("\n").pop().trim();
             const linkElement = e.querySelector('a');
-            if(!linkElement || !linkElement.attributes) {
+            if (!linkElement || !linkElement.attributes) {
                 return null;
             }
             const link = linkElement.attributes.href;

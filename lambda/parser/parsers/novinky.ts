@@ -6,19 +6,19 @@ const novinkyParser: IParser = async (file) => {
     const content = await downloadObject(file);
     const root = parse(content.toString());
 
-    const elements = (root as any).querySelectorAll('main header li');
+    const elements = (root as any).querySelectorAll("[data-dot='ogm-top-stories'] article");
     const valid = elements
         .map((e: any): IArticleData | null => {
             const headlineElement = e.querySelector('h3');
-            if(!headlineElement) {
+            if (!headlineElement) {
                 return null;
             }
             const linkElement = e.querySelector('a');
-            if(!linkElement || !linkElement.attributes) {
+            if (!linkElement || !linkElement.attributes) {
                 return null;
             }
             const headline = headlineElement.rawText.trim();
-            const perexElement = e.querySelector('p');
+            const perexElement = e.querySelector('span');
             const perex = perexElement ? perexElement.rawText.trim() : '';
             const link = linkElement.attributes.href;
             return {headline, perex, link};
