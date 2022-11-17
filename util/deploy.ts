@@ -2,7 +2,7 @@ const ignoreExtensions = ['map'];
 const gzippable = ['css', 'js', 'html', 'svg'];
 import {promises as fs} from 'fs';
 import * as mime from 'mime';
-import * as zopfli from 'node-zopfli';
+import * as zopfli from 'zlib';
 import {S3, CloudFront} from 'aws-sdk';
 
 const uploadDir = async (dir: string, prefix: string) => {
