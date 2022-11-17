@@ -51,11 +51,18 @@ interface HourData {
 
 const MAX_ARTICLE_LENGTH = 4;
 
-const datafile = fs.readFileSync(__dirname + '/../data/keys2.txt', 'utf-8');
+const publicationId: Publication = 'novinky'; // todo: CHANGE THIS WHEN NEEDED
+const firstReferenceTime = new Date().getTime();
+// const firstReferenceTime = new Date("2022-11-16T12:59:00.138Z").getTime();
+const lastReferenceTime = new Date("2022-08-23T00:00:00.000Z").getTime();
+const logOnlyDoNotUpload = false;
+
+const datafile = fs.readFileSync(__dirname + '/../data/keys3.txt', 'utf-8')
+    + fs.readFileSync(__dirname + '/../data/keys2.txt', 'utf-8');
 const files = datafile.split("\n")
     // .slice(1) // remove  -idnes-cz1492763826366.html
     .filter(file => {
-        return file.includes('novinky')
+        return file.includes(publicationId)
     })
     .map((filename): FileAndDate => {
         const date = getDateFromFileName(filename);
@@ -96,18 +103,31 @@ const getPublicationDay = async (publicationId: Publication, files: FileAndDate[
         return newId;
     };
 
-    const hours = await Promise.all(matchingFiles.map(async (file): Promise<HourData|null> => {
-        try {
-            const articlesInFile = (await parser(file.filename)).slice(0, MAX_ARTICLE_LENGTH);
-            const articleIds = articlesInFile.map(getArticleId);
-            return {
-                time: file.time,
-                articles: articleIds
-            };
-        } catch (e) {
-            console.error("\n", e, publicationId, file.filename, "\n");
-            return null;
+    const hours = await Promise.all(matchingFiles.map(async (file): Promise<HourData | null> => {
+        const maxAttempts = 9;
+        for(let attempt = 1; attempt <= maxAttempts; ++attempt) {
+            try {
+                const articlesInFile = (await parser(file.filename)).slice(0, MAX_ARTICLE_LENGTH);
+                const articleIds = articlesInFile.map(getArticleId);
+                return {
+                    time: file.time,
+                    articles: articleIds
+                };
+            } catch (e) {
+                // sometimes S3 gets rate limited or something, so cool down
+                process.stdout.write(attempt.toString());
+                if(e.retryable && attempt <= maxAttempts) {
+                    await new Promise(resolve => setTimeout(resolve, attempt * attempt * 1000));
+                } else {
+                    console.error("\n", e, publicationId, "\n");
+                    console.error(file.filename);
+                    process.exit();
+                    return null;
+                }
+            }
         }
+        process.exit();
+        return null;
     }));
 
     const hoursNotNull: HourData[] = hours.filter(h => h !== null) as HourData[];
@@ -161,12 +181,9 @@ const getParser = (file: string): IParser => {
         throw new Error("No parser for " + file);
     }
 };
-//20190717T093131_seznam
-const firstReferenceTime = new Date("2019-08-25T10:41:39.138Z").getTime();
 
-const lastReferenceTime = new Date("2019-08-25T10:41:39.138Z").getTime();
+
 let currentReferenceTime = firstReferenceTime;
-const publicationId: Publication = 'novinky';
 
 (async () => {
     do {
@@ -180,9 +197,13 @@ const publicationId: Publication = 'novinky';
             const existing = JSON.parse((await downloadObject(key)).toString()) as PublicationDay;
             existing.articles = day.articles;
             existing.hours = day.hours;
-            console.log('Updating');
-            await uploadObject(key, existing);
-
+            console.log('Updating', key);
+            if(logOnlyDoNotUpload) {
+                console.log(existing);
+            } else {
+                await uploadObject(key, existing);
+            }
+            // break
         } catch(e) {
             console.log("Not existing");
             // await uploadObject(key, day);
